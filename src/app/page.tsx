@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, MessageSquare, UserPlus, ArrowRight, CheckCircle2, ShieldCheck, Cpu, Database, Server } from 'lucide-react';
+import { FileText, MessageSquare, UserPlus, ArrowRight, CheckCircle2, ShieldCheck, Cpu, Database, Server, Mic } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const dynamic = 'force-static';
@@ -42,22 +42,22 @@ export default function LandingPage() {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
               {/* Left Column: Text */}
               <div className="max-w-2xl">
-                <div className="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-widest text-blue-600 uppercase bg-blue-50 rounded-full border border-blue-100">
+                <div className="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-widest text-blue-600 uppercase bg-blue-50 rounded-full border border-blue-100 animate-fade-in-up">
                   Beratung & Engineering
                 </div>
 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-8 leading-[1.1] break-words">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-8 leading-[1.1] break-words animate-fade-in-up delay-100">
                   Ihr Experte für <br className="hidden lg:block" />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">
                     KI-Prozess-Automatisierung.
                   </span>
                 </h1>
 
-                <p className="text-xl text-slate-600 leading-relaxed max-w-lg mb-10">
+                <p className="text-xl text-slate-600 leading-relaxed max-w-lg mb-10 animate-fade-in-up delay-200">
                   Automatisierung nimmt Ihnen Routineaufgaben ab: Studien zeigen, dass Unternehmen bis zu 75 % der Zeit einsparen, die bisher für manuelle Tätigkeiten aufgewendet wurde.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 mb-16">
+                <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-fade-in-up delay-300">
                   <a href="https://calendly.com/marc-interlinked-sxdh/30min" target="_blank" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white transition-all bg-blue-600 rounded-full hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/20 active:scale-[0.98]">
                     Kostenlose Erstberatung
                   </a>
@@ -274,8 +274,7 @@ export default function LandingPage() {
               </div>
 
               <div className="mt-10 flex flex-col items-center">
-                <img src="/signature.svg" alt="" className="h-12 opacity-50" />
-                {/* Fallback signature representation if image missing */}
+                {/* Fallback signature representation since image is missing */}
                 <div className="text-xl font-handwriting text-slate-400 italic">Marc Serafin</div>
               </div>
 
@@ -384,7 +383,7 @@ export default function LandingPage() {
               <div className="bg-indigo-50 rounded-3xl p-10 flex flex-col justify-center text-slate-900 shadow-sm border border-indigo-100 min-h-[400px]">
                 <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm text-indigo-600">
                   <div className="w-8 h-8 flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" /><path d="M19 10v2a7 7 0 0 1-14 0v-2" /><line x1="12" x2="12" y1="19" y2="22" /></svg>
+                    <Mic className="w-6 h-6" />
                   </div>
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">
