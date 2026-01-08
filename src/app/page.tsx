@@ -1,6 +1,8 @@
 import React from 'react';
 import { FileText, MessageSquare, UserPlus, ArrowRight, CheckCircle2, ShieldCheck, Cpu, Database, Server, Mic } from 'lucide-react';
 import type { Metadata } from 'next';
+import Navbar from '@/components/Navbar';
+import ContactSection from '@/components/ContactSection';
 
 export const dynamic = 'force-static';
 
@@ -13,27 +15,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen font-sans selection:bg-blue-100 selection:text-blue-900">
       {/* 1. STICKY NAVBAR */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <a href="/" className="text-xl font-monda tracking-tight text-slate-900 group hover:opacity-80 transition-opacity">
-            interlinked.dev
-          </a>
-
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-            <a href="#solutions" className="hover:text-blue-600 transition-colors">Lösungen</a>
-            <a href="#work" className="hover:text-blue-600 transition-colors">Arbeitsweise</a>
-            <a href="#founder" className="hover:text-blue-600 transition-colors">Über uns</a>
-          </div>
-
-          <a
-            href="https://calendly.com/marc-interlinked-sxdh/30min"
-            target="_blank"
-            className="hidden md:inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white transition-all bg-blue-600 rounded-full hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20 active:scale-95"
-          >
-            Kostenlose Erstberatung
-          </a>
-        </div>
-      </nav>
+      <Navbar />
 
       <main className="pt-20">
         {/* 2. HERO SECTION */}
@@ -69,8 +51,8 @@ export default function LandingPage() {
                 {/* Trust Stats */}
                 <div className="grid grid-cols-3 gap-8 border-t border-slate-200 pt-8">
                   <div>
-                    <div className="text-3xl font-bold text-slate-900 mb-1">10+ Jahre</div>
-                    <div className="text-sm font-medium text-slate-500 uppercase tracking-wide">Engineering</div>
+                    <div className="text-3xl font-bold text-slate-900 mb-1">10+</div>
+                    <div className="text-sm font-medium text-slate-500 uppercase tracking-wide">Jahre Engineering</div>
                   </div>
                   <div>
                     <div className="text-3xl font-bold text-slate-900 mb-1">50+</div>
@@ -475,6 +457,10 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
+
+        {/* 8. CONTACT SECTION */}
+        <ContactSection />
+
       </main>
 
       {/* 8. FOOTER */}
