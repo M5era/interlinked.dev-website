@@ -258,40 +258,30 @@ export default function LandingPage() {
         {/* 4. FOUNDER SECTION (ID: #founder) */}
         <section id="founder" className="py-24 bg-white border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              {/* Image Placeholder */}
-              <div className="relative aspect-[4/5] lg:aspect-square bg-slate-200 rounded-3xl overflow-hidden flex items-center justify-center group">
-                <div className="absolute inset-0 bg-gradient-to-tr from-slate-300 to-slate-100 opacity-50" />
-                <span className="text-slate-400 font-medium text-lg relative z-10 group-hover:scale-105 transition-transform duration-500">
-                  Marc Serafin
-                </span>
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-8 leading-tight">
+                Automatisieren Sie die Routine. <br />
+                <span className="text-blue-600">Fokussieren Sie sich auf die Vision.</span>
+              </h2>
+
+              <div className="prose prose-lg text-slate-600 prose-p:leading-relaxed mx-auto">
+                <p className="mb-6">
+                  Hi, ich bin Marc Serafin. Ich entwickle seit über einem Jahrzehnt Software für Startups und Agenturen. Während meiner Zeit als Engineer bei Locoia (iPaaS) wurde mir eines klar: Low-Code-Plattformen sind mächtig, stoßen aber irgendwann an ihre Grenzen.
+                </p>
+                <p>
+                  Wachsende Unternehmen erreichen den Punkt, an dem Standard-Tools zur Bremse werden. Genau hier komme ich ins Spiel. Mit Interlinked entwickle ich robuste, maßgeschneiderte Integrationen, dort wo Standard-Plattformen aufhören.
+                </p>
               </div>
 
-              <div>
-                <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-8 leading-tight">
-                  Automatisieren Sie die Routine. <br />
-                  <span className="text-blue-600">Fokussieren Sie sich auf die Vision.</span>
-                </h2>
+              <div className="mt-10 flex flex-col items-center">
+                <img src="/signature.svg" alt="" className="h-12 opacity-50" />
+                {/* Fallback signature representation if image missing */}
+                <div className="text-xl font-handwriting text-slate-400 italic">Marc Serafin</div>
+              </div>
 
-                <div className="prose prose-lg text-slate-600 prose-p:leading-relaxed">
-                  <p className="mb-6">
-                    Hi, ich bin Marc Serafin. Ich entwickle seit über einem Jahrzehnt Software für Startups und Agenturen. Während meiner Zeit als Engineer bei Locoia (iPaaS) wurde mir eines klar: Low-Code-Plattformen sind mächtig, stoßen aber irgendwann an ihre Grenzen.
-                  </p>
-                  <p>
-                    Wachsende Unternehmen erreichen den Punkt, an dem Standard-Tools zur Bremse werden. Genau hier komme ich ins Spiel. Mit Interlinked entwickle ich robuste, maßgeschneiderte Integrationen, dort wo Standard-Plattformen aufhören.
-                  </p>
-                </div>
-
-                <div className="mt-10">
-                  <img src="/signature.svg" alt="" className="h-12 opacity-50" />
-                  {/* Fallback signature representation if image missing */}
-                  <div className="text-xl font-handwriting text-slate-400 italic">Marc Serafin</div>
-                </div>
-
-                <div className="mt-8 flex items-center gap-10">
-                  <img src="/tum.png" alt="TUM Logo" className="h-10 object-contain" />
-                  <img src="/nova.png" alt="Nova SBE Logo" className="h-14 object-contain" />
-                </div>
+              <div className="mt-8 flex items-center justify-center gap-10">
+                <img src="/tum.png" alt="TUM Logo" className="h-10 object-contain" />
+                <img src="/nova.png" alt="Nova SBE Logo" className="h-14 object-contain" />
               </div>
             </div>
           </div>
