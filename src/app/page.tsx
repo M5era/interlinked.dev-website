@@ -256,7 +256,7 @@ export default function LandingPage() {
         </section>
 
         {/* 4. FOUNDER SECTION (ID: #founder) */}
-        <section id="founder" className="py-24 bg-slate-50">
+        <section id="founder" className="py-24 bg-white border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               {/* Image Placeholder */}
@@ -286,6 +286,11 @@ export default function LandingPage() {
                   <img src="/signature.svg" alt="" className="h-12 opacity-50" />
                   {/* Fallback signature representation if image missing */}
                   <div className="text-xl font-handwriting text-slate-400 italic">Marc Serafin</div>
+                </div>
+
+                <div className="mt-8 flex items-center gap-10">
+                  <img src="/tum.png" alt="TUM Logo" className="h-10 object-contain" />
+                  <img src="/nova.png" alt="Nova SBE Logo" className="h-14 object-contain" />
                 </div>
               </div>
             </div>
