@@ -80,23 +80,18 @@ export default function LandingPage() {
                         <FileText size={20} />
                       </div>
                       <div className="flex-1">
-                        <div className="h-2 w-16 bg-slate-200 rounded mb-2"></div>
-                        <div className="h-2 w-24 bg-slate-100 rounded"></div>
+                        <div className="text-sm font-semibold text-slate-700">Rechnungseingang</div>
                       </div>
                     </div>
 
-                    {/* Card 2: AI Processing (Right - Active) */}
+                    {/* Card 2: KI-Datenextraktion (Right - Active) */}
                     <div className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-blue-100 shadow-xl shadow-blue-900/5 w-72 translate-x-12 z-20 hover:scale-105 transition-transform duration-300">
                       <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-600/20">
                         <Cpu size={24} />
                       </div>
                       <div className="flex-1">
-                        <div className="text-sm font-bold text-slate-900 mb-1">AI Processing</div>
-                        <div className="flex gap-1">
-                          <div className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse"></div>
-                          <div className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse delay-75"></div>
-                          <div className="w-1.5 h-1.5 rounded-full bg-blue-200 animate-pulse delay-150"></div>
-                        </div>
+                        <div className="text-sm font-bold text-slate-900 mb-1">KI-Texterkennung</div>
+                        <div className="text-xs text-slate-500">Positionen & Beträge erkannt</div>
                       </div>
                     </div>
 
@@ -106,8 +101,8 @@ export default function LandingPage() {
                         <Database size={20} />
                       </div>
                       <div className="flex-1">
-                        <div className="text-xs font-semibold text-slate-700">Data Synced</div>
-                        <div className="text-[10px] text-slate-400">Just now</div>
+                        <div className="text-xs font-semibold text-slate-700">Im ERP verbucht</div>
+                        <div className="text-[10px] text-slate-400">Gerade eben</div>
                       </div>
                       <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
                         <CheckCircle2 size={12} className="text-green-600" />
@@ -248,7 +243,7 @@ export default function LandingPage() {
 
               <div className="prose prose-lg text-slate-600 prose-p:leading-relaxed mx-auto">
                 <p className="mb-6">
-                  Hi, ich bin Marc Serafin. Ich entwickle seit über einem Jahrzehnt Software für Startups und Agenturen. Während meiner Zeit als Engineer bei Locoia (iPaaS) wurde mir eines klar: Low-Code-Plattformen sind mächtig, stoßen aber irgendwann an ihre Grenzen.
+                  Hi, ich bin Marc Serafin. Ich entwickle seit fast einem Jahrzehnt Software für Startups und Agenturen. Während meiner Zeit als Engineer bei Locoia (iPaaS) wurde mir eines klar: Low-Code-Plattformen sind mächtig, stoßen aber irgendwann an ihre Grenzen.
                 </p>
                 <p>
                   Wachsende Unternehmen erreichen den Punkt, an dem Standard-Tools zur Bremse werden. Genau hier komme ich ins Spiel. Mit Interlinked entwickle ich robuste, maßgeschneiderte Integrationen, dort wo Standard-Plattformen aufhören.
