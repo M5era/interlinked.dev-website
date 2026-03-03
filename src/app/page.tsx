@@ -51,7 +51,7 @@ export default function LandingPage() {
                 {/* Trust Stats */}
                 <div className="grid grid-cols-3 gap-8 border-t border-slate-200 pt-8">
                   <div>
-                    <div className="text-3xl font-bold text-slate-900 mb-1">10+</div>
+                    <div className="text-3xl font-bold text-slate-900 mb-1">8+</div>
                     <div className="text-sm font-medium text-slate-500 uppercase tracking-wide">Jahre Engineering</div>
                   </div>
                   <div>
