@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageSquare, ArrowRight, CheckCircle2, Database, Server, Webhook, Clock, LayoutDashboard, Wallet, Workflow, Sparkles } from 'lucide-react';
+import { MessageSquare, ArrowRight, CheckCircle2, Database, Server, Webhook, Clock, LayoutDashboard, Wallet, Workflow, Sparkles, Bot } from 'lucide-react';
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import ContactSection from '@/components/ContactSection';
@@ -102,14 +102,14 @@ export default function LandingPage() {
                     <Clock size={16} className="text-amber-500 flex-shrink-0" /> Scheduler
                   </div>
 
-                  {/* Backend Node */}
+                  {/* Central Node: KI-Agent */}
                   <div className="absolute left-[205px] top-[140px] w-[170px] h-[84px] flex items-center gap-3 p-3 bg-white border border-blue-200 rounded-2xl shadow-lg shadow-blue-600/10">
                     <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white flex-shrink-0 shadow-md shadow-blue-600/30">
-                      <Server size={20} />
+                      <Bot size={20} />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="text-xs font-bold text-slate-900 leading-tight mb-0.5">Automatisierungs-Backend</div>
-                      <div className="text-[10px] text-slate-500 leading-tight">Workflows & Business-Logik</div>
+                      <div className="text-sm font-bold text-slate-900 leading-tight mb-0.5">KI-Agent</div>
+                      <div className="text-[10px] text-slate-500 leading-tight">entscheidet & führt aus</div>
                     </div>
                   </div>
 
