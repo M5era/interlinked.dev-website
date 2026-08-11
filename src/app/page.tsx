@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, MessageSquare, UserPlus, ArrowRight, CheckCircle2, Cpu, Database, Server, Mic, Webhook, Mail, Clock, LayoutDashboard, Wallet } from 'lucide-react';
+import { FileText, MessageSquare, UserPlus, ArrowRight, CheckCircle2, Database, Server, Mic, Webhook, Clock, LayoutDashboard, Wallet } from 'lucide-react';
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import ContactSection from '@/components/ContactSection';
@@ -71,19 +71,22 @@ export default function LandingPage() {
                 <div className="relative z-10 p-8 w-[480px]">
                   <div className="relative flex flex-col gap-6 items-center">
 
-                    {/* Connecting Line - Central Axis */}
-                    <div className="absolute top-8 bottom-8 left-1/2 w-px border-l-2 border-dashed border-blue-200 -translate-x-1/2 -z-10"></div>
+                    {/* Connecting Line - Central Axis (below the trigger row) */}
+                    <div className="absolute top-32 bottom-8 left-1/2 w-px border-l-2 border-dashed border-blue-200 -translate-x-1/2 -z-10"></div>
 
-                    {/* Row 1: Triggers */}
-                    <div className="flex gap-3">
-                      <div className="flex items-center gap-2 px-4 py-2.5 bg-white/90 backdrop-blur-sm rounded-full border border-slate-200 shadow-sm text-sm font-semibold text-slate-700 hover:scale-105 transition-transform duration-300">
-                        <Webhook size={16} className="text-blue-600" /> Webhook
+                    {/* Row 1: Triggers (each with its own connector line) */}
+                    <div className="flex gap-12 -mb-6">
+                      <div className="flex flex-col items-center">
+                        <div className="flex items-center gap-2 px-4 py-2.5 bg-white/90 backdrop-blur-sm rounded-full border border-slate-200 shadow-sm text-sm font-semibold text-slate-700 hover:scale-105 transition-transform duration-300">
+                          <Webhook size={16} className="text-blue-600" /> Webhook
+                        </div>
+                        <div className="h-12 border-l-2 border-dashed border-blue-200 -z-10"></div>
                       </div>
-                      <div className="flex items-center gap-2 px-4 py-2.5 bg-white/90 backdrop-blur-sm rounded-full border border-slate-200 shadow-sm text-sm font-semibold text-slate-700 hover:scale-105 transition-transform duration-300">
-                        <Mail size={16} className="text-blue-600" /> E-Mail
-                      </div>
-                      <div className="flex items-center gap-2 px-4 py-2.5 bg-white/90 backdrop-blur-sm rounded-full border border-slate-200 shadow-sm text-sm font-semibold text-slate-700 hover:scale-105 transition-transform duration-300">
-                        <Clock size={16} className="text-blue-600" /> Zeitplan
+                      <div className="flex flex-col items-center">
+                        <div className="flex items-center gap-2 px-4 py-2.5 bg-white/90 backdrop-blur-sm rounded-full border border-slate-200 shadow-sm text-sm font-semibold text-slate-700 hover:scale-105 transition-transform duration-300">
+                          <Clock size={16} className="text-blue-600" /> Scheduler
+                        </div>
+                        <div className="h-12 border-l-2 border-dashed border-blue-200 -z-10"></div>
                       </div>
                     </div>
 
@@ -123,7 +126,7 @@ export default function LandingPage() {
                     {/* Status Pill */}
                     <div className="flex items-center gap-2.5 px-4 py-2 bg-slate-900 rounded-full text-xs font-medium text-slate-200 shadow-lg">
                       <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
-                      Läuft auf Ihrer Infrastruktur · planbare Kosten
+                      Hosted in Germany · planbare Kosten
                     </div>
                   </div>
                 </div>
@@ -556,10 +559,6 @@ export default function LandingPage() {
           <div className="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm text-slate-400">
               © 2026 Interlinked.dev.
-            </div>
-            <div className="text-sm text-slate-400 flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-              Systems Operational
             </div>
           </div>
         </div>
