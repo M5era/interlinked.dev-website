@@ -139,10 +139,10 @@ const en = {
         claim: "resolve incidents before customers notice",
         nodes: [
           { title: "Monitoring alert", sub: "servers & services" },
-          { title: "AI triage", sub: "categorizes & prioritizes" },
+          { title: "Triage", sub: "rule-based: categorizes & prioritizes" },
           { title: "Escalated", sub: "ticket + Slack alert" },
         ],
-        attachmentLabel: "AI model",
+        attachmentLabel: "Rule engine",
       },
       {
         key: "support",
@@ -431,10 +431,10 @@ const de: typeof en = {
         claim: "Störungen lösen, bevor Kunden sie bemerken",
         nodes: [
           { title: "Monitoring-Alert", sub: "Server & Services" },
-          { title: "KI-Triage", sub: "kategorisiert & priorisiert" },
+          { title: "Triage", sub: "regelbasiert: kategorisiert & priorisiert" },
           { title: "Eskaliert", sub: "Ticket + Slack-Alert" },
         ],
-        attachmentLabel: "KI-Modell",
+        attachmentLabel: "Regelwerk",
       },
       {
         key: "support",

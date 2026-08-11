@@ -50,10 +50,10 @@ const TEAM_VISUALS: Record<
     it: {
         nodes: [
             { icon: Activity, iconClass: "bg-red-50 text-red-500" },
-            { icon: Bot, iconClass: "bg-blue-50 text-blue-600" },
+            { icon: Workflow, iconClass: "bg-blue-50 text-blue-600" },
             { icon: MessageSquare, iconClass: "bg-emerald-50 text-emerald-600" },
         ],
-        attachment: { icon: Sparkles, iconClass: "text-blue-600" },
+        attachment: { icon: Server, iconClass: "text-slate-500" },
     },
     support: {
         nodes: [
