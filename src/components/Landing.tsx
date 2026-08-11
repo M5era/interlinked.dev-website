@@ -394,8 +394,8 @@ export default function Landing({ lang }: { lang: Lang }) {
                                 </h2>
 
                                 <div className="prose prose-lg text-slate-600 prose-p:leading-relaxed">
-                                    <p className="mb-6">{t.founder.p1}</p>
-                                    <p>{t.founder.p2}</p>
+                                    <p className={t.founder.p2 ? "mb-6" : ""}>{t.founder.p1}</p>
+                                    {t.founder.p2 && <p>{t.founder.p2}</p>}
                                 </div>
 
                                 <div className="mt-8">

@@ -55,10 +55,6 @@ const en = {
         title: "AI that pays its way",
         desc: "We figure out what's worth building, build it into the way you work, and make sure it actually gets used. Stop funding experiments. Start buying outcomes.",
       },
-      {
-        title: "Senior people, working systems",
-        desc: "A small, senior team that ships. No juniors learning on your project, no handoff halfway through.",
-      },
     ],
   },
   cases: {
@@ -201,10 +197,10 @@ const en = {
     ],
   },
   founder: {
-    title: "We know where platforms end.",
-    titleAccent: "We used to build them.",
-    p1: "Interlinked was founded by Marc Serafin — a software engineer with 8+ years across startups and agencies, including engineering at Locoia, a German iPaaS platform. Building automation platforms from the inside teaches you exactly where they stop.",
-    p2: "That's where we start: robust, custom automation and the software around it — backends, APIs and interfaces that grow with your company instead of holding it back.",
+    title: "Senior people,",
+    titleAccent: "working systems.",
+    p1: "A small, senior team that ships. No juniors learning on your project, no handoff halfway through.",
+    p2: "",
     name: "Marc Serafin",
     role: "Founder",
     imageAlt: "Engineers building software together",
@@ -349,10 +345,6 @@ const de: typeof en = {
         title: "Ergebnisse statt Experimente",
         desc: "Wir definieren, was sich zu bauen lohnt, bauen es in Ihr Unternehmen ein und sorgen dafür, dass Ihr Team es wirklich nutzt. Zahlen Sie nicht länger fürs Experimentieren – zahlen Sie für Ergebnisse.",
       },
-      {
-        title: "Echte Entwickler, echte Systeme",
-        desc: "Ein kleines, erfahrenes Team, das liefert. Keine Übergaben, keine Juniors, die an Ihrem Projekt lernen.",
-      },
     ],
   },
   cases: {
@@ -495,10 +487,10 @@ const de: typeof en = {
     ],
   },
   founder: {
-    title: "Wir kennen die Grenzen der Plattformen.",
-    titleAccent: "Weil wir sie selbst gebaut haben.",
-    p1: "Interlinked wurde von Marc Serafin gegründet – Softwareentwickler mit über acht Jahren Erfahrung bei Startups und Agenturen, unter anderem als Engineer bei Locoia, einer deutschen iPaaS-Plattform. Wer Automatisierungs-Plattformen von innen gebaut hat, weiß genau, wo sie aufhören.",
-    p2: "Genau dort setzen wir an: robuste, maßgeschneiderte Automatisierungen und die Software drumherum – Backends, Schnittstellen und Oberflächen, die mit Ihrem Unternehmen wachsen, statt es auszubremsen.",
+    title: "Echte Entwickler,",
+    titleAccent: "echte Systeme.",
+    p1: "Ein kleines, erfahrenes Team, das liefert. Keine Übergaben, keine Juniors, die an Ihrem Projekt lernen.",
+    p2: "",
     name: "Marc Serafin",
     role: "Gründer",
     imageAlt: "Engineers bei der gemeinsamen Arbeit",
