@@ -91,7 +91,7 @@ export default function SolutionsShowcase({ lang }: { lang: Lang }) {
                         <button
                             key={team.key}
                             onClick={() => setActiveKey(team.key)}
-                            className={`text-left flex-shrink-0 lg:w-full p-4 lg:p-5 rounded-2xl border transition-all duration-200 ${
+                            className={`text-left flex-shrink-0 w-64 lg:w-full p-4 lg:p-5 rounded-2xl border transition-all duration-200 ${
                                 isActive
                                     ? "bg-white border-blue-200 shadow-lg shadow-blue-600/5"
                                     : "bg-slate-50 border-slate-100 hover:border-slate-200 hover:bg-white"
@@ -101,7 +101,7 @@ export default function SolutionsShowcase({ lang }: { lang: Lang }) {
                                 <span className={`font-bold ${isActive ? "text-blue-600" : "text-slate-900"}`}>{team.team}</span>{" "}
                                 <span className="text-slate-400 font-medium">{t.canWord}</span>
                             </div>
-                            <div className="text-sm text-slate-600 mt-1 hidden lg:block leading-snug">{team.claim}</div>
+                            <div className="text-sm text-slate-600 mt-1 leading-snug">{team.claim}</div>
                         </button>
                     );
                 })}
