@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import ProjectForm from "@/components/ProjectForm";
 import { getDict, type Lang } from "@/i18n/dictionaries";
 
@@ -42,8 +42,8 @@ export default function ContactSection({ lang }: { lang: Lang }) {
                         <span className="hidden sm:inline text-slate-300">·</span>
                         <span>
                             {t.contact.altOr}{" "}
-                            <a href="mailto:contact@interlinked.dev" className="inline-flex items-center gap-1.5 font-semibold text-blue-600 hover:text-blue-700 transition-colors">
-                                <Mail className="w-4 h-4" /> contact@interlinked.dev
+                            <a href="mailto:contact@interlinked.dev" className="font-semibold text-blue-600 hover:text-blue-700 transition-colors">
+                                contact@interlinked.dev
                             </a>
                         </span>
                     </div>
