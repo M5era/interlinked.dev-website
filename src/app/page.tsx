@@ -306,16 +306,16 @@ export default function LandingPage() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-8 leading-tight">
-                Automatisieren Sie die Routine. <br />
-                <span className="text-blue-600">Fokussieren Sie sich auf die Vision.</span>
+                Ich kenne die Grenzen der Plattformen. <br />
+                <span className="text-blue-600">Weil ich sie selbst gebaut habe.</span>
               </h2>
 
               <div className="prose prose-lg text-slate-600 prose-p:leading-relaxed mx-auto">
                 <p className="mb-6">
-                  Hi, ich bin Marc Serafin. Ich entwickle seit fast einem Jahrzehnt Software für Startups und Agenturen. Während meiner Zeit als Engineer bei Locoia (iPaaS) wurde mir eines klar: Low-Code-Plattformen sind mächtig, stoßen aber irgendwann an ihre Grenzen.
+                  Hi, ich bin Marc Serafin. Seit fast einem Jahrzehnt entwickle ich Software für Startups und Agenturen – unter anderem als Engineer bei Locoia, einer deutschen iPaaS-Plattform. Dort habe ich Automatisierungs-Plattformen von innen gebaut und dabei eines gelernt: Low-Code ist mächtig, stößt aber irgendwann an Grenzen.
                 </p>
                 <p>
-                  Wachsende Unternehmen erreichen den Punkt, an dem Standard-Tools zur Bremse werden. Genau hier komme ich ins Spiel. Mit Interlinked entwickle ich robuste, maßgeschneiderte Integrationen, dort wo Standard-Plattformen aufhören.
+                  Genau an diesem Punkt setze ich mit Interlinked an: robuste, maßgeschneiderte Automatisierungen und die Software drumherum – Backends, Schnittstellen und Oberflächen, die mit Ihrem Unternehmen wachsen, statt es auszubremsen.
                 </p>
               </div>
 
