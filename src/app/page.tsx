@@ -4,11 +4,12 @@ import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import ContactSection from '@/components/ContactSection';
 import SolutionsShowcase from '@/components/SolutionsShowcase';
+import Reveal from '@/components/Reveal';
 
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: 'Interlinked.dev | Automatisierung & Custom Software',
+  title: 'Interlinked.dev | Automatisierung ohne Limits',
   description: 'Prozess-Automatisierung ist erst der Anfang: robuste Backends, eigene UIs und maßgeschneiderte Software – mit planbaren Kosten.',
 };
 
@@ -32,7 +33,7 @@ export default function LandingPage() {
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-8 leading-[1.1] break-words animate-fade-in-up delay-100">
                   Ihr Experte für <br className="hidden lg:block" />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">
-                    Automatisierung & Custom Software.
+                    Automatisierung ohne Limits.
                   </span>
                 </h1>
 
@@ -67,74 +68,75 @@ export default function LandingPage() {
               </div>
 
               {/* Right Column: Workflow Canvas (n8n style) */}
-              <div className="relative hidden lg:block ml-auto">
-                <div className="relative z-10 w-[620px] h-[480px] bg-white rounded-3xl border border-slate-200 shadow-2xl shadow-slate-200/60 overflow-hidden">
+              <div className="relative mt-4 lg:mt-0 lg:ml-auto h-[300px] sm:h-[400px] md:h-[480px] lg:h-[450px] xl:h-[590px]">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 lg:left-auto lg:right-0 lg:translate-x-0 origin-top lg:origin-top-right scale-[0.48] sm:scale-[0.65] md:scale-[0.8] lg:scale-[0.75] xl:scale-100 w-[680px]">
+                <div className="relative z-10 w-[680px] h-[520px] bg-white rounded-3xl border border-slate-200 shadow-2xl shadow-slate-200/60 overflow-hidden">
                   {/* Dotted canvas grid */}
                   <div className="absolute inset-0 bg-[radial-gradient(rgba(100,116,139,0.18)_1px,transparent_1px)] [background-size:20px_20px]"></div>
                   {/* Soft glow */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-100/60 rounded-full blur-3xl"></div>
 
                   {/* Edges */}
-                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 620 480" fill="none">
-                    {/* Triggers -> KI-Agent */}
-                    <path d="M182 135 C 212 135 210 200 240 200" stroke="#cbd5e1" strokeWidth="1.5" />
-                    <path d="M182 275 C 212 275 210 238 240 238" stroke="#cbd5e1" strokeWidth="1.5" />
-                    {/* KI-Agent -> Systems */}
-                    <path d="M410 195 C 422 195 416 95 430 95" stroke="#cbd5e1" strokeWidth="1.5" />
-                    <path d="M410 219 L 430 219" stroke="#cbd5e1" strokeWidth="1.5" />
-                    <path d="M410 243 C 422 243 416 343 430 343" stroke="#cbd5e1" strokeWidth="1.5" />
-                    {/* Dashed attachments below the agent */}
-                    <path d="M295 263 C 295 325 225 345 225 400" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="4 4" />
-                    <path d="M355 263 C 355 325 385 345 385 400" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="4 4" />
+                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 680 520" fill="none">
+                    {/* Triggers -> Workflow */}
+                    <path d="M192 160 C 216 160 214 215 235 215" stroke="#cbd5e1" strokeWidth="1.5" />
+                    <path d="M192 310 C 216 310 214 255 235 255" stroke="#cbd5e1" strokeWidth="1.5" />
+                    {/* Workflow -> Systems */}
+                    <path d="M445 215 C 462 215 460 100 478 100" stroke="#cbd5e1" strokeWidth="1.5" />
+                    <path d="M445 235 L 478 235" stroke="#cbd5e1" strokeWidth="1.5" />
+                    <path d="M445 255 C 462 255 460 370 478 370" stroke="#cbd5e1" strokeWidth="1.5" />
+                    {/* Dashed attachments below the workflow */}
+                    <path d="M305 283 C 305 350 245 370 245 430" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="4 4" />
+                    <path d="M375 283 C 375 350 435 370 435 430" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="4 4" />
                     {/* Connection dots */}
-                    {[[182, 135], [240, 200], [182, 275], [240, 238], [410, 195], [430, 95], [410, 219], [430, 219], [410, 243], [430, 343]].map(([cx, cy]) => (
+                    {[[192, 160], [235, 215], [192, 310], [235, 255], [445, 215], [478, 100], [445, 235], [478, 235], [445, 255], [478, 370]].map(([cx, cy]) => (
                       <circle key={`${cx}-${cy}`} cx={cx} cy={cy} r="2.5" fill="#94a3b8" />
                     ))}
                   </svg>
 
                   {/* Trigger: Webhook */}
-                  <div className="absolute left-8 top-[110px] w-[150px] flex items-center gap-2.5 px-4 py-3.5 bg-white border border-slate-200 rounded-xl text-sm font-semibold text-slate-700 shadow-sm">
+                  <div className="absolute left-8 top-[133px] w-[160px] flex items-center gap-3 px-4 py-4 bg-white border border-slate-200 rounded-xl text-sm font-semibold text-slate-700 shadow-sm">
                     <Webhook size={18} className="text-blue-600 flex-shrink-0" /> Webhook
                   </div>
 
                   {/* Trigger: Scheduler */}
-                  <div className="absolute left-8 top-[250px] w-[150px] flex items-center gap-2.5 px-4 py-3.5 bg-white border border-slate-200 rounded-xl text-sm font-semibold text-slate-700 shadow-sm">
+                  <div className="absolute left-8 top-[283px] w-[160px] flex items-center gap-3 px-4 py-4 bg-white border border-slate-200 rounded-xl text-sm font-semibold text-slate-700 shadow-sm">
                     <Clock size={18} className="text-amber-500 flex-shrink-0" /> Scheduler
                   </div>
 
                   {/* Central Node: Workflow */}
-                  <div className="absolute left-[240px] top-[175px] w-[170px] h-[88px] flex items-center gap-3.5 p-4 bg-white border border-blue-200 rounded-2xl shadow-lg shadow-blue-600/10">
+                  <div className="absolute left-[235px] top-[187px] w-[210px] h-[96px] flex items-center gap-4 p-4 bg-white border border-blue-200 rounded-2xl shadow-lg shadow-blue-600/10">
                     <div className="w-11 h-11 bg-blue-600 rounded-xl flex items-center justify-center text-white flex-shrink-0 shadow-md shadow-blue-600/30">
                       <Workflow size={22} />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="text-sm font-bold text-slate-900 leading-tight mb-0.5">Rechnungs-Workflow</div>
-                      <div className="text-[11px] text-slate-500 leading-tight">auslesen, abgleichen, verbuchen</div>
+                      <div className="text-base font-bold text-slate-900 leading-tight mb-1">Workflow</div>
+                      <div className="text-[11px] text-slate-500 leading-snug">Rechnungen auslesen, abgleichen, verbuchen</div>
                     </div>
                   </div>
 
                   {/* System: ERP & Datenbank */}
-                  <div className="absolute left-[430px] top-[70px] w-[170px] flex items-center gap-2.5 px-4 py-3.5 bg-white border border-slate-200 rounded-xl text-xs font-semibold text-slate-700 shadow-sm whitespace-nowrap">
+                  <div className="absolute left-[478px] top-[73px] w-[170px] flex items-center gap-2.5 px-4 py-4 bg-white border border-slate-200 rounded-xl text-xs font-semibold text-slate-700 shadow-sm whitespace-nowrap">
                     <Database size={18} className="text-emerald-500 flex-shrink-0" /> ERP & Datenbank
                   </div>
 
                   {/* System: Slack & Teams */}
-                  <div className="absolute left-[430px] top-[194px] w-[170px] flex items-center gap-2.5 px-4 py-3.5 bg-white border border-slate-200 rounded-xl text-xs font-semibold text-slate-700 shadow-sm whitespace-nowrap">
+                  <div className="absolute left-[478px] top-[208px] w-[170px] flex items-center gap-2.5 px-4 py-4 bg-white border border-slate-200 rounded-xl text-xs font-semibold text-slate-700 shadow-sm whitespace-nowrap">
                     <MessageSquare size={18} className="text-violet-500 flex-shrink-0" /> Slack & Teams
                   </div>
 
                   {/* System: Dashboard */}
-                  <div className="absolute left-[430px] top-[318px] w-[170px] flex items-center gap-2.5 px-4 py-3.5 bg-white border border-blue-200 rounded-xl text-xs font-semibold text-slate-700 shadow-sm shadow-blue-600/10 whitespace-nowrap">
+                  <div className="absolute left-[478px] top-[343px] w-[170px] flex items-center gap-2.5 px-4 py-4 bg-white border border-blue-200 rounded-xl text-xs font-semibold text-slate-700 shadow-sm shadow-blue-600/10 whitespace-nowrap">
                     <LayoutDashboard size={18} className="text-blue-600 flex-shrink-0" /> Ihr Dashboard
                   </div>
 
                   {/* Attachment: KI-Modell */}
-                  <div className="absolute left-[165px] top-[400px] flex items-center gap-2 px-3.5 py-2 bg-white/90 border border-dashed border-slate-300 rounded-full text-xs font-medium text-slate-600">
+                  <div className="absolute left-[189px] top-[430px] flex items-center gap-2 px-3.5 py-2 bg-white/90 border border-dashed border-slate-300 rounded-full text-xs font-medium text-slate-600">
                     <Sparkles size={14} className="text-blue-600" /> KI-Modell
                   </div>
 
                   {/* Attachment: PostgreSQL */}
-                  <div className="absolute left-[320px] top-[400px] flex items-center gap-2 px-3.5 py-2 bg-white/90 border border-dashed border-slate-300 rounded-full text-xs font-medium text-slate-600">
+                  <div className="absolute left-[374px] top-[430px] flex items-center gap-2 px-3.5 py-2 bg-white/90 border border-dashed border-slate-300 rounded-full text-xs font-medium text-slate-600">
                     <Database size={14} className="text-emerald-500" /> PostgreSQL
                   </div>
 
@@ -147,6 +149,7 @@ export default function LandingPage() {
                     Hosted in Germany · planbare Kosten
                   </div>
                 </div>
+                </div>
 
                 {/* Decorative Background Elements behind diagram */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-blue-100/40 to-purple-100/40 rounded-full blur-3xl -z-10"></div>
@@ -158,7 +161,8 @@ export default function LandingPage() {
         {/* NEW TESTIMONIAL SECTION */}
         <section className="py-24 bg-white border-b border-slate-100">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
+            <Reveal>
+              <div className="max-w-4xl mx-auto text-center">
               <div className="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-widest text-blue-600 uppercase bg-blue-50 rounded-full border border-blue-100">
                 Testimonial
               </div>
@@ -189,25 +193,31 @@ export default function LandingPage() {
                   <img src="/adabay.png" alt="Adabay" className="h-8 md:h-9 object-contain" />
                 </div>
               </div>
-            </div>
+              </div>
+            </Reveal>
           </div>
         </section>
 
         {/* 3. SOLUTIONS GRID (ID: #solutions) */}
         <section id="solutions" className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="max-w-3xl mb-12">
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">Automatisierung für jedes Team.</h2>
-              <p className="text-lg text-slate-600">Ob Vertrieb, Finance, HR oder IT – wir automatisieren die Prozesse, in denen Ihre Zeit verloren geht.</p>
-            </div>
+            <Reveal>
+              <div className="max-w-3xl mb-12">
+                <h2 className="text-3xl font-bold text-slate-900 mb-4">Automatisierung für jedes Team.</h2>
+                <p className="text-lg text-slate-600">Ob Vertrieb, Finance, HR oder IT – wir automatisieren die Prozesse, in denen Ihre Zeit verloren geht.</p>
+              </div>
+            </Reveal>
 
-            <SolutionsShowcase />
+            <Reveal delay={120}>
+              <SolutionsShowcase />
+            </Reveal>
           </div>
         </section>
 
         {/* 3b. BEYOND PLATFORMS SECTION */}
         <section className="py-24 bg-slate-50 border-y border-slate-100">
           <div className="max-w-7xl mx-auto px-6">
+            <Reveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
               <div className="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-widest text-blue-600 uppercase bg-blue-50 rounded-full border border-blue-100">
                 Mehr als Automatisierung
@@ -221,7 +231,7 @@ export default function LandingPage() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
+              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-blue-600">
                   <Server className="w-7 h-7" />
                 </div>
@@ -231,7 +241,7 @@ export default function LandingPage() {
                 </p>
               </div>
 
-              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
+              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-blue-600">
                   <Wallet className="w-7 h-7" />
                 </div>
@@ -241,7 +251,7 @@ export default function LandingPage() {
                 </p>
               </div>
 
-              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
+              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-blue-600">
                   <LayoutDashboard className="w-7 h-7" />
                 </div>
@@ -251,12 +261,14 @@ export default function LandingPage() {
                 </p>
               </div>
             </div>
+            </Reveal>
           </div>
         </section>
 
         {/* 4. FOUNDER SECTION (ID: #founder) */}
         <section id="founder" className="py-24 bg-white border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-6">
+            <Reveal>
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-8 leading-tight">
                 Wir kennen die Grenzen der Plattformen. <br />
@@ -282,12 +294,14 @@ export default function LandingPage() {
                 <img src="/nova.png" alt="Nova SBE Logo" className="h-14 object-contain" />
               </div>
             </div>
+          </Reveal>
           </div>
         </section>
 
         {/* 5. ENGAGEMENT MODELS */}
         <section id="work" className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
+            <Reveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-slate-900 mb-4">Wie wir arbeiten.</h2>
               <p className="text-lg text-slate-600">Transparente Modelle für jede Phase Ihrer Automatisierung.</p>
@@ -295,7 +309,7 @@ export default function LandingPage() {
 
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {/* Card A: Das Audit */}
-              <div className="p-10 rounded-3xl bg-slate-50 border border-slate-100 hover:border-blue-200 transition-all duration-300">
+              <div className="p-10 rounded-3xl bg-slate-50 border border-slate-100 hover:border-blue-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                 <div className="flex items-center justify-between mb-8">
                   <h3 className="text-2xl font-bold text-slate-900">Das Audit</h3>
                 </div>
@@ -320,7 +334,7 @@ export default function LandingPage() {
               </div>
 
               {/* Card B: Der Build */}
-              <div className="p-10 rounded-3xl bg-white border-2 border-slate-900 shadow-xl relative overflow-hidden">
+              <div className="p-10 rounded-3xl bg-white border-2 border-slate-900 shadow-xl relative overflow-hidden hover:-translate-y-1 transition-transform duration-300">
                 {/* Decorative Elements */}
                 <div className="absolute inset-0 bg-[radial-gradient(#0F172A_1px,transparent_1px)] [background-size:20px_20px] opacity-[0.03] [mask-image:radial-gradient(circle_at_top_right,white,transparent_70%)] pointer-events-none" />
                 <div className="absolute -top-24 -right-24 w-64 h-64 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
@@ -347,15 +361,17 @@ export default function LandingPage() {
                 </ul>
               </div>
             </div>
+            </Reveal>
           </div>
         </section>
 
         {/* 6. TECH STACK & SECURITY (Bento Style) */}
         <section className="py-24 bg-slate-50">
           <div className="max-w-7xl mx-auto px-6">
+            <Reveal>
             <div className="grid lg:grid-cols-2 gap-6">
               {/* Box 1: Security & Tech Stack - Dark */}
-              <div className="bg-slate-900 rounded-3xl p-10 flex flex-col justify-between text-white shadow-xl overflow-hidden relative group min-h-[400px]">
+              <div className="bg-slate-900 rounded-3xl p-10 flex flex-col justify-between text-white shadow-xl overflow-hidden relative group min-h-[400px] hover:-translate-y-1 transition-transform duration-300">
                 <div className="absolute top-0 right-0 p-32 bg-blue-600/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-blue-600/20 transition-all duration-1000" />
 
                 <div className="relative z-10">
@@ -379,7 +395,7 @@ export default function LandingPage() {
                 </div>
               </div>
 
-              <div className="bg-indigo-50 rounded-3xl p-10 flex flex-col justify-center text-slate-900 shadow-sm border border-indigo-100 min-h-[400px]">
+              <div className="bg-indigo-50 rounded-3xl p-10 flex flex-col justify-center text-slate-900 shadow-sm border border-indigo-100 min-h-[400px] hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
                 <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm text-indigo-600">
                   <div className="w-8 h-8 flex items-center justify-center">
                     <Workflow className="w-6 h-6" />
@@ -394,7 +410,7 @@ export default function LandingPage() {
               </div>
 
               {/* Box 3: Failure Rate - White */}
-              <div className="bg-white rounded-3xl p-10 flex flex-col justify-center text-slate-900 shadow-sm border border-slate-200 min-h-[360px]">
+              <div className="bg-white rounded-3xl p-10 flex flex-col justify-center text-slate-900 shadow-sm border border-slate-200 min-h-[360px] hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">
                   Gehören Sie zu den 5 %<br /> die gewinnen.
                 </h2>
@@ -409,7 +425,7 @@ export default function LandingPage() {
               </div>
 
               {/* Box 4: Meeting CTA - Dark Blue/Slate */}
-              <div className="bg-slate-800 rounded-3xl p-10 flex flex-col justify-center text-white shadow-xl overflow-hidden relative group min-h-[360px]">
+              <div className="bg-slate-800 rounded-3xl p-10 flex flex-col justify-center text-white shadow-xl overflow-hidden relative group min-h-[360px] hover:-translate-y-1 transition-transform duration-300">
                 <div className="absolute bottom-0 left-0 p-24 bg-blue-500/10 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2 group-hover:bg-blue-500/20 transition-all duration-1000" />
 
                 <div className="relative z-10 h-full flex flex-col justify-between">
@@ -429,54 +445,61 @@ export default function LandingPage() {
                 </div>
               </div>
             </div>
+            </Reveal>
           </div>
         </section>
 
-        {/* 7. PROCESS TIMELINE (ID: #process) */}
-        <section id="process" className="py-24 bg-slate-50">
+        {/* 7. PROCESS (ID: #process) */}
+        <section id="process" className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center text-slate-900 mb-16">Von Chaos zu Autopilot.</h2>
-
-            <div className="max-w-4xl mx-auto">
-              <div className="relative">
-                {/* Connecting Line (Desktop) */}
-                <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-200 -z-10 -translate-y-1/2" />
-
-                <div className="grid md:grid-cols-3 gap-12">
-                  {/* Step 1 */}
-                  <div className="relative bg-white p-8 rounded-2xl border border-slate-100 shadow-lg text-center group hover:-translate-y-2 transition-transform duration-300">
-                    <div className="w-12 h-12 mx-auto bg-blue-50 text-blue-600 rounded-full flex items-center justify-center font-bold text-xl mb-4 border-4 border-white shadow-sm relative z-10 group-hover:scale-110 transition-transform">
-                      1
-                    </div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Analyse</h3>
-                    <p className="text-slate-600">Wir prüfen Ihre manuellen Prozesse und definieren Anforderungen.</p>
-                  </div>
-
-                  {/* Step 2 */}
-                  <div className="relative bg-white p-8 rounded-2xl border border-slate-100 shadow-lg text-center group hover:-translate-y-2 transition-transform duration-300">
-                    <div className="w-12 h-12 mx-auto bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl mb-4 border-4 border-white shadow-sm relative z-10 group-hover:scale-110 transition-transform">
-                      2
-                    </div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Connect</h3>
-                    <p className="text-slate-600">Wir bauen die Daten-Pipelines und automatisieren die Workflows.</p>
-                  </div>
-
-                  {/* Step 3 */}
-                  <div className="relative bg-white p-8 rounded-2xl border border-slate-100 shadow-lg text-center group hover:-translate-y-2 transition-transform duration-300">
-                    <div className="w-12 h-12 mx-auto bg-slate-900 text-white rounded-full flex items-center justify-center font-bold text-xl mb-4 border-4 border-white shadow-sm relative z-10 group-hover:scale-110 transition-transform">
-                      3
-                    </div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Handover</h3>
-                    <p className="text-slate-600">Übergabe des laufenden Systems inklusive Schulung und Doku.</p>
-                  </div>
-                </div>
+            <Reveal>
+              <div className="max-w-3xl mb-16">
+                <h2 className="text-3xl font-bold text-slate-900 mb-4">Von Chaos zu Autopilot.</h2>
+                <p className="text-lg text-slate-600">In drei Schritten zur laufenden Automatisierung.</p>
               </div>
+            </Reveal>
+
+            <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
+              <Reveal>
+                <div className="group h-full">
+                  <div className="flex items-center gap-4 mb-8">
+                    <span className="font-mono text-sm font-bold text-blue-600 tracking-widest">01</span>
+                    <div className="h-px flex-1 bg-gradient-to-r from-blue-300 via-slate-200 to-transparent"></div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">Analyse</h3>
+                  <p className="text-lg text-slate-600 leading-relaxed">Wir prüfen Ihre manuellen Prozesse und definieren gemeinsam die Anforderungen.</p>
+                </div>
+              </Reveal>
+
+              <Reveal delay={120}>
+                <div className="group h-full">
+                  <div className="flex items-center gap-4 mb-8">
+                    <span className="font-mono text-sm font-bold text-blue-600 tracking-widest">02</span>
+                    <div className="h-px flex-1 bg-gradient-to-r from-blue-300 via-slate-200 to-transparent"></div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">Connect</h3>
+                  <p className="text-lg text-slate-600 leading-relaxed">Wir bauen die Daten-Pipelines und automatisieren die Workflows.</p>
+                </div>
+              </Reveal>
+
+              <Reveal delay={240}>
+                <div className="group h-full">
+                  <div className="flex items-center gap-4 mb-8">
+                    <span className="font-mono text-sm font-bold text-blue-600 tracking-widest">03</span>
+                    <div className="h-px flex-1 bg-gradient-to-r from-blue-300 via-slate-200 to-transparent"></div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">Handover</h3>
+                  <p className="text-lg text-slate-600 leading-relaxed">Übergabe des laufenden Systems inklusive Schulung und Doku.</p>
+                </div>
+              </Reveal>
             </div>
           </div>
         </section>
 
         {/* 8. CONTACT SECTION */}
-        <ContactSection />
+        <Reveal>
+          <ContactSection />
+        </Reveal>
 
       </main>
 
