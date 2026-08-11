@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageSquare, ArrowRight, CheckCircle2, Database, Server, Webhook, Clock, LayoutDashboard, Wallet, Workflow, Sparkles, Bot } from 'lucide-react';
+import { MessageSquare, ArrowRight, CheckCircle2, Database, Server, Webhook, Clock, LayoutDashboard, Wallet, Workflow, Sparkles } from 'lucide-react';
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import ContactSection from '@/components/ContactSection';
@@ -68,77 +68,74 @@ export default function LandingPage() {
 
               {/* Right Column: Workflow Canvas (n8n style) */}
               <div className="relative hidden lg:block ml-auto">
-                <div className="relative z-10 w-[520px] h-[420px] bg-white rounded-3xl border border-slate-200 shadow-2xl shadow-slate-200/60 overflow-hidden">
+                <div className="relative z-10 w-[620px] h-[480px] bg-white rounded-3xl border border-slate-200 shadow-2xl shadow-slate-200/60 overflow-hidden">
                   {/* Dotted canvas grid */}
-                  <div className="absolute inset-0 bg-[radial-gradient(rgba(100,116,139,0.18)_1px,transparent_1px)] [background-size:18px_18px]"></div>
+                  <div className="absolute inset-0 bg-[radial-gradient(rgba(100,116,139,0.18)_1px,transparent_1px)] [background-size:20px_20px]"></div>
                   {/* Soft glow */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-100/60 rounded-full blur-3xl"></div>
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-100/60 rounded-full blur-3xl"></div>
 
                   {/* Edges */}
-                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 520 420" fill="none">
-                    {/* Triggers -> Backend */}
-                    <path d="M174 107 C 192 107 188 168 205 168" stroke="#cbd5e1" strokeWidth="1.5" />
-                    <path d="M174 227 C 192 227 188 196 205 196" stroke="#cbd5e1" strokeWidth="1.5" />
-                    {/* Backend -> Systems */}
-                    <path d="M375 160 C 392 160 386 76 400 76" stroke="#cbd5e1" strokeWidth="1.5" />
-                    <path d="M375 182 C 392 182 388 211 400 211" stroke="#cbd5e1" strokeWidth="1.5" />
-                    <path d="M375 204 C 392 204 386 346 400 346" stroke="#cbd5e1" strokeWidth="1.5" />
-                    {/* Dashed attachments below backend */}
-                    <path d="M255 224 C 255 265 195 280 195 315" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="4 4" />
-                    <path d="M325 224 C 325 265 320 280 320 315" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="4 4" />
+                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 620 480" fill="none">
+                    {/* Triggers -> KI-Agent */}
+                    <path d="M182 135 C 212 135 210 200 240 200" stroke="#cbd5e1" strokeWidth="1.5" />
+                    <path d="M182 275 C 212 275 210 238 240 238" stroke="#cbd5e1" strokeWidth="1.5" />
+                    {/* KI-Agent -> Systems */}
+                    <path d="M410 195 C 422 195 416 95 430 95" stroke="#cbd5e1" strokeWidth="1.5" />
+                    <path d="M410 219 L 430 219" stroke="#cbd5e1" strokeWidth="1.5" />
+                    <path d="M410 243 C 422 243 416 343 430 343" stroke="#cbd5e1" strokeWidth="1.5" />
+                    {/* Dashed attachments below the agent */}
+                    <path d="M295 263 C 295 325 225 345 225 400" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="4 4" />
+                    <path d="M355 263 C 355 325 385 345 385 400" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="4 4" />
                     {/* Connection dots */}
-                    {[[174, 107], [205, 168], [174, 227], [205, 196], [375, 160], [400, 76], [375, 182], [400, 211], [375, 204], [400, 346]].map(([cx, cy]) => (
+                    {[[182, 135], [240, 200], [182, 275], [240, 238], [410, 195], [430, 95], [410, 219], [430, 219], [410, 243], [430, 343]].map(([cx, cy]) => (
                       <circle key={`${cx}-${cy}`} cx={cx} cy={cy} r="2.5" fill="#94a3b8" />
                     ))}
                   </svg>
 
                   {/* Trigger: Webhook */}
-                  <div className="absolute left-6 top-[80px] w-[150px] flex items-center gap-2.5 px-4 py-3.5 bg-white border border-slate-200 rounded-xl text-sm font-semibold text-slate-700 shadow-sm">
-                    <Webhook size={16} className="text-blue-600 flex-shrink-0" /> Webhook
+                  <div className="absolute left-8 top-[110px] w-[150px] flex items-center gap-2.5 px-4 py-3.5 bg-white border border-slate-200 rounded-xl text-sm font-semibold text-slate-700 shadow-sm">
+                    <Webhook size={18} className="text-blue-600 flex-shrink-0" /> Webhook
                   </div>
 
                   {/* Trigger: Scheduler */}
-                  <div className="absolute left-6 top-[200px] w-[150px] flex items-center gap-2.5 px-4 py-3.5 bg-white border border-slate-200 rounded-xl text-sm font-semibold text-slate-700 shadow-sm">
-                    <Clock size={16} className="text-amber-500 flex-shrink-0" /> Scheduler
+                  <div className="absolute left-8 top-[250px] w-[150px] flex items-center gap-2.5 px-4 py-3.5 bg-white border border-slate-200 rounded-xl text-sm font-semibold text-slate-700 shadow-sm">
+                    <Clock size={18} className="text-amber-500 flex-shrink-0" /> Scheduler
                   </div>
 
-                  {/* Central Node: KI-Agent */}
-                  <div className="absolute left-[205px] top-[140px] w-[170px] h-[84px] flex items-center gap-3 p-3 bg-white border border-blue-200 rounded-2xl shadow-lg shadow-blue-600/10">
-                    <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white flex-shrink-0 shadow-md shadow-blue-600/30">
-                      <Bot size={20} />
+                  {/* Central Node: Workflow */}
+                  <div className="absolute left-[240px] top-[175px] w-[170px] h-[88px] flex items-center gap-3.5 p-4 bg-white border border-blue-200 rounded-2xl shadow-lg shadow-blue-600/10">
+                    <div className="w-11 h-11 bg-blue-600 rounded-xl flex items-center justify-center text-white flex-shrink-0 shadow-md shadow-blue-600/30">
+                      <Workflow size={22} />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="text-sm font-bold text-slate-900 leading-tight mb-0.5">KI-Agent</div>
-                      <div className="text-[10px] text-slate-500 leading-tight">entscheidet & führt aus</div>
+                      <div className="text-sm font-bold text-slate-900 leading-tight mb-0.5">Rechnungs-Workflow</div>
+                      <div className="text-[11px] text-slate-500 leading-tight">auslesen, abgleichen, verbuchen</div>
                     </div>
                   </div>
 
                   {/* System: ERP & Datenbank */}
-                  <div className="absolute left-[400px] top-[40px] w-[96px] h-[72px] flex flex-col items-center justify-center gap-1.5 bg-white border border-slate-200 rounded-xl shadow-sm">
-                    <Database size={18} className="text-emerald-500" />
-                    <div className="text-[10px] font-semibold text-slate-700 text-center leading-tight px-1">ERP & Datenbank</div>
+                  <div className="absolute left-[430px] top-[70px] w-[170px] flex items-center gap-2.5 px-4 py-3.5 bg-white border border-slate-200 rounded-xl text-xs font-semibold text-slate-700 shadow-sm whitespace-nowrap">
+                    <Database size={18} className="text-emerald-500 flex-shrink-0" /> ERP & Datenbank
                   </div>
 
                   {/* System: Slack & Teams */}
-                  <div className="absolute left-[400px] top-[175px] w-[96px] h-[72px] flex flex-col items-center justify-center gap-1.5 bg-white border border-slate-200 rounded-xl shadow-sm">
-                    <MessageSquare size={18} className="text-violet-500" />
-                    <div className="text-[10px] font-semibold text-slate-700 text-center leading-tight px-1">Slack & Teams</div>
+                  <div className="absolute left-[430px] top-[194px] w-[170px] flex items-center gap-2.5 px-4 py-3.5 bg-white border border-slate-200 rounded-xl text-xs font-semibold text-slate-700 shadow-sm whitespace-nowrap">
+                    <MessageSquare size={18} className="text-violet-500 flex-shrink-0" /> Slack & Teams
                   </div>
 
                   {/* System: Dashboard */}
-                  <div className="absolute left-[400px] top-[310px] w-[96px] h-[72px] flex flex-col items-center justify-center gap-1.5 bg-white border border-blue-200 rounded-xl shadow-sm shadow-blue-600/10">
-                    <LayoutDashboard size={18} className="text-blue-600" />
-                    <div className="text-[10px] font-semibold text-slate-700 text-center leading-tight px-1">Ihr Dashboard</div>
+                  <div className="absolute left-[430px] top-[318px] w-[170px] flex items-center gap-2.5 px-4 py-3.5 bg-white border border-blue-200 rounded-xl text-xs font-semibold text-slate-700 shadow-sm shadow-blue-600/10 whitespace-nowrap">
+                    <LayoutDashboard size={18} className="text-blue-600 flex-shrink-0" /> Ihr Dashboard
                   </div>
 
                   {/* Attachment: KI-Modell */}
-                  <div className="absolute left-[140px] top-[315px] flex items-center gap-1.5 px-3 py-2 bg-white/90 border border-dashed border-slate-300 rounded-full text-[11px] font-medium text-slate-600">
-                    <Sparkles size={12} className="text-blue-600" /> KI-Modell
+                  <div className="absolute left-[165px] top-[400px] flex items-center gap-2 px-3.5 py-2 bg-white/90 border border-dashed border-slate-300 rounded-full text-xs font-medium text-slate-600">
+                    <Sparkles size={14} className="text-blue-600" /> KI-Modell
                   </div>
 
                   {/* Attachment: PostgreSQL */}
-                  <div className="absolute left-[268px] top-[315px] flex items-center gap-1.5 px-3 py-2 bg-white/90 border border-dashed border-slate-300 rounded-full text-[11px] font-medium text-slate-600">
-                    <Database size={12} className="text-emerald-500" /> PostgreSQL
+                  <div className="absolute left-[320px] top-[400px] flex items-center gap-2 px-3.5 py-2 bg-white/90 border border-dashed border-slate-300 rounded-full text-xs font-medium text-slate-600">
+                    <Database size={14} className="text-emerald-500" /> PostgreSQL
                   </div>
 
                 </div>
