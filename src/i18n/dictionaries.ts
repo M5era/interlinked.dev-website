@@ -68,6 +68,7 @@ const en = {
         statLabel: "webhooks processed per month",
         title: "INCONconnect: insurance claims without re-keying",
         desc: "Property managers report claims straight from their CRM — synced in real time, zero re-keying.",
+        image: "/case-incon.jpg",
       },
       {
         tag: "Payments platform",
@@ -75,13 +76,7 @@ const en = {
         statLabel: "businesses processing daily transactions",
         title: "Domopay: payments on autopilot",
         desc: "A Stripe-based payments platform for a German proptech company — from feature list to production.",
-      },
-      {
-        tag: "Connectors & pipelines",
-        stat: "100+",
-        statLabel: "integrations across 50+ APIs",
-        title: "When there is no native integration",
-        desc: "Custom connectors and data pipelines that keep systems reliably in sync.",
+        image: "/case-domopay.jpg",
       },
     ],
     testimonial: {
@@ -377,6 +372,7 @@ const de: typeof en = {
         statLabel: "Webhooks pro Monat verarbeitet",
         title: "INCONconnect: Schadenmeldungen ohne Doppeleingabe",
         desc: "Hausverwaltungen melden Schäden direkt aus ihrem CRM – in Echtzeit synchronisiert, ohne Doppeleingabe.",
+        image: "/case-incon.jpg",
       },
       {
         tag: "Payments-Plattform",
@@ -384,13 +380,7 @@ const de: typeof en = {
         statLabel: "Unternehmen mit täglichen Transaktionen",
         title: "Domopay: Zahlungen auf Autopilot",
         desc: "Payments-Plattform auf Stripe-Basis für einen deutschen Proptech-Anbieter – von der Feature-Liste bis in die Produktion.",
-      },
-      {
-        tag: "Konnektoren & Pipelines",
-        stat: "100+",
-        statLabel: "Integrationen über 50+ APIs",
-        title: "Wenn es keine fertige Schnittstelle gibt",
-        desc: "Eigene Konnektoren und Daten-Pipelines, die Systeme zuverlässig synchron halten.",
+        image: "/case-domopay.jpg",
       },
     ],
     testimonial: {

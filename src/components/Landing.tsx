@@ -149,17 +149,21 @@ export default function Landing({ lang }: { lang: Lang }) {
                             </div>
                         </Reveal>
 
-                        <div className="grid md:grid-cols-3 gap-6">
+                        <div className="grid md:grid-cols-2 gap-6">
                             {t.cases.items.map((item, i) => (
                                 <Reveal key={item.title} delay={i * 120} className="h-full">
-                                    <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
-                                        <div className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-6">{item.tag}</div>
-                                        <div className="mb-6">
-                                            <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800 mb-2">{item.stat}</div>
-                                            <div className="text-sm font-medium text-slate-500 uppercase tracking-wide">{item.statLabel}</div>
+                                    <div className="rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col overflow-hidden">
+                                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                                        <img src={item.image} alt={item.title} className="w-full aspect-[16/9] object-cover grayscale" />
+                                        <div className="p-8 flex flex-col flex-1">
+                                            <div className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-6">{item.tag}</div>
+                                            <div className="mb-6">
+                                                <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800 mb-2">{item.stat}</div>
+                                                <div className="text-sm font-medium text-slate-500 uppercase tracking-wide">{item.statLabel}</div>
+                                            </div>
+                                            <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+                                            <p className="text-slate-600 leading-relaxed">{item.desc}</p>
                                         </div>
-                                        <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
-                                        <p className="text-slate-600 leading-relaxed">{item.desc}</p>
                                     </div>
                                 </Reveal>
                             ))}
@@ -286,7 +290,7 @@ export default function Landing({ lang }: { lang: Lang }) {
                                 <img
                                     src="/team.jpg"
                                     alt={t.founder.imageAlt}
-                                    className="rounded-3xl shadow-2xl shadow-slate-300/50 object-cover w-full aspect-[4/3]"
+                                    className="rounded-3xl shadow-2xl shadow-slate-300/50 object-cover w-full aspect-[4/3] grayscale"
                                 />
                             </div>
 
