@@ -178,23 +178,23 @@ const en = {
     ],
   },
   process: {
-    title: "From chaos to autopilot.",
-    sub: "Three steps to automation your team actually uses.",
+    title: "How we work",
+    sub: "The same three steps, every project.",
     steps: [
       {
         num: "01",
-        title: "Analyze",
-        desc: "We map your manual processes, find where the time leaks, and define the small set of automations genuinely worth building.",
+        title: "Identify",
+        desc: "We start by understanding how your team actually operates: where hours disappear, what gets done twice, what everyone quietly works around. From that, a short list of automations that will earn their place.",
       },
       {
         num: "02",
         title: "Build",
-        desc: "We build the solution, connect the APIs and run it reliably on our infrastructure in Germany — including testing and error handling.",
+        desc: "Then we build. Everything ships into the systems and tools you already use — no rip-and-replace, no parallel universe. Engineered to run properly from day one, not after three rounds of fixes.",
       },
       {
         num: "03",
         title: "Adopt",
-        desc: "Then we make it stick: training, tuning and operations alongside your team, until the system is simply how work gets done.",
+        desc: "Then we make it stick. We work alongside your team — training, tuning, adjusting — until the system isn't “the new AI thing” but simply how the work gets done. Only then do we step back.",
       },
     ],
   },
