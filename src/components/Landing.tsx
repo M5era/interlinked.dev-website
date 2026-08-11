@@ -274,7 +274,7 @@ export default function Landing({ lang }: { lang: Lang }) {
                                 <img
                                     src="/team.jpg"
                                     alt={t.founder.imageAlt}
-                                    className="w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] object-cover grayscale"
+                                    className="w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] object-cover object-bottom grayscale"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/25 to-transparent"></div>
                                 <div className="absolute bottom-0 left-0 p-8 md:p-12 max-w-2xl">

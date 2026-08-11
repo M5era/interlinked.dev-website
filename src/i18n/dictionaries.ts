@@ -2,9 +2,9 @@ export type Lang = "en" | "de";
 
 const en = {
   meta: {
-    title: "Interlinked | Custom Automation & Integration Engineering",
+    title: "Interlinked | Custom AI Automation Studio",
     description:
-      "We build automation as real software: robust backends, 100+ integrations shipped, hosted in Germany. From workflow automation to full platforms — with predictable costs.",
+      "Less AI talk, more shipped: we build the automations that pay for themselves — voice agents, workflow automation and custom AI tools, engineered into how you already work. Hosted in Germany.",
   },
   nav: {
     solutions: "Solutions",
@@ -303,29 +303,29 @@ const en = {
 
 const de: typeof en = {
   meta: {
-    title: "Interlinked | Automatisierung ohne Limits",
+    title: "Interlinked | Studio für maßgeschneiderte KI-Automatisierung",
     description:
-      "Prozess-Automatisierung ist erst der Anfang: robuste Backends, eigene UIs und maßgeschneiderte Software – mit planbaren Kosten. Gehostet in Deutschland.",
+      "Weniger KI-Gerede, mehr geliefert: Wir bauen Automatisierungen, die sich rechnen – Voice Agents, Workflow-Automatisierung und eigene KI-Tools. Gehostet in Deutschland.",
   },
   nav: {
     solutions: "Lösungen",
     cases: "Projekte",
     process: "Arbeitsweise",
     faq: "FAQ",
-    contact: "Projekt starten",
+    contact: "Projekt einreichen",
   },
   hero: {
     badge: "Beratung & Engineering",
     open: "Offen für neue Projekte",
-    h1a: "Mehr als No-Code.",
-    h1b: "Automatisierung ohne Limits.",
-    sub: "Automatisierung nimmt Ihnen Routineaufgaben ab – Studien zeigen bis zu 75 % Zeitersparnis. Und wir gehen weiter: mit robusten Backends, eigenen Tools und Oberflächen, die exakt zu Ihrem Team passen.",
-    ctaPrimary: "Projekt starten",
-    ctaSecondary: "So funktioniert's",
+    h1a: "Weniger KI-Gerede.",
+    h1b: "Mehr geliefert.",
+    sub: "Interlinked ist ein Studio für maßgeschneiderte KI-Automatisierung. Wir finden die Automatisierungen, die sich wirklich rechnen, bauen sie in Ihre bestehenden Abläufe ein und übergeben sie lauffähig – Voice Agents, Workflow-Automatisierung, eigene KI-Tools.",
+    ctaPrimary: "Projekt einreichen",
+    ctaSecondary: "Wie wir arbeiten",
     stats: [
-      { value: "8+", label: "Jahre Engineering" },
-      { value: "100+", label: "Integrationen gebaut" },
-      { value: "100k+", label: "Events/Monat produktiv" },
+      { value: "30+", label: "Individuelle Systeme geliefert" },
+      { value: "2–6 Wo.", label: "Von der Idee in die Produktion" },
+      { value: "8+ Jahre", label: "Engineering von Produktionssoftware" },
     ],
     canvas: {
       webhook: "Webhook",
@@ -468,23 +468,23 @@ const de: typeof en = {
     ],
   },
   process: {
-    title: "Von Chaos zu Autopilot.",
-    sub: "In drei Schritten zu Automatisierung, die Ihr Team wirklich nutzt.",
+    title: "Wie wir arbeiten",
+    sub: "Dieselben drei Schritte, in jedem Projekt.",
     steps: [
       {
         num: "01",
-        title: "Analyse",
-        desc: "Wir durchleuchten Ihre manuellen Prozesse, finden die Zeitfresser und definieren die Automatisierungen, die sich wirklich lohnen.",
+        title: "Verstehen",
+        desc: "Wir beginnen damit, zu verstehen, wie Ihr Team wirklich arbeitet: wo Stunden verschwinden, was doppelt gemacht wird, worum alle stillschweigend herumarbeiten. Daraus entsteht eine kurze Liste von Automatisierungen, die ihren Platz verdienen.",
       },
       {
         num: "02",
-        title: "Build",
-        desc: "Wir entwickeln die Lösung, verbinden die APIs und betreiben sie zuverlässig auf unserer Infrastruktur in Deutschland – inklusive Testing und Error-Handling.",
+        title: "Bauen",
+        desc: "Dann bauen wir. Alles fügt sich in die Systeme und Tools ein, die Sie bereits nutzen – kein Rip-and-Replace, kein Paralleluniversum. So gebaut, dass es vom ersten Tag an sauber läuft, nicht erst nach drei Korrekturrunden.",
       },
       {
         num: "03",
-        title: "Adoption",
-        desc: "Dann verankern wir das System im Alltag: Schulung, Feintuning und Betrieb gemeinsam mit Ihrem Team – bis es einfach dazugehört.",
+        title: "Verankern",
+        desc: "Dann sorgen wir dafür, dass es bleibt. Wir arbeiten an der Seite Ihres Teams – schulen, justieren, passen an – bis das System nicht mehr „das neue KI-Ding“ ist, sondern einfach die Art, wie gearbeitet wird. Erst dann ziehen wir uns zurück.",
       },
     ],
   },
@@ -511,7 +511,7 @@ const de: typeof en = {
     winDesc: "Die Mehrheit der Unternehmen scheitert an der Komplexität interner KI-Infrastrukturen. Machen Sie es besser: Interlinked liefert messbare Erfolge innerhalb weniger Wochen.",
     ctaTitle: "Welche Aufgaben halten Ihr Team unnötig auf?",
     ctaDesc: "Lassen Sie uns gemeinsam Ihr Automatisierungspotenzial entdecken. Beschreiben Sie Ihr Vorhaben – wir antworten innerhalb von drei Werktagen.",
-    ctaButton: "Projekt starten",
+    ctaButton: "Projekt einreichen",
   },
   faq: {
     badge: "FAQ",
