@@ -162,11 +162,11 @@ const en = {
   beyond: {
     badge: "More than automation",
     title: "Everything automation platforms can do.",
-    titleAccent: "And then some.",
+    titleAccent: "And everything they can't.",
     sub: "Platforms like n8n or Make are a strong starting point — and we happily use them. But when it matters, we build your automation as real software: robust, extensible and free of platform limits.",
     cards: [
       {
-        title: "Your own server",
+        title: "Our own servers",
         desc: "Your workflows run as real software on our infrastructure in Germany — no vendor lock-in, no execution limits, no platform ceilings.",
       },
       {
@@ -456,11 +456,11 @@ const de: typeof en = {
   beyond: {
     badge: "Mehr als Automatisierung",
     title: "Alles, was Automatisierungs-Plattformen können.",
-    titleAccent: "Und mehr.",
+    titleAccent: "Und alles, was sie nicht können.",
     sub: "Plattformen wie n8n oder Make sind ein starker Startpunkt – und wir setzen sie gerne ein. Wenn es darauf ankommt, bauen wir Ihre Automatisierung aber als richtige Software: robust, erweiterbar und ohne Plattform-Grenzen.",
     cards: [
       {
-        title: "Eigener Server",
+        title: "Unsere eigenen Server",
         desc: "Ihre Workflows laufen als richtige Software auf unserer Infrastruktur in Deutschland – ohne Vendor-Lock-in, Ausführungslimits oder Plattform-Grenzen.",
       },
       {
