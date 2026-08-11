@@ -1,15 +1,10 @@
 import React from "react";
 import {
     ArrowRight,
-    MessageSquare,
-    Database,
     Server,
-    Webhook,
-    Clock,
     LayoutDashboard,
     Wallet,
     Workflow,
-    Sparkles,
     XCircle,
     Hammer,
     Users,
@@ -64,123 +59,39 @@ export default function Landing({ lang }: { lang: Lang }) {
             <Navbar lang={lang} />
 
             <main className="pt-20">
-                {/* 2. HERO SECTION */}
-                <section className="relative pt-24 pb-20 lg:pt-32 lg:pb-28 overflow-hidden">
-                    <div className="max-w-7xl mx-auto px-6">
-                        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-                            {/* Left Column: Text */}
-                            <div className="max-w-2xl">
-                                <div className="flex flex-wrap items-center gap-3 mb-6 animate-fade-in-up">
-                                    <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-medium text-slate-600 bg-white rounded-full border border-slate-200">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
-                                        {t.hero.open}
-                                    </div>
-                                </div>
+                {/* 2. HERO SECTION — centered; the old workflow-canvas visual
+                    is archived in components/WorkflowCanvas.tsx */}
+                <section className="relative pt-28 pb-24 lg:pt-40 lg:pb-36 overflow-hidden">
+                    {/* Soft top glow */}
+                    <div className="absolute inset-x-0 -top-24 h-[480px] bg-[radial-gradient(ellipse_at_top,rgba(37,99,235,0.10),transparent_65%)] pointer-events-none"></div>
 
-                                {/* Capped at text-6xl: the column is ~616px wide and longer
-                                    headline words (EN "no-code.", DE "Automatisierung") clip
-                                    under the canvas at text-7xl. */}
-                                <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight text-slate-900 mb-8 leading-[1.1] break-words hyphens-auto lg:pr-10 animate-fade-in-up delay-100">
-                                    {t.hero.h1a} <br className="hidden lg:block" />
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">
-                                        {t.hero.h1b}
-                                    </span>
-                                </h1>
-
-                                <p className="text-xl text-slate-600 leading-relaxed max-w-lg mb-10 animate-fade-in-up delay-200">
-                                    {t.hero.sub}
-                                </p>
-
-                                <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-fade-in-up delay-300">
-                                    <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white transition-all bg-blue-600 rounded-full hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/20 active:scale-[0.98]">
-                                        {t.hero.ctaPrimary} <ArrowRight className="ml-2 w-5 h-5" />
-                                    </a>
-                                    <a href="#process" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-700 transition-all bg-white border border-slate-200 rounded-full hover:bg-slate-50 hover:border-slate-300 active:scale-[0.98]">
-                                        {t.hero.ctaSecondary}
-                                    </a>
-                                </div>
+                    <div className="relative max-w-4xl mx-auto px-6 text-center">
+                        <div className="flex justify-center mb-8 animate-fade-in-up">
+                            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-medium text-slate-600 bg-white rounded-full border border-slate-200 shadow-sm">
+                                <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                                {t.hero.open}
                             </div>
+                        </div>
 
-                            {/* Right Column: Workflow Canvas (n8n style) */}
-                            <div className="relative mt-4 lg:mt-0 lg:ml-auto h-[300px] sm:h-[400px] md:h-[480px] lg:h-[450px] xl:h-[590px]">
-                                <div className="absolute top-0 left-1/2 -translate-x-1/2 lg:left-auto lg:right-0 lg:translate-x-0 origin-top lg:origin-top-right scale-[0.48] sm:scale-[0.65] md:scale-[0.8] lg:scale-[0.75] xl:scale-100 w-[680px]">
-                                <div className="relative z-10 w-[680px] h-[520px] bg-white rounded-3xl border border-slate-200 shadow-2xl shadow-slate-200/60 overflow-hidden">
-                                    {/* Dotted canvas grid */}
-                                    <div className="absolute inset-0 bg-[radial-gradient(rgba(100,116,139,0.18)_1px,transparent_1px)] [background-size:20px_20px]"></div>
-                                    {/* Soft glow */}
-                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-100/60 rounded-full blur-3xl"></div>
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-8 leading-[1.08] animate-fade-in-up delay-100">
+                            {t.hero.h1a}
+                            <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">
+                                {t.hero.h1b}
+                            </span>
+                        </h1>
 
-                                    {/* Edges */}
-                                    <svg className="absolute inset-0 w-full h-full" viewBox="0 0 680 520" fill="none">
-                                        {/* Triggers -> Workflow */}
-                                        <path d="M192 160 C 216 160 214 215 235 215" stroke="#cbd5e1" strokeWidth="1.5" />
-                                        <path d="M192 310 C 216 310 214 255 235 255" stroke="#cbd5e1" strokeWidth="1.5" />
-                                        {/* Workflow -> Systems */}
-                                        <path d="M445 215 C 462 215 460 100 478 100" stroke="#cbd5e1" strokeWidth="1.5" />
-                                        <path d="M445 235 L 478 235" stroke="#cbd5e1" strokeWidth="1.5" />
-                                        <path d="M445 255 C 462 255 460 370 478 370" stroke="#cbd5e1" strokeWidth="1.5" />
-                                        {/* Dashed attachments below the workflow */}
-                                        <path d="M305 283 C 305 350 245 370 245 430" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="4 4" />
-                                        <path d="M375 283 C 375 350 435 370 435 430" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="4 4" />
-                                        {/* Connection dots */}
-                                        {[[192, 160], [235, 215], [192, 310], [235, 255], [445, 215], [478, 100], [445, 235], [478, 235], [445, 255], [478, 370]].map(([cx, cy]) => (
-                                            <circle key={`${cx}-${cy}`} cx={cx} cy={cy} r="2.5" fill="#94a3b8" />
-                                        ))}
-                                    </svg>
+                        <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto mb-10 animate-fade-in-up delay-200">
+                            {t.hero.sub}
+                        </p>
 
-                                    {/* Trigger: Webhook */}
-                                    <div className="absolute left-8 top-[133px] w-[160px] flex items-center gap-3 px-4 py-4 bg-white border border-slate-200 rounded-xl text-sm font-semibold text-slate-700 shadow-sm">
-                                        <Webhook size={18} className="text-blue-600 flex-shrink-0" /> {t.hero.canvas.webhook}
-                                    </div>
-
-                                    {/* Trigger: Scheduler */}
-                                    <div className="absolute left-8 top-[283px] w-[160px] flex items-center gap-3 px-4 py-4 bg-white border border-slate-200 rounded-xl text-sm font-semibold text-slate-700 shadow-sm">
-                                        <Clock size={18} className="text-amber-500 flex-shrink-0" /> {t.hero.canvas.scheduler}
-                                    </div>
-
-                                    {/* Central Node: Workflow */}
-                                    <div className="absolute left-[235px] top-[187px] w-[210px] h-[96px] flex items-center gap-4 p-4 bg-white border border-blue-200 rounded-2xl shadow-lg shadow-blue-600/10">
-                                        <div className="w-11 h-11 bg-blue-600 rounded-xl flex items-center justify-center text-white flex-shrink-0 shadow-md shadow-blue-600/30">
-                                            <Workflow size={22} />
-                                        </div>
-                                        <div className="flex-1 min-w-0">
-                                            <div className="text-base font-bold text-slate-900 leading-tight mb-1">{t.hero.canvas.workflowTitle}</div>
-                                            <div className="text-[11px] text-slate-500 leading-snug">{t.hero.canvas.workflowSub}</div>
-                                        </div>
-                                    </div>
-
-                                    {/* System: ERP & Database */}
-                                    <div className="absolute left-[478px] top-[73px] w-[170px] flex items-center gap-2.5 px-4 py-4 bg-white border border-slate-200 rounded-xl text-xs font-semibold text-slate-700 shadow-sm whitespace-nowrap">
-                                        <Database size={18} className="text-emerald-500 flex-shrink-0" /> {t.hero.canvas.erp}
-                                    </div>
-
-                                    {/* System: Slack & Teams */}
-                                    <div className="absolute left-[478px] top-[208px] w-[170px] flex items-center gap-2.5 px-4 py-4 bg-white border border-slate-200 rounded-xl text-xs font-semibold text-slate-700 shadow-sm whitespace-nowrap">
-                                        <MessageSquare size={18} className="text-violet-500 flex-shrink-0" /> {t.hero.canvas.slack}
-                                    </div>
-
-                                    {/* System: Dashboard */}
-                                    <div className="absolute left-[478px] top-[343px] w-[170px] flex items-center gap-2.5 px-4 py-4 bg-white border border-blue-200 rounded-xl text-xs font-semibold text-slate-700 shadow-sm shadow-blue-600/10 whitespace-nowrap">
-                                        <LayoutDashboard size={18} className="text-blue-600 flex-shrink-0" /> {t.hero.canvas.dashboard}
-                                    </div>
-
-                                    {/* Attachment: AI model */}
-                                    <div className="absolute left-[189px] top-[430px] flex items-center gap-2 px-3.5 py-2 bg-white/90 border border-dashed border-slate-300 rounded-full text-xs font-medium text-slate-600">
-                                        <Sparkles size={14} className="text-blue-600" /> {t.hero.canvas.aiModel}
-                                    </div>
-
-                                    {/* Attachment: PostgreSQL */}
-                                    <div className="absolute left-[374px] top-[430px] flex items-center gap-2 px-3.5 py-2 bg-white/90 border border-dashed border-slate-300 rounded-full text-xs font-medium text-slate-600">
-                                        <Database size={14} className="text-emerald-500" /> {t.hero.canvas.postgres}
-                                    </div>
-
-                                </div>
-
-                                </div>
-
-                                {/* Decorative Background Elements behind diagram */}
-                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-blue-100/40 to-purple-100/40 rounded-full blur-3xl -z-10"></div>
-                            </div>
+                        <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up delay-300">
+                            <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white transition-all bg-blue-600 rounded-full hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/20 active:scale-[0.98]">
+                                {t.hero.ctaPrimary} <ArrowRight className="ml-2 w-5 h-5" />
+                            </a>
+                            <a href="#process" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-700 transition-all bg-white border border-slate-200 rounded-full hover:bg-slate-50 hover:border-slate-300 active:scale-[0.98]">
+                                {t.hero.ctaSecondary}
+                            </a>
                         </div>
                     </div>
                 </section>
@@ -323,27 +234,25 @@ export default function Landing({ lang }: { lang: Lang }) {
                 </section>
 
                 {/* 7. PROCESS (ID: #process) */}
-                <section id="process" className="py-28 bg-white">
+                <section id="process" className="py-24 bg-white">
                     <div className="max-w-7xl mx-auto px-6">
                         <Reveal>
-                            <div className="text-center max-w-3xl mx-auto mb-16">
-                                <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-5 tracking-tight">{t.process.title}</h2>
-                                <p className="text-xl text-slate-600">{t.process.sub}</p>
+                            <div className="max-w-3xl mb-16">
+                                <h2 className="text-3xl font-bold text-slate-900 mb-4">{t.process.title}</h2>
+                                <p className="text-lg text-slate-600">{t.process.sub}</p>
                             </div>
                         </Reveal>
 
-                        <div className="grid md:grid-cols-3 gap-6">
+                        <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
                             {t.process.steps.map((step, i) => (
-                                <Reveal key={step.num} delay={i * 140} className="h-full">
-                                    <div className="relative h-full p-10 pt-14 rounded-3xl bg-slate-50 border border-slate-100 overflow-hidden hover:border-blue-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                                        <div className="absolute -top-10 -right-2 text-[160px] leading-none font-bold text-slate-200/70 select-none pointer-events-none group-hover:text-blue-100 transition-colors duration-500">
-                                            {step.num}
-                                        </div>
-                                        <div className="relative z-10">
+                                <Reveal key={step.num} delay={i * 120}>
+                                    <div className="group h-full">
+                                        <div className="flex items-center gap-4 mb-8">
                                             <span className="font-mono text-sm font-bold text-blue-600 tracking-widest">{step.num}</span>
-                                            <h3 className="text-2xl font-bold text-slate-900 mt-4 mb-4 group-hover:text-blue-600 transition-colors duration-300">{step.title}</h3>
-                                            <p className="text-lg text-slate-600 leading-relaxed">{step.desc}</p>
+                                            <div className="h-px flex-1 bg-gradient-to-r from-blue-300 via-slate-200 to-transparent"></div>
                                         </div>
+                                        <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">{step.title}</h3>
+                                        <p className="text-lg text-slate-600 leading-relaxed">{step.desc}</p>
                                     </div>
                                 </Reveal>
                             ))}
