@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, MessageSquare, UserPlus, ArrowRight, CheckCircle2, ShieldCheck, Cpu, Database, Server, Mic } from 'lucide-react';
+import { FileText, MessageSquare, UserPlus, ArrowRight, CheckCircle2, Cpu, Database, Server, Mic, Webhook, Mail, Clock, LayoutDashboard, Wallet } from 'lucide-react';
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import ContactSection from '@/components/ContactSection';
@@ -7,8 +7,8 @@ import ContactSection from '@/components/ContactSection';
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: 'Interlinked.dev | Beratung & Engineering für Prozess-Automatisierung',
-  description: 'Ihr Experte für Prozess-Automatisierung. Von der ersten Analyse bis zum vollautomatisierten Workflow.',
+  title: 'Interlinked.dev | Automatisierung & Custom Software',
+  description: 'Prozess-Automatisierung ist erst der Anfang: robuste Backends, eigene UIs und maßgeschneiderte Software – mit planbaren Kosten.',
 };
 
 export default function LandingPage() {
@@ -31,12 +31,12 @@ export default function LandingPage() {
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-8 leading-[1.1] break-words animate-fade-in-up delay-100">
                   Ihr Experte für <br className="hidden lg:block" />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">
-                    Prozess-Automatisierung.
+                    Automatisierung & Custom Software.
                   </span>
                 </h1>
 
                 <p className="text-xl text-slate-600 leading-relaxed max-w-lg mb-10 animate-fade-in-up delay-200">
-                  Automatisierung nimmt Ihnen Routineaufgaben ab: Studien zeigen, dass Unternehmen bis zu 75 % der Zeit einsparen, die bisher für manuelle Tätigkeiten aufgewendet wurde.
+                  Automatisierung nimmt Ihnen Routineaufgaben ab – Studien zeigen bis zu 75 % Zeitersparnis. Und wir gehen weiter: mit robusten Backends, eigenen Tools und Oberflächen, die exakt zu Ihrem Team passen.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-fade-in-up delay-300">
@@ -65,48 +65,65 @@ export default function LandingPage() {
                 </div>
               </div>
 
-              {/* Right Column: Abstract Graphic */}
+              {/* Right Column: System Graphic */}
               <div className="relative hidden lg:block ml-auto translate-x-8">
-                {/* Abstract Workflow Visualization */}
-                <div className="relative z-10 p-8">
-                  <div className="relative flex flex-col gap-8 items-center">
+                {/* Node-Graph Style System Visualization */}
+                <div className="relative z-10 p-8 w-[480px]">
+                  <div className="relative flex flex-col gap-6 items-center">
 
                     {/* Connecting Line - Central Axis */}
-                    <div className="absolute top-10 bottom-10 left-1/2 w-px border-l-2 border-dashed border-blue-200 -translate-x-1/2 -z-10"></div>
+                    <div className="absolute top-8 bottom-8 left-1/2 w-px border-l-2 border-dashed border-blue-200 -translate-x-1/2 -z-10"></div>
 
-                    {/* Card 1: Input (Left) */}
-                    <div className="flex items-center gap-4 p-4 bg-white/90 backdrop-blur-sm rounded-2xl border border-slate-200 shadow-sm w-64 -translate-x-12 hover:scale-105 transition-transform duration-300">
-                      <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 shadow-sm">
-                        <FileText size={20} />
+                    {/* Row 1: Triggers */}
+                    <div className="flex gap-3">
+                      <div className="flex items-center gap-2 px-4 py-2.5 bg-white/90 backdrop-blur-sm rounded-full border border-slate-200 shadow-sm text-sm font-semibold text-slate-700 hover:scale-105 transition-transform duration-300">
+                        <Webhook size={16} className="text-blue-600" /> Webhook
                       </div>
-                      <div className="flex-1">
-                        <div className="text-sm font-semibold text-slate-700">Rechnungseingang</div>
+                      <div className="flex items-center gap-2 px-4 py-2.5 bg-white/90 backdrop-blur-sm rounded-full border border-slate-200 shadow-sm text-sm font-semibold text-slate-700 hover:scale-105 transition-transform duration-300">
+                        <Mail size={16} className="text-blue-600" /> E-Mail
+                      </div>
+                      <div className="flex items-center gap-2 px-4 py-2.5 bg-white/90 backdrop-blur-sm rounded-full border border-slate-200 shadow-sm text-sm font-semibold text-slate-700 hover:scale-105 transition-transform duration-300">
+                        <Clock size={16} className="text-blue-600" /> Zeitplan
                       </div>
                     </div>
 
-                    {/* Card 2: KI-Datenextraktion (Right - Active) */}
-                    <div className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-blue-100 shadow-xl shadow-blue-900/5 w-72 translate-x-12 z-20 hover:scale-105 transition-transform duration-300">
-                      <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-600/20">
-                        <Cpu size={24} />
+                    {/* Row 2: Central Backend Node */}
+                    <div className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-blue-100 shadow-xl shadow-blue-900/5 w-80 z-20 hover:scale-105 transition-transform duration-300">
+                      <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-600/20 flex-shrink-0">
+                        <Server size={24} />
                       </div>
                       <div className="flex-1">
-                        <div className="text-sm font-bold text-slate-900 mb-1">KI-Texterkennung</div>
-                        <div className="text-xs text-slate-500">Positionen & Beträge erkannt</div>
+                        <div className="text-sm font-bold text-slate-900 mb-1">Ihr Automatisierungs-Backend</div>
+                        <div className="text-xs text-slate-500">Workflows, KI & Business-Logik</div>
                       </div>
                     </div>
 
-                    {/* Card 3: Output (Left) */}
-                    <div className="flex items-center gap-4 p-4 bg-white/90 backdrop-blur-sm rounded-2xl border border-slate-200 shadow-sm w-64 -translate-x-12 hover:scale-105 transition-transform duration-300">
-                      <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center text-green-600 shadow-sm">
-                        <Database size={20} />
+                    {/* Row 3: Connected Systems */}
+                    <div className="grid grid-cols-3 gap-3 w-full">
+                      <div className="flex flex-col items-center gap-2 p-4 bg-white/90 backdrop-blur-sm rounded-2xl border border-slate-200 shadow-sm hover:scale-105 transition-transform duration-300">
+                        <div className="w-9 h-9 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
+                          <Database size={18} />
+                        </div>
+                        <div className="text-xs font-semibold text-slate-700 text-center">ERP & Datenbank</div>
                       </div>
-                      <div className="flex-1">
-                        <div className="text-xs font-semibold text-slate-700">Im ERP verbucht</div>
-                        <div className="text-[10px] text-slate-400">Gerade eben</div>
+                      <div className="flex flex-col items-center gap-2 p-4 bg-white/90 backdrop-blur-sm rounded-2xl border border-slate-200 shadow-sm hover:scale-105 transition-transform duration-300">
+                        <div className="w-9 h-9 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
+                          <MessageSquare size={18} />
+                        </div>
+                        <div className="text-xs font-semibold text-slate-700 text-center">Slack & Teams</div>
                       </div>
-                      <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
-                        <CheckCircle2 size={12} className="text-green-600" />
+                      <div className="flex flex-col items-center gap-2 p-4 bg-white rounded-2xl border border-blue-100 shadow-md hover:scale-105 transition-transform duration-300">
+                        <div className="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-sm">
+                          <LayoutDashboard size={18} />
+                        </div>
+                        <div className="text-xs font-semibold text-slate-700 text-center">Ihr eigenes Dashboard</div>
                       </div>
+                    </div>
+
+                    {/* Status Pill */}
+                    <div className="flex items-center gap-2.5 px-4 py-2 bg-slate-900 rounded-full text-xs font-medium text-slate-200 shadow-lg">
+                      <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
+                      Läuft auf Ihrer Infrastruktur · planbare Kosten
                     </div>
                   </div>
                 </div>
@@ -227,6 +244,55 @@ export default function LandingPage() {
                     <span>Multi-Language</span>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 3b. BEYOND PLATFORMS SECTION */}
+        <section className="py-24 bg-slate-50 border-y border-slate-100">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <div className="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-widest text-blue-600 uppercase bg-blue-50 rounded-full border border-blue-100">
+                Mehr als Automatisierung
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+                Alles, was Automatisierungs-Plattformen können. <span className="text-blue-600">Und mehr.</span>
+              </h2>
+              <p className="text-lg text-slate-600 leading-relaxed">
+                Plattformen wie n8n oder Zapier sind ein starker Startpunkt – und wir setzen sie gerne ein. Wenn es darauf ankommt, bauen wir Ihre Automatisierung aber als richtige Software: robust, erweiterbar und ohne Plattform-Grenzen.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
+                <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-blue-600">
+                  <Server className="w-7 h-7" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Eigenes Backend</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Ihre Workflows laufen als richtige Software auf Ihrer Infrastruktur – ohne Vendor-Lock-in, Ausführungslimits oder Plattform-Grenzen.
+                </p>
+              </div>
+
+              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
+                <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-blue-600">
+                  <Wallet className="w-7 h-7" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Planbare Kosten</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Keine Abrechnung pro Workflow-Ausführung oder Webhook-Traffic. Ihre Kosten bleiben kontrollierbar und vorhersehbar – auch wenn Ihr Volumen wächst.
+                </p>
+              </div>
+
+              <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-300">
+                <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-blue-600">
+                  <LayoutDashboard className="w-7 h-7" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Eigene UIs & Tools</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Wo Plattformen aufhören, fangen wir an: Dashboards, interne Tools und Oberflächen, mit denen Ihr Team die Automationen selbst steuert.
+                </p>
               </div>
             </div>
           </div>
