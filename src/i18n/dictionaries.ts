@@ -163,7 +163,7 @@ const en = {
     badge: "More than automation",
     title: "Everything automation platforms can do.",
     titleAccent: "And then some.",
-    sub: "Platforms like n8n or Zapier are a strong starting point — and we happily use them. But when it matters, we build your automation as real software: robust, extensible and free of platform limits.",
+    sub: "Platforms like n8n or Make are a strong starting point — and we happily use them. But when it matters, we build your automation as real software: robust, extensible and free of platform limits.",
     cards: [
       {
         title: "Your own server",
@@ -234,7 +234,7 @@ const en = {
         a: "Custom automation and the software around it: workflow automation (n8n and beyond), system integrations, event-driven backends, internal tools and dashboards. From a single automated process to a full integration platform.",
       },
       {
-        q: "How is that different from an agency that sets up Zapier or n8n?",
+        q: "How is that different from an agency that sets up Make or n8n?",
         a: "We use those platforms where they fit — but we don't stop where they stop. When your process needs real error handling, custom logic or its own interface, we build it as software: versioned, tested, and running on infrastructure in Germany without per-execution pricing.",
       },
       {
@@ -336,7 +336,7 @@ const de: typeof en = {
   pain: {
     badge: "Kommt Ihnen das bekannt vor?",
     title: "Sie haben die Tools ausprobiert. Die Ergebnisse blieben aus.",
-    p1: "Ein paar Zapier-Flows sind eingerichtet. Vielleicht gab es einen KI-Piloten, oder jemand im Team hat einen n8n-Workflow gebaut, der funktioniert hat – eine Zeit lang.",
+    p1: "Ein paar Make-Flows sind eingerichtet. Vielleicht gab es einen KI-Piloten, oder jemand im Team hat einen n8n-Workflow gebaut, der funktioniert hat – eine Zeit lang.",
     symptoms: [
       "Workflows brechen still ab – und niemand merkt es, bis ein Kunde es merkt",
       "Der Pilot hat in der Demo überzeugt und wurde nie skaliert",
@@ -457,7 +457,7 @@ const de: typeof en = {
     badge: "Mehr als Automatisierung",
     title: "Alles, was Automatisierungs-Plattformen können.",
     titleAccent: "Und mehr.",
-    sub: "Plattformen wie n8n oder Zapier sind ein starker Startpunkt – und wir setzen sie gerne ein. Wenn es darauf ankommt, bauen wir Ihre Automatisierung aber als richtige Software: robust, erweiterbar und ohne Plattform-Grenzen.",
+    sub: "Plattformen wie n8n oder Make sind ein starker Startpunkt – und wir setzen sie gerne ein. Wenn es darauf ankommt, bauen wir Ihre Automatisierung aber als richtige Software: robust, erweiterbar und ohne Plattform-Grenzen.",
     cards: [
       {
         title: "Eigener Server",
@@ -528,7 +528,7 @@ const de: typeof en = {
         a: "Maßgeschneiderte Automatisierung und die Software drumherum: Workflow-Automatisierung (n8n und darüber hinaus), System-Integrationen, event-getriebene Backends, interne Tools und Dashboards. Vom einzelnen automatisierten Prozess bis zur kompletten Integrationsplattform.",
       },
       {
-        q: "Was ist der Unterschied zu einer Agentur, die Zapier oder n8n einrichtet?",
+        q: "Was ist der Unterschied zu einer Agentur, die Make oder n8n einrichtet?",
         a: "Wir setzen diese Plattformen ein, wo sie passen – aber wir hören nicht auf, wo sie aufhören. Wenn Ihr Prozess echtes Error-Handling, eigene Logik oder eine eigene Oberfläche braucht, bauen wir ihn als Software: versioniert, getestet und auf Infrastruktur in Deutschland betrieben – ohne Abrechnung pro Ausführung.",
       },
       {
