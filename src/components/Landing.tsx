@@ -56,7 +56,7 @@ export default function Landing({ lang }: { lang: Lang }) {
     const isStaging = process.env.SITE_ENV === "staging";
 
     return (
-        <div className="min-h-screen font-sans selection:bg-blue-100 selection:text-blue-900">
+        <div lang={lang} className="min-h-screen font-sans selection:bg-blue-100 selection:text-blue-900">
             <JsonLd lang={lang} />
 
             {/* 1. STICKY NAVBAR */}
@@ -79,7 +79,10 @@ export default function Landing({ lang }: { lang: Lang }) {
                                     </div>
                                 </div>
 
-                                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-slate-900 mb-8 leading-[1.1] break-words animate-fade-in-up delay-100">
+                                {/* Capped at text-6xl: the column is ~616px wide and longer
+                                    headline words (EN "no-code.", DE "Automatisierung") clip
+                                    under the canvas at text-7xl. */}
+                                <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight text-slate-900 mb-8 leading-[1.1] break-words hyphens-auto lg:pr-10 animate-fade-in-up delay-100">
                                     {t.hero.h1a} <br className="hidden lg:block" />
                                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">
                                         {t.hero.h1b}
