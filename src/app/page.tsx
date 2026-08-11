@@ -68,14 +68,14 @@ export default function LandingPage() {
 
               {/* Right Column: Workflow Canvas (n8n style) */}
               <div className="relative hidden lg:block ml-auto">
-                <div className="relative z-10 w-[520px] h-[460px] bg-white rounded-3xl border border-slate-200 shadow-2xl shadow-slate-200/60 overflow-hidden">
+                <div className="relative z-10 w-[520px] h-[420px] bg-white rounded-3xl border border-slate-200 shadow-2xl shadow-slate-200/60 overflow-hidden">
                   {/* Dotted canvas grid */}
                   <div className="absolute inset-0 bg-[radial-gradient(rgba(100,116,139,0.18)_1px,transparent_1px)] [background-size:18px_18px]"></div>
                   {/* Soft glow */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-100/60 rounded-full blur-3xl"></div>
 
                   {/* Edges */}
-                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 520 460" fill="none">
+                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 520 420" fill="none">
                     {/* Triggers -> Backend */}
                     <path d="M174 107 C 192 107 188 168 205 168" stroke="#cbd5e1" strokeWidth="1.5" />
                     <path d="M174 227 C 192 227 188 196 205 196" stroke="#cbd5e1" strokeWidth="1.5" />
@@ -141,8 +141,11 @@ export default function LandingPage() {
                     <Database size={12} className="text-emerald-500" /> PostgreSQL
                   </div>
 
-                  {/* Status Pill (standalone, no connector) */}
-                  <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-2.5 px-4 py-2 bg-slate-900 rounded-full text-xs font-medium text-slate-200 shadow-lg whitespace-nowrap">
+                </div>
+
+                {/* Status Badge below the canvas */}
+                <div className="relative z-10 mt-5 flex justify-center">
+                  <div className="flex items-center gap-2.5 px-4 py-2 bg-slate-900 rounded-full text-xs font-medium text-slate-200 shadow-lg whitespace-nowrap">
                     <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
                     Hosted in Germany · planbare Kosten
                   </div>
