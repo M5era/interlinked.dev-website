@@ -228,7 +228,7 @@ export default function LandingPage() {
                 <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-blue-600">
                   <Server className="w-7 h-7" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Eigenes Backend</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Eigener Server</h3>
                 <p className="text-slate-600 leading-relaxed">
                   Ihre Workflows laufen als richtige Software auf unserer Infrastruktur in Deutschland – ohne Vendor-Lock-in, Ausführungslimits oder Plattform-Grenzen.
                 </p>
