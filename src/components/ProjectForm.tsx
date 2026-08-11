@@ -52,7 +52,7 @@ export default function ProjectForm({ lang }: { lang: Lang }) {
     }
 
     const inputClass =
-        "w-full px-4 py-3.5 bg-white border border-slate-200 rounded-xl text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-blue-400 focus:ring-4 focus:ring-blue-600/10 transition-all";
+        "w-full px-4 py-3 text-base bg-white border border-slate-200 rounded-xl text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-blue-400 focus:ring-4 focus:ring-blue-600/10 transition-all";
 
     return (
         <form onSubmit={handleSubmit} className="text-left">
@@ -122,7 +122,7 @@ export default function ProjectForm({ lang }: { lang: Lang }) {
                 <button
                     type="submit"
                     disabled={status === "sending"}
-                    className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white transition-all bg-blue-600 rounded-full hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/20 active:scale-[0.98] disabled:opacity-60 disabled:pointer-events-none"
+                    className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white transition-all bg-blue-600 rounded-full hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/20 active:scale-[0.98] disabled:opacity-60 disabled:pointer-events-none"
                 >
                     {status === "sending" ? (
                         <>

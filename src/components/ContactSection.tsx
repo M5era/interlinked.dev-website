@@ -21,10 +21,10 @@ export default function ContactSection({ lang }: { lang: Lang }) {
                 </div>
 
                 <div className="max-w-3xl mx-auto">
-                    <div className="bg-white rounded-3xl border border-slate-200 shadow-xl shadow-slate-200/50 p-8 md:p-12 relative">
-                        <div className="mb-10">
-                            <h3 className="text-2xl font-bold text-slate-900 mb-3">{t.contact.title}</h3>
-                            <p className="text-slate-600 leading-relaxed">{t.contact.sub}</p>
+                    <div className="bg-white rounded-3xl border border-slate-200 shadow-xl shadow-slate-200/50 p-6 sm:p-8 md:p-12 relative">
+                        <div className="mb-8 md:mb-10">
+                            <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">{t.contact.title}</h3>
+                            <p className="text-sm md:text-base text-slate-600 leading-relaxed">{t.contact.sub}</p>
                         </div>
                         <ProjectForm lang={lang} />
                     </div>
