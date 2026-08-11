@@ -227,27 +227,45 @@ const en = {
     items: [
       {
         q: "What does Interlinked build?",
-        a: "Custom automation and the software around it: workflow automation (n8n and beyond), system integrations, event-driven backends, internal tools and dashboards. From a single automated process to a full integration platform.",
+        a: "Custom AI systems: voice agents, workflow automation in n8n and Make, custom AI apps and internal tools — plus the integrations that wire it all into the software you already run on.",
       },
       {
-        q: "How is that different from an agency that sets up Make or n8n?",
-        a: "We use those platforms where they fit — but we don't stop where they stop. When your process needs real error handling, custom logic or its own interface, we build it as software: versioned, tested, and running on infrastructure in Germany without per-execution pricing.",
+        q: "How do we start working together?",
+        a: "Send your project through the form on this page, or just email us. We read every submission and reply by email.",
       },
       {
-        q: "How fast do we see results?",
-        a: "The audit takes days, not weeks. A first automation is typically live within a few weeks — we start with the process that saves the most time, prove it works, then scale from there.",
+        q: "Custom or off-the-shelf?",
+        a: "Custom, always — engineered around your workflows, your data, your existing stack. We're tool-agnostic and industry-agnostic: we care about what works, not about selling you a platform.",
       },
       {
-        q: "What happens with our data?",
-        a: "It stays in Germany. Hosting on German infrastructure, full GDPR compliance, a data processing agreement if required — and your data is never used to train models.",
+        q: "How fast do you move?",
+        a: "You'll see a working pilot in weeks, not months. We test early, prove it delivers, and only then scale it up.",
       },
       {
-        q: "Who owns the code?",
-        a: "You do. Every build is handed over with source code and documentation. If you ever want to leave, you take everything with you — no lock-in, contractually.",
+        q: "What do you need from my team?",
+        a: "Enough time with your people to understand how the work really happens. After that, we carry the technical lift — your team stays on their actual job.",
       },
       {
-        q: "What does it cost?",
-        a: "The audit is a fixed price, and every build is quoted before we start — no surprises, no hidden costs. Running costs stay flat: we don't bill per workflow execution. Share a budget range in the form and we'll tell you honestly what's realistic for it.",
+        q: "What kinds of projects are a fit?",
+        a: "Clear pain points: repetitive manual work, processes held together by copy-paste, data nobody's using. Include your budget and timeline in the form and we'll tell you quickly — and honestly — whether it's a fit.",
+      },
+    ],
+    seoItems: [
+      {
+        q: "What does Interlinked build?",
+        a: "Interlinked is a custom automation studio based in Germany. It builds AI voice agents, n8n and Make workflow automation, custom AI apps and internal tools, and the integrations that wire automation into the systems a business already runs on.",
+      },
+      {
+        q: "How do I work with Interlinked?",
+        a: "Submit your project through the form on interlinked.dev or email contact@interlinked.dev. Every submission is read and answered by email within three business days.",
+      },
+      {
+        q: "Are Interlinked's builds custom or template-based?",
+        a: "Every build is custom, engineered around each client's workflows, data and existing stack. Interlinked is tool-agnostic and industry-agnostic, hosted on its own infrastructure in Germany and fully GDPR-compliant.",
+      },
+      {
+        q: "What kinds of projects does Interlinked take on?",
+        a: "Projects with clear pain points: repetitive manual work, processes held together by copy-paste, or unused data. A working pilot typically ships within weeks.",
       },
     ],
   },
@@ -283,6 +301,7 @@ const en = {
   },
   footer: {
     tagline: "We build the digital infrastructure for tomorrow's market leaders. Automation that works.",
+    exploreHeading: "Explore",
     legalHeading: "Legal",
     imprint: "Imprint",
     privacy: "Privacy",
@@ -517,27 +536,45 @@ const de: typeof en = {
     items: [
       {
         q: "Was baut Interlinked?",
-        a: "Maßgeschneiderte Automatisierung und die Software drumherum: Workflow-Automatisierung (n8n und darüber hinaus), System-Integrationen, event-getriebene Backends, interne Tools und Dashboards. Vom einzelnen automatisierten Prozess bis zur kompletten Integrationsplattform.",
+        a: "Maßgeschneiderte KI-Systeme: Voice Agents, Workflow-Automatisierung in n8n und Make, eigene KI-Apps und interne Tools – plus die Integrationen, die alles mit der Software verbinden, mit der Sie bereits arbeiten.",
       },
       {
-        q: "Was ist der Unterschied zu einer Agentur, die Make oder n8n einrichtet?",
-        a: "Wir setzen diese Plattformen ein, wo sie passen – aber wir hören nicht auf, wo sie aufhören. Wenn Ihr Prozess echtes Error-Handling, eigene Logik oder eine eigene Oberfläche braucht, bauen wir ihn als Software: versioniert, getestet und auf Infrastruktur in Deutschland betrieben – ohne Abrechnung pro Ausführung.",
+        q: "Wie starten wir die Zusammenarbeit?",
+        a: "Schicken Sie Ihr Projekt über das Formular auf dieser Seite – oder einfach per E-Mail. Wir lesen jede Anfrage und antworten per E-Mail.",
       },
       {
-        q: "Wie schnell sehen wir Ergebnisse?",
-        a: "Das Audit dauert Tage, nicht Wochen. Eine erste Automatisierung ist typischerweise innerhalb weniger Wochen produktiv – wir starten mit dem Prozess, der am meisten Zeit spart, beweisen den Nutzen und skalieren dann.",
+        q: "Individuell oder von der Stange?",
+        a: "Immer individuell – entwickelt um Ihre Workflows, Ihre Daten, Ihren bestehenden Stack. Wir sind tool-agnostisch und branchen-agnostisch: Uns interessiert, was funktioniert – nicht, Ihnen eine Plattform zu verkaufen.",
       },
       {
-        q: "Was passiert mit unseren Daten?",
-        a: "Sie bleiben in Deutschland. Hosting auf deutscher Infrastruktur, volle DSGVO-Konformität, auf Wunsch mit AV-Vertrag – und Ihre Daten werden niemals zum Training von Modellen verwendet.",
+        q: "Wie schnell geht das?",
+        a: "Ein funktionierender Pilot steht in Wochen, nicht Monaten. Wir testen früh, beweisen den Nutzen – und skalieren erst dann.",
       },
       {
-        q: "Wem gehört der Code?",
-        a: "Ihnen. Jedes Projekt wird mit Quellcode und Dokumentation übergeben. Wenn Sie irgendwann wechseln wollen, nehmen Sie alles mit – kein Lock-in, vertraglich zugesichert.",
+        q: "Was brauchen Sie von meinem Team?",
+        a: "Genug Zeit mit Ihren Leuten, um zu verstehen, wie die Arbeit wirklich abläuft. Danach übernehmen wir die technische Last – Ihr Team bleibt bei seiner eigentlichen Arbeit.",
       },
       {
-        q: "Was kostet das?",
-        a: "Das Audit hat einen Festpreis, und jeder Build wird vor dem Start verbindlich angeboten – keine Überraschungen, keine versteckten Kosten. Auch im Betrieb bleiben die Kosten planbar: Wir rechnen nicht pro Workflow-Ausführung ab. Nennen Sie im Formular eine Budget-Spanne, und wir sagen Ihnen ehrlich, was dafür realistisch ist.",
+        q: "Welche Projekte passen?",
+        a: "Klare Schmerzpunkte: repetitive Handarbeit, Prozesse, die mit Copy-Paste zusammengehalten werden, Daten, die niemand nutzt. Nennen Sie Budget und Zeitrahmen im Formular – wir sagen Ihnen schnell und ehrlich, ob es passt.",
+      },
+    ],
+    seoItems: [
+      {
+        q: "Was baut Interlinked?",
+        a: "Interlinked ist ein Automatisierungs-Studio aus Deutschland. Es baut KI-Voice-Agents, Workflow-Automatisierung mit n8n und Make, eigene KI-Apps und interne Tools sowie die Integrationen, die Automatisierung mit den bestehenden Systemen eines Unternehmens verbinden.",
+      },
+      {
+        q: "Wie arbeite ich mit Interlinked?",
+        a: "Projekt über das Formular auf interlinked.dev einreichen oder eine E-Mail an contact@interlinked.dev senden. Jede Anfrage wird gelesen und innerhalb von drei Werktagen per E-Mail beantwortet.",
+      },
+      {
+        q: "Sind die Lösungen von Interlinked individuell oder vorgefertigt?",
+        a: "Jede Lösung ist individuell und um Workflows, Daten und den bestehenden Stack des Kunden herum entwickelt. Interlinked ist tool- und branchenagnostisch, gehostet auf eigener Infrastruktur in Deutschland und DSGVO-konform.",
+      },
+      {
+        q: "Welche Projekte übernimmt Interlinked?",
+        a: "Projekte mit klaren Schmerzpunkten: repetitive Handarbeit, Copy-Paste-Prozesse, ungenutzte Daten. Ein funktionierender Pilot steht typischerweise innerhalb weniger Wochen.",
       },
     ],
   },
@@ -573,6 +610,7 @@ const de: typeof en = {
   },
   footer: {
     tagline: "Wir bauen die digitale Infrastruktur für die Marktführer von morgen. Automatisierung, die funktioniert.",
+    exploreHeading: "Entdecken",
     legalHeading: "Rechtliches",
     imprint: "Impressum",
     privacy: "Datenschutz",

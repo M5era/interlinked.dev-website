@@ -38,7 +38,7 @@ function JsonLd({ lang }: { lang: Lang }) {
     const faq = {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        mainEntity: t.faq.items.map((item) => ({
+        mainEntity: t.faq.seoItems.map((item) => ({
             "@type": "Question",
             name: item.q,
             acceptedAnswer: { "@type": "Answer", text: item.a },
@@ -488,12 +488,22 @@ export default function Landing({ lang }: { lang: Lang }) {
             {/* 12. FOOTER */}
             <footer className="bg-white border-t border-slate-200 pt-16 pb-8">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="grid md:grid-cols-4 gap-12 mb-12">
-                        <div className="col-span-2">
+                    <div className="grid md:grid-cols-5 gap-12 mb-12">
+                        <div className="md:col-span-2">
                             <div className="text-xl font-bold font-monda tracking-tight text-slate-900 mb-6">
                                 interlinked.dev
                             </div>
                             <p className="text-slate-500 max-w-sm">{t.footer.tagline}</p>
+                        </div>
+
+                        <div>
+                            <h4 className="font-bold text-slate-900 mb-4">{t.footer.exploreHeading}</h4>
+                            <ul className="space-y-3 text-sm text-slate-600">
+                                <li><a href="#process" className="hover:text-blue-600 transition-colors">{t.nav.process}</a></li>
+                                <li><a href="#cases" className="hover:text-blue-600 transition-colors">{t.nav.cases}</a></li>
+                                <li><a href="#faq" className="hover:text-blue-600 transition-colors">{t.nav.faq}</a></li>
+                                <li><a href="#contact" className="hover:text-blue-600 transition-colors">{t.nav.contact}</a></li>
+                            </ul>
                         </div>
 
                         <div>

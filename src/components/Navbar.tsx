@@ -2,26 +2,51 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Check, ChevronDown, Menu, X } from "lucide-react";
 import { getDict, type Lang } from "@/i18n/dictionaries";
 
-function LangToggle({ lang, className = "" }: { lang: Lang; className?: string }) {
+const LANGUAGES: { code: Lang; label: string; href: string }[] = [
+    { code: "en", label: "English", href: "/" },
+    { code: "de", label: "Deutsch", href: "/de" },
+];
+
+function LangDropdown({ lang }: { lang: Lang }) {
+    const [open, setOpen] = useState(false);
+
     return (
-        <div className={`flex items-center gap-1 text-sm font-semibold ${className}`}>
-            <Link
-                href="/"
-                className={`px-2 py-1 rounded-md transition-colors ${lang === "en" ? "text-slate-900 bg-slate-200/70" : "text-slate-400 hover:text-slate-600"}`}
-                aria-current={lang === "en" ? "page" : undefined}
+        <div
+            className="relative"
+            onBlur={(e) => {
+                if (!e.currentTarget.contains(e.relatedTarget as Node)) setOpen(false);
+            }}
+        >
+            <button
+                onClick={() => setOpen(!open)}
+                aria-haspopup="menu"
+                aria-expanded={open}
+                className="flex items-center gap-1 px-2 py-1.5 text-sm font-medium text-slate-500 hover:text-slate-900 rounded-md transition-colors"
             >
-                EN
-            </Link>
-            <Link
-                href="/de"
-                className={`px-2 py-1 rounded-md transition-colors ${lang === "de" ? "text-slate-900 bg-slate-200/70" : "text-slate-400 hover:text-slate-600"}`}
-                aria-current={lang === "de" ? "page" : undefined}
-            >
-                DE
-            </Link>
+                {lang.toUpperCase()}
+                <ChevronDown size={14} className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+            </button>
+
+            {open && (
+                <div className="absolute right-0 top-full mt-2 w-36 py-1.5 bg-white border border-slate-200 rounded-xl shadow-xl shadow-slate-200/60 z-50">
+                    {LANGUAGES.map((l) => (
+                        <Link
+                            key={l.code}
+                            href={l.href}
+                            aria-current={l.code === lang ? "page" : undefined}
+                            className={`flex items-center justify-between px-3.5 py-2 text-sm transition-colors ${
+                                l.code === lang ? "font-semibold text-slate-900" : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+                            }`}
+                        >
+                            {l.label}
+                            {l.code === lang && <Check size={14} className="text-blue-600" />}
+                        </Link>
+                    ))}
+                </div>
+            )}
         </div>
     );
 }
@@ -64,7 +89,7 @@ export default function Navbar({ lang }: { lang: Lang }) {
                                 {l.label}
                             </a>
                         ))}
-                        <LangToggle lang={lang} />
+                        <LangDropdown lang={lang} />
                         <a
                             href="#contact"
                             onClick={(e) => handleScroll(e, "#contact")}
@@ -76,7 +101,7 @@ export default function Navbar({ lang }: { lang: Lang }) {
 
                     {/* Mobile Navigation Controls */}
                     <div className="flex md:hidden items-center gap-3">
-                        <LangToggle lang={lang} />
+                        <LangDropdown lang={lang} />
                         <a
                             href="#contact"
                             onClick={(e) => handleScroll(e, "#contact")}
