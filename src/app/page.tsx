@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, MessageSquare, UserPlus, ArrowRight, CheckCircle2, Database, Server, Webhook, Clock, LayoutDashboard, Wallet, Workflow } from 'lucide-react';
+import { FileText, MessageSquare, UserPlus, ArrowRight, CheckCircle2, Database, Server, Webhook, Clock, LayoutDashboard, Wallet, Workflow, TrendingUp, Activity } from 'lucide-react';
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import ContactSection from '@/components/ContactSection';
@@ -179,33 +179,56 @@ export default function LandingPage() {
         {/* 3. SOLUTIONS GRID (ID: #solutions) */}
         <section id="solutions" className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-3xl font-bold text-slate-900 mb-12">Lösungen für Ihr Wachstum</h2>
+            <div className="max-w-3xl mb-12">
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">Automatisierung für jedes Team.</h2>
+              <p className="text-lg text-slate-600">Ob Vertrieb, Finance, HR oder IT – wir automatisieren die Prozesse, in denen Ihre Zeit verloren geht.</p>
+            </div>
 
             <div className="flex flex-col gap-6">
-              {/* Top Row: Finance & HR Combined */}
-              <div className="p-8 lg:p-12 rounded-[2.5rem] bg-slate-50 border border-slate-100 group">
-                <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
-                  {/* Finance Section */}
-                  <div className="flex flex-col h-full">
-                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform duration-300">
-                      <FileText className="w-8 h-8 text-blue-600" />
-                    </div>
-                    <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-6">Finance:<br />Cashflow auf Autopilot.</h3>
-                    <p className="text-lg text-slate-600 leading-relaxed max-w-lg mt-auto">
-                      Schluss mit manueller Rechnungsablage. Wir implementieren KI-gestützte Lösungen, die Dokumente auslesen, mit Bestellungen abgleichen und direkt mit Ihrem Rechnungstool synchronisieren.
-                    </p>
+              {/* Team Use Cases Grid */}
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Vertrieb & CRM */}
+                <div className="p-8 lg:p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 group hover:border-blue-200 transition-all duration-300">
+                  <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                    <TrendingUp className="w-8 h-8 text-blue-600" />
                   </div>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-4">Vertrieb & CRM</h3>
+                  <p className="text-lg text-slate-600 leading-relaxed">
+                    Leads automatisch anreichern, qualifizieren und ins CRM synchronisieren. Angebote und Follow-ups entstehen im Hintergrund – Ihr Team verkauft, statt Daten zu pflegen.
+                  </p>
+                </div>
 
-                  {/* HR Section */}
-                  <div className="flex flex-col h-full md:border-l md:border-slate-200 md:pl-12 lg:pl-16">
-                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform duration-300 delay-100">
-                      <UserPlus className="w-8 h-8 text-blue-600" />
-                    </div>
-                    <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-6">HR:<br />Onboarding in Sekunden.</h3>
-                    <p className="text-lg text-slate-600 leading-relaxed max-w-lg mt-auto">
-                      Startklar an Tag 1. 1-Click Onboarding. Arbeitsvertrag unterschrieben? Das System erstellt automatisch Microsoft 365-Accounts, bestellt Hardware und vergibt Zugriffsrechte.
-                    </p>
+                {/* Finance & Backoffice */}
+                <div className="p-8 lg:p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 group hover:border-blue-200 transition-all duration-300">
+                  <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                    <FileText className="w-8 h-8 text-blue-600" />
                   </div>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-4">Finance & Backoffice</h3>
+                  <p className="text-lg text-slate-600 leading-relaxed">
+                    Rechnungen auslesen, mit Bestellungen abgleichen und direkt im Buchhaltungstool verbuchen. Zahlungsabgleich und Reporting laufen automatisch mit.
+                  </p>
+                </div>
+
+                {/* HR & Onboarding */}
+                <div className="p-8 lg:p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 group hover:border-blue-200 transition-all duration-300">
+                  <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                    <UserPlus className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-4">HR & Onboarding</h3>
+                  <p className="text-lg text-slate-600 leading-relaxed">
+                    Vom unterschriebenen Arbeitsvertrag zum startklaren Arbeitsplatz: Accounts, Hardware und Zugriffsrechte werden automatisch eingerichtet – und beim Offboarding genauso zuverlässig wieder entzogen.
+                  </p>
+                </div>
+
+                {/* IT & Operations */}
+                <div className="p-8 lg:p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 group hover:border-blue-200 transition-all duration-300">
+                  <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                    <Activity className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-4">IT & Operations</h3>
+                  <p className="text-lg text-slate-600 leading-relaxed">
+                    Monitoring, Alerts und Incident-Workflows: Störungen werden automatisch erkannt, kategorisiert und an die richtige Stelle eskaliert – bevor Kunden sie bemerken.
+                  </p>
                 </div>
               </div>
 
