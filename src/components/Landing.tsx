@@ -330,7 +330,7 @@ export default function Landing({ lang }: { lang: Lang }) {
                                     <Workflow className="w-6 h-6" />
                                 </div>
                                 <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">
-                                    {t.bento.systemsTitle1} <br />{t.bento.systemsTitle2}
+                                    {t.bento.systemsTitle1} <br className="hidden lg:block" />{t.bento.systemsTitle2}
                                 </h2>
                                 <p className="text-slate-600 text-lg leading-relaxed">{t.bento.systemsDesc}</p>
                             </div>
