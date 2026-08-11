@@ -16,7 +16,7 @@ const en = {
   hero: {
     badge: "Consulting & Engineering",
     open: "Open for new projects",
-    h1a: "Less talk.",
+    h1a: "Less AI talk.",
     h1b: "More shipped.",
     sub: "Interlinked is a custom AI automation studio. We find the automations that actually pay for themselves, build them into the way you already work, and hand them over running — voice agents, workflow automation, custom AI tools.",
     ctaPrimary: "Submit a project",
