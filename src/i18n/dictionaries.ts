@@ -292,6 +292,7 @@ const en = {
   },
   footer: {
     tagline: "We build the digital infrastructure for tomorrow's market leaders. Automation that works.",
+    location: "Based in Lisbon, Portugal",
     exploreHeading: "Explore",
     legalHeading: "Legal",
     imprint: "Imprint",
@@ -593,6 +594,7 @@ const de: typeof en = {
   },
   footer: {
     tagline: "Wir bauen die digitale Infrastruktur für die Marktführer von morgen. Automatisierung, die funktioniert.",
+    location: "Mit Sitz in Lissabon, Portugal",
     exploreHeading: "Entdecken",
     legalHeading: "Rechtliches",
     imprint: "Impressum",
