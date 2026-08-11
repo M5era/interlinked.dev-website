@@ -1,24 +1,52 @@
 import React from "react";
-import { Mail } from "lucide-react";
+import { Phone } from "lucide-react";
+import ProjectForm from "@/components/ProjectForm";
+import { getDict, type Lang } from "@/i18n/dictionaries";
 
-export default function ContactSection() {
+export default function ContactSection({ lang }: { lang: Lang }) {
+    const t = getDict(lang);
+
     return (
-        <section id="contact" className="py-24 bg-slate-50 border-t border-slate-200">
+        <section id="contact" className="py-24 bg-slate-50 border-t border-slate-200 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6">
-                <div className="max-w-3xl mx-auto text-center">
-                    <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                        Wollen Sie mehr über Automationen erfahren?
+                {/* Manifesto closer */}
+                <div className="max-w-3xl mx-auto text-center mb-16">
+                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
+                        <span className="text-slate-400">{t.closing.line1}</span>
+                        <br />
+                        <span className="text-slate-900">{t.closing.line2}</span>
+                        <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">{t.closing.line3}</span>
                     </h2>
-                    <p className="text-lg text-slate-600 leading-relaxed mb-10">
-                        Melden Sie sich unverbindlich bei uns, falls Sie weitere Fragen haben, oder besser verstehen wollen, wie KI/Automationen Ihr Unternehmen erfolgreicher machen können.
-                    </p>
+                </div>
 
-                    <a
-                        href="mailto:marc@interlinked.dev"
-                        className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white transition-all bg-blue-600 rounded-full hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/20 active:scale-[0.98]"
-                    >
-                        <Mail className="mr-2 w-5 h-5" /> Treten Sie in Kontakt!
-                    </a>
+                <div className="max-w-3xl mx-auto">
+                    <div className="bg-white rounded-3xl border border-slate-200 shadow-xl shadow-slate-200/50 p-8 md:p-12 relative">
+                        <div className="mb-10">
+                            <h3 className="text-2xl font-bold text-slate-900 mb-3">{t.contact.title}</h3>
+                            <p className="text-slate-600 leading-relaxed">{t.contact.sub}</p>
+                        </div>
+                        <ProjectForm lang={lang} />
+                    </div>
+
+                    {/* Alternative contact paths */}
+                    <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-8 text-sm text-slate-500">
+                        <span className="font-semibold text-slate-600">{t.contact.altTitle}</span>
+                        <a
+                            href="https://calendly.com/marc-interlinked-sxdh/30min"
+                            target="_blank"
+                            className="inline-flex items-center gap-2 font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+                        >
+                            <Phone className="w-4 h-4" /> {t.contact.altCalendly}
+                        </a>
+                        <span className="hidden sm:inline text-slate-300">·</span>
+                        <span>
+                            {t.contact.altOr}{" "}
+                            <a href="mailto:contact@interlinked.dev" className="font-semibold text-blue-600 hover:text-blue-700 transition-colors">
+                                contact@interlinked.dev
+                            </a>
+                        </span>
+                    </div>
                 </div>
             </div>
         </section>

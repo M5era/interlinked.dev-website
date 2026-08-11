@@ -4,13 +4,13 @@ import { getDict } from '@/i18n/dictionaries';
 
 export const dynamic = 'force-static';
 
-const t = getDict('en');
+const t = getDict('de');
 
 export const metadata: Metadata = {
   title: t.meta.title,
   description: t.meta.description,
   alternates: {
-    canonical: 'https://interlinked.dev/',
+    canonical: 'https://interlinked.dev/de',
     languages: {
       en: 'https://interlinked.dev/',
       de: 'https://interlinked.dev/de',
@@ -19,13 +19,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: t.meta.title,
     description: t.meta.description,
-    url: 'https://interlinked.dev/',
+    url: 'https://interlinked.dev/de',
     siteName: 'interlinked.dev',
-    locale: 'en_US',
+    locale: 'de_DE',
     type: 'website',
   },
 };
 
-export default function LandingPage() {
-  return <Landing lang="en" />;
+export default function LandingPageDe() {
+  return <Landing lang="de" />;
 }
