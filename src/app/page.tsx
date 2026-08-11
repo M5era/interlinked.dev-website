@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, MessageSquare, UserPlus, ArrowRight, CheckCircle2, Database, Server, Mic, Webhook, Clock, LayoutDashboard, Wallet } from 'lucide-react';
+import { FileText, MessageSquare, UserPlus, ArrowRight, CheckCircle2, Database, Server, Webhook, Clock, LayoutDashboard, Wallet, Workflow } from 'lucide-react';
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import ContactSection from '@/components/ContactSection';
@@ -429,14 +429,14 @@ export default function LandingPage() {
               <div className="bg-indigo-50 rounded-3xl p-10 flex flex-col justify-center text-slate-900 shadow-sm border border-indigo-100 min-h-[400px]">
                 <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm text-indigo-600">
                   <div className="w-8 h-8 flex items-center justify-center">
-                    <Mic className="w-6 h-6" />
+                    <Workflow className="w-6 h-6" />
                   </div>
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">
-                  Unendliche Kapazität für <br />Ihren Kundendialog.
+                  Ihre Systeme sprechen <br />endlich miteinander.
                 </h2>
                 <p className="text-slate-600 text-lg leading-relaxed">
-                  Keine Warteschleifen mehr, 24/7-Verfügbarkeit ohne Personalaufwand. Die KI als "elastischer" Mitarbeiter, der bei 100 gleichzeitigen Nachrichten nicht nervös wird.
+                  CRM, ERP, Buchhaltung, E-Mail, Datenbanken – wir verbinden Ihre Tools über APIs zu durchgängigen Workflows. Auch dann, wenn es keine fertige Schnittstelle gibt.
                 </p>
               </div>
 
