@@ -258,9 +258,9 @@ export default function Landing({ lang }: { lang: Lang }) {
                             </div>
                         </Reveal>
 
-                        <div className="grid md:grid-cols-3 gap-6 items-start">
+                        <div className="grid md:grid-cols-3 gap-6">
                             {t.cases.items.map((item, i) => (
-                                <Reveal key={item.title} delay={i * 120}>
+                                <Reveal key={item.title} delay={i * 120} className="h-full">
                                     <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-blue-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
                                         <div className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-6">{item.tag}</div>
                                         <div className="mb-6">
@@ -269,27 +269,31 @@ export default function Landing({ lang }: { lang: Lang }) {
                                         </div>
                                         <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
                                         <p className="text-slate-600 leading-relaxed">{item.desc}</p>
-
-                                        {item.quote && (
-                                            <div className="mt-8 pt-6 border-t border-slate-100">
-                                                <p className="text-slate-500 italic leading-relaxed mb-5">&bdquo;{item.quote}&ldquo;</p>
-                                                <div className="flex items-center gap-4">
-                                                    {item.logo && (
-                                                        /* eslint-disable-next-line @next/next/no-img-element */
-                                                        <img src={item.logo} alt={item.quoteCompany ?? ""} className="w-14 h-14 object-contain opacity-90" />
-                                                    )}
-                                                    <div>
-                                                        <div className="font-bold text-slate-900 text-sm leading-none mb-1">{item.quoteName}</div>
-                                                        <div className="text-xs font-medium text-slate-500">{item.quoteRole}</div>
-                                                        <div className="text-[10px] text-slate-400 font-medium uppercase tracking-wider mt-0.5">{item.quoteCompany}</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        )}
                                     </div>
                                 </Reveal>
                             ))}
                         </div>
+
+                        {/* Client testimonial band */}
+                        <Reveal delay={240}>
+                            <div className="mt-10 p-8 md:p-10 rounded-3xl bg-white border border-slate-200 shadow-sm md:flex items-center gap-10">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img
+                                    src={t.cases.testimonial.logo}
+                                    alt={t.cases.testimonial.company}
+                                    className="w-24 h-24 object-contain opacity-90 flex-shrink-0 mb-6 md:mb-0"
+                                />
+                                <div>
+                                    <p className="text-lg text-slate-600 italic leading-relaxed mb-5">
+                                        &bdquo;{t.cases.testimonial.quote}&ldquo;
+                                    </p>
+                                    <div className="font-bold text-slate-900 text-sm leading-none mb-1">{t.cases.testimonial.name}</div>
+                                    <div className="text-xs font-medium text-slate-500">
+                                        {t.cases.testimonial.role} · {t.cases.testimonial.company}
+                                    </div>
+                                </div>
+                            </div>
+                        </Reveal>
                     </div>
                 </section>
 
@@ -399,19 +403,6 @@ export default function Landing({ lang }: { lang: Lang }) {
                                     <div className="text-xs text-slate-400 font-medium uppercase tracking-wider mt-1">{t.founder.role}</div>
                                 </div>
 
-                                <div className="mt-10 pt-8 border-t border-slate-200">
-                                    <p className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-5">{t.founder.trustedLabel}</p>
-                                    <div className="flex flex-wrap items-center gap-8">
-                                        {/* eslint-disable @next/next/no-img-element */}
-                                        <img src="/locoia.png" alt="Locoia" className="h-5 object-contain" />
-                                        <img src="/agentenwerk.png" alt="Agentenwerk" className="h-10 object-contain" />
-                                        <img src="/voiceline.jpg" alt="VoiceLine" className="h-8 object-contain mix-blend-multiply" />
-                                        <img src="/adabay.png" alt="Adabay" className="h-7 object-contain" />
-                                        <img src="/tum.png" alt="TUM" className="h-8 object-contain" />
-                                        <img src="/nova.png" alt="Nova SBE" className="h-11 object-contain" />
-                                        {/* eslint-enable @next/next/no-img-element */}
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         </Reveal>
