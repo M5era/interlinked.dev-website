@@ -1,0 +1,596 @@
+export type Lang = "en" | "de";
+
+const en = {
+  meta: {
+    title: "Interlinked | Custom Automation & Integration Engineering",
+    description:
+      "We build automation as real software: robust backends, 100+ integrations shipped, hosted in Germany. From workflow automation to full platforms — with predictable costs.",
+  },
+  nav: {
+    solutions: "Solutions",
+    cases: "Work",
+    process: "How we work",
+    faq: "FAQ",
+    contact: "Start a project",
+  },
+  hero: {
+    badge: "Consulting & Engineering",
+    open: "Open for new projects",
+    h1a: "Beyond no-code.",
+    h1b: "Automation without limits.",
+    sub: "Automation takes routine work off your team's plate — studies show up to 75% time savings. We go further: robust backends, custom tools, and interfaces built around how your team actually works.",
+    ctaPrimary: "Start your project",
+    ctaSecondary: "See how it works",
+    stats: [
+      { value: "8+", label: "Years engineering" },
+      { value: "100+", label: "Integrations shipped" },
+      { value: "100k+", label: "Events/month in production" },
+    ],
+    canvas: {
+      webhook: "Webhook",
+      scheduler: "Scheduler",
+      workflowTitle: "Workflow",
+      workflowSub: "Read invoices, match, post to accounting",
+      erp: "ERP & Database",
+      slack: "Slack & Teams",
+      dashboard: "Your dashboard",
+      aiModel: "AI model",
+      postgres: "PostgreSQL",
+      statusBadge: "Hosted in Germany · predictable costs",
+    },
+  },
+  pain: {
+    badge: "Sound familiar?",
+    title: "You tried the tools. The results never came.",
+    p1: "You set up a few Zapier flows. Maybe you ran an AI pilot, or someone on the team built an n8n workflow that worked — for a while.",
+    symptoms: [
+      "Workflows break silently, and nobody notices until a customer does",
+      "The pilot impressed everyone in the demo, then never scaled",
+      "Every new tool added a subscription — but the manual work is still there",
+    ],
+    p2: "You're not behind. This is exactly where most teams get stuck: off-the-shelf platforms get you to 80% fast. The remaining 20% — the part that touches your real systems, your edge cases, your data — is engineering.",
+    p3: "That's the part we do.",
+    highlights: [
+      {
+        title: "Results, not experiments",
+        desc: "We define what's worth building, build it into your business, and make sure your team actually uses it. Stop paying to experiment. Start paying for results.",
+      },
+      {
+        title: "Real builders, real systems",
+        desc: "A small, senior team that ships. No handoffs, no juniors learning on your project.",
+      },
+    ],
+  },
+  cases: {
+    badge: "Selected work",
+    title: "Real systems, running in production.",
+    sub: "Not demos. Platforms that businesses depend on every day.",
+    items: [
+      {
+        tag: "Integration platform",
+        stat: "100k",
+        statLabel: "webhooks processed per month",
+        title: "INCONconnect: insurance claims without re-keying",
+        desc: "An integration platform that lets property managers report insurance claims straight from their own CRM — synced in real time, documents centralized, no media breaks. Built end-to-end with an event-driven backend, idempotent processing and automatic retries.",
+        quote:
+          "Thanks to the API interface we developed together, our clients now submit claims directly from their CRM into our system — in real time, with no media breaks. It reduces manual entry, minimizes errors and noticeably improves process quality.",
+        quoteName: "Ariane Fischer",
+        quoteRole: "Head of Digital Transformation",
+        quoteCompany: "INCON Versicherungsmakler GmbH",
+        logo: "/incon-logo.png",
+      },
+      {
+        tag: "Payments platform",
+        stat: "30+",
+        statLabel: "businesses processing daily transactions",
+        title: "Domopay: payments on autopilot",
+        desc: "A full-stack payments platform built on Stripe for a German property-management software company — including DocuWare and Zoho integrations and automated invoice storage. Delivered solo, from nothing more than a feature list to production.",
+      },
+      {
+        tag: "Connectors & pipelines",
+        stat: "100+",
+        statLabel: "integrations across 50+ APIs",
+        title: "When there is no native integration",
+        desc: "Custom connectors, data transformations and scheduled automations that keep systems in sync reliably — including the ones everyone said were impossible to integrate.",
+      },
+    ],
+  },
+  solutions: {
+    title: "Automation for every team.",
+    sub: "Sales, finance, HR or IT — we automate the processes where your time disappears.",
+    canWord: "can",
+    teams: [
+      {
+        key: "sales",
+        team: "Sales",
+        claim: "qualify leads automatically and write them to the CRM",
+        nodes: [
+          { title: "New lead", sub: "web form or email" },
+          { title: "AI agent", sub: "qualifies & enriches" },
+          { title: "CRM updated", sub: "incl. follow-up task" },
+        ],
+        attachmentLabel: "AI model",
+      },
+      {
+        key: "finance",
+        team: "Finance",
+        claim: "read invoices and post them automatically",
+        nodes: [
+          { title: "Invoice in inbox", sub: "PDF attachment detected" },
+          { title: "AI text extraction", sub: "line items & amounts" },
+          { title: "Posted", sub: "in your accounting tool" },
+        ],
+        attachmentLabel: "AI model",
+      },
+      {
+        key: "hr",
+        team: "HR",
+        claim: "onboard new employees in minutes",
+        nodes: [
+          { title: "Contract signed", sub: "e-signature received" },
+          { title: "Onboarding workflow", sub: "accounts, hardware, permissions" },
+          { title: "Ready on day one", sub: "team notified automatically" },
+        ],
+        attachmentLabel: "Microsoft 365",
+      },
+      {
+        key: "it",
+        team: "IT & Ops",
+        claim: "resolve incidents before customers notice",
+        nodes: [
+          { title: "Monitoring alert", sub: "servers & services" },
+          { title: "AI triage", sub: "categorizes & prioritizes" },
+          { title: "Escalated", sub: "ticket + Slack alert" },
+        ],
+        attachmentLabel: "AI model",
+      },
+      {
+        key: "support",
+        team: "Support",
+        claim: "answer requests around the clock",
+        nodes: [
+          { title: "Customer request", sub: "email or chat" },
+          { title: "AI agent", sub: "drafts the answer" },
+          { title: "Ready to send", sub: "reviewed by your team" },
+        ],
+        attachmentLabel: "Your knowledge base",
+      },
+    ],
+  },
+  beyond: {
+    badge: "More than automation",
+    title: "Everything automation platforms can do.",
+    titleAccent: "And then some.",
+    sub: "Platforms like n8n or Zapier are a strong starting point — and we happily use them. But when it matters, we build your automation as real software: robust, extensible and free of platform limits.",
+    cards: [
+      {
+        title: "Your own server",
+        desc: "Your workflows run as real software on our infrastructure in Germany — no vendor lock-in, no execution limits, no platform ceilings.",
+      },
+      {
+        title: "Predictable costs",
+        desc: "No billing per workflow run or webhook traffic. Your costs stay controlled and predictable — even as your volume grows.",
+      },
+      {
+        title: "Custom UIs & tools",
+        desc: "Where platforms stop, we start: dashboards, internal tools and interfaces that let your team steer the automations themselves.",
+      },
+    ],
+  },
+  process: {
+    title: "From chaos to autopilot.",
+    sub: "Three steps to automation your team actually uses.",
+    steps: [
+      {
+        num: "01",
+        title: "Analyze",
+        desc: "We map your manual processes, find where the time leaks, and define the small set of automations genuinely worth building.",
+      },
+      {
+        num: "02",
+        title: "Build",
+        desc: "We build the solution, connect the APIs and run it reliably on our infrastructure in Germany — including testing and error handling.",
+      },
+      {
+        num: "03",
+        title: "Adopt",
+        desc: "Then we make it stick: training, tuning and operations alongside your team, until the system is simply how work gets done.",
+      },
+    ],
+  },
+  founder: {
+    title: "We know where platforms end.",
+    titleAccent: "We used to build them.",
+    p1: "Interlinked was founded by Marc Serafin — a software engineer with 8+ years across startups and agencies, including engineering at Locoia, a German iPaaS platform. Building automation platforms from the inside teaches you exactly where they stop.",
+    p2: "That's where we start: robust, custom automation and the software around it — backends, APIs and interfaces that grow with your company instead of holding it back.",
+    name: "Marc Serafin",
+    role: "Founder",
+    imageAlt: "Engineers building software together",
+    trustedLabel: "Built with and for",
+  },
+  bento: {
+    gdprTitle: "Your data stays in Germany.",
+    gdprAccent: "Guaranteed.",
+    gdprDesc: "No transfers abroad, no training of models on your information. Full GDPR compliance and absolute transparency.",
+    poweredBy: "Powered by",
+    systemsTitle1: "Your systems finally",
+    systemsTitle2: "talk to each other.",
+    systemsDesc: "CRM, ERP, accounting, email, databases — we connect your tools via APIs into end-to-end workflows. Even when there is no off-the-shelf integration.",
+    winTitle1: "Be part of the 5%",
+    winTitle2: "that win.",
+    winDesc: "Most companies fail at the complexity of internal AI infrastructure. Do it better: Interlinked delivers measurable results within weeks.",
+    ctaTitle: "Which tasks are slowing your team down?",
+    ctaDesc: "Let's find your automation potential together. Tell us what you want to build — we reply within one business day.",
+    ctaButton: "Start your project",
+  },
+  faq: {
+    badge: "FAQ",
+    title: "You have questions. Fair enough.",
+    items: [
+      {
+        q: "What does Interlinked build?",
+        a: "Custom automation and the software around it: workflow automation (n8n and beyond), system integrations, event-driven backends, internal tools and dashboards. From a single automated process to a full integration platform.",
+      },
+      {
+        q: "How is that different from an agency that sets up Zapier or n8n?",
+        a: "We use those platforms where they fit — but we don't stop where they stop. When your process needs real error handling, custom logic or its own interface, we build it as software: versioned, tested, and running on infrastructure in Germany without per-execution pricing.",
+      },
+      {
+        q: "How fast do we see results?",
+        a: "The audit takes days, not weeks. A first automation is typically live within a few weeks — we start with the process that saves the most time, prove it works, then scale from there.",
+      },
+      {
+        q: "What happens with our data?",
+        a: "It stays in Germany. Hosting on German infrastructure, full GDPR compliance, a data processing agreement if required — and your data is never used to train models.",
+      },
+      {
+        q: "Who owns the code?",
+        a: "You do. Every build is handed over with source code and documentation. If you ever want to leave, you take everything with you — no lock-in, contractually.",
+      },
+      {
+        q: "What does it cost?",
+        a: "The audit is a fixed price, and every build is quoted before we start — no surprises, no hidden costs. Running costs stay flat: we don't bill per workflow execution. Share a budget range in the form and we'll tell you honestly what's realistic for it.",
+      },
+    ],
+  },
+  closing: {
+    line1: "Manual work doesn't scale.",
+    line2: "Engineered automation does.",
+    line3: "Let's build yours.",
+  },
+  contact: {
+    title: "Tell us what you want to build.",
+    sub: "We review every submission and reply within one business day — usually with a first idea of how we'd approach it.",
+    form: {
+      name: "Full name",
+      namePlaceholder: "Jane Doe",
+      email: "Work email",
+      emailPlaceholder: "jane@company.com",
+      company: "Company",
+      companyPlaceholder: "Acme GmbH",
+      message: "What do you want to build?",
+      messagePlaceholder: "The process, the problem it causes, the tools involved — and any timeline...",
+      budget: "Budget (EUR)",
+      budgetSelect: "Select a range",
+      budgetOptions: ["Under €2,500", "€2,500 – €5,000", "€5,000 – €10,000", "€10,000 – €25,000", "€25,000+", "Not sure yet"],
+      submit: "Submit project",
+      sending: "Sending...",
+      success: "Thanks! Your project landed in our inbox — we'll reply within one business day.",
+      error: "Something went wrong. Please try again or email us directly at contact@interlinked.dev.",
+      privacyNote: "No spam, no newsletter. Your data stays in Germany.",
+    },
+    altTitle: "Prefer to talk first?",
+    altCalendly: "Book a free 30-minute intro call",
+    altOr: "or email",
+  },
+  footer: {
+    tagline: "We build the digital infrastructure for tomorrow's market leaders. Automation that works.",
+    legalHeading: "Legal",
+    imprint: "Imprint",
+    privacy: "Privacy",
+    contactHeading: "Contact",
+  },
+};
+
+const de: typeof en = {
+  meta: {
+    title: "Interlinked | Automatisierung ohne Limits",
+    description:
+      "Prozess-Automatisierung ist erst der Anfang: robuste Backends, eigene UIs und maßgeschneiderte Software – mit planbaren Kosten. Gehostet in Deutschland.",
+  },
+  nav: {
+    solutions: "Lösungen",
+    cases: "Projekte",
+    process: "Arbeitsweise",
+    faq: "FAQ",
+    contact: "Projekt starten",
+  },
+  hero: {
+    badge: "Beratung & Engineering",
+    open: "Offen für neue Projekte",
+    h1a: "Mehr als No-Code.",
+    h1b: "Automatisierung ohne Limits.",
+    sub: "Automatisierung nimmt Ihnen Routineaufgaben ab – Studien zeigen bis zu 75 % Zeitersparnis. Und wir gehen weiter: mit robusten Backends, eigenen Tools und Oberflächen, die exakt zu Ihrem Team passen.",
+    ctaPrimary: "Projekt starten",
+    ctaSecondary: "So funktioniert's",
+    stats: [
+      { value: "8+", label: "Jahre Engineering" },
+      { value: "100+", label: "Integrationen gebaut" },
+      { value: "100k+", label: "Events/Monat produktiv" },
+    ],
+    canvas: {
+      webhook: "Webhook",
+      scheduler: "Scheduler",
+      workflowTitle: "Workflow",
+      workflowSub: "Rechnungen auslesen, abgleichen, verbuchen",
+      erp: "ERP & Datenbank",
+      slack: "Slack & Teams",
+      dashboard: "Ihr Dashboard",
+      aiModel: "KI-Modell",
+      postgres: "PostgreSQL",
+      statusBadge: "Hosted in Germany · planbare Kosten",
+    },
+  },
+  pain: {
+    badge: "Kommt Ihnen das bekannt vor?",
+    title: "Sie haben die Tools ausprobiert. Die Ergebnisse blieben aus.",
+    p1: "Ein paar Zapier-Flows sind eingerichtet. Vielleicht gab es einen KI-Piloten, oder jemand im Team hat einen n8n-Workflow gebaut, der funktioniert hat – eine Zeit lang.",
+    symptoms: [
+      "Workflows brechen still ab – und niemand merkt es, bis ein Kunde es merkt",
+      "Der Pilot hat in der Demo überzeugt und wurde nie skaliert",
+      "Jedes neue Tool brachte ein Abo – die Handarbeit ist trotzdem noch da",
+    ],
+    p2: "Sie sind nicht zu spät dran. Genau hier bleiben die meisten Teams stecken: Fertige Plattformen bringen Sie schnell auf 80 %. Die letzten 20 % – der Teil, der Ihre echten Systeme, Sonderfälle und Daten berührt – sind Engineering.",
+    p3: "Genau diesen Teil übernehmen wir.",
+    highlights: [
+      {
+        title: "Ergebnisse statt Experimente",
+        desc: "Wir definieren, was sich zu bauen lohnt, bauen es in Ihr Unternehmen ein und sorgen dafür, dass Ihr Team es wirklich nutzt. Zahlen Sie nicht länger fürs Experimentieren – zahlen Sie für Ergebnisse.",
+      },
+      {
+        title: "Echte Entwickler, echte Systeme",
+        desc: "Ein kleines, erfahrenes Team, das liefert. Keine Übergaben, keine Juniors, die an Ihrem Projekt lernen.",
+      },
+    ],
+  },
+  cases: {
+    badge: "Ausgewählte Projekte",
+    title: "Echte Systeme, produktiv im Einsatz.",
+    sub: "Keine Demos. Plattformen, auf die sich Unternehmen jeden Tag verlassen.",
+    items: [
+      {
+        tag: "Integrationsplattform",
+        stat: "100k",
+        statLabel: "Webhooks pro Monat verarbeitet",
+        title: "INCONconnect: Schadenmeldungen ohne Doppeleingabe",
+        desc: "Eine Integrationsplattform, mit der Hausverwaltungen Versicherungsschäden direkt aus ihrem CRM melden – in Echtzeit synchronisiert, Dokumente zentralisiert, ohne Medienbrüche. End-to-end gebaut: event-getriebenes Backend, idempotente Verarbeitung, automatische Retries.",
+        quote:
+          "Durch die gemeinsam entwickelte API-Schnittstelle können unsere Kunden Schadenmeldungen direkt aus ihrem CRM an unser System übermitteln – medienbruchfrei und in Echtzeit. Das reduziert manuelle Eingaben, minimiert Fehler und verbessert die Prozessqualität spürbar.",
+        quoteName: "Ariane Fischer",
+        quoteRole: "Head of Digital Transformation",
+        quoteCompany: "INCON Versicherungsmakler GmbH",
+        logo: "/incon-logo.png",
+      },
+      {
+        tag: "Payments-Plattform",
+        stat: "30+",
+        statLabel: "Unternehmen mit täglichen Transaktionen",
+        title: "Domopay: Zahlungen auf Autopilot",
+        desc: "Eine Full-Stack-Payments-Plattform auf Stripe-Basis für einen deutschen Software-Anbieter der Immobilienverwaltung – inklusive DocuWare- und Zoho-Integrationen und automatischer Rechnungsablage. Allein umgesetzt: von der Feature-Liste bis in die Produktion.",
+      },
+      {
+        tag: "Konnektoren & Pipelines",
+        stat: "100+",
+        statLabel: "Integrationen über 50+ APIs",
+        title: "Wenn es keine fertige Schnittstelle gibt",
+        desc: "Eigene Konnektoren, Daten-Transformationen und zeitgesteuerte Automatisierungen, die Systeme zuverlässig synchron halten – auch die, die angeblich nicht integrierbar waren.",
+      },
+    ],
+  },
+  solutions: {
+    title: "Automatisierung für jedes Team.",
+    sub: "Ob Vertrieb, Finance, HR oder IT – wir automatisieren die Prozesse, in denen Ihre Zeit verloren geht.",
+    canWord: "kann",
+    teams: [
+      {
+        key: "sales",
+        team: "Vertrieb",
+        claim: "Leads automatisch qualifizieren und ins CRM schreiben",
+        nodes: [
+          { title: "Neuer Lead", sub: "Webformular oder E-Mail" },
+          { title: "KI-Agent", sub: "qualifiziert & reichert an" },
+          { title: "CRM aktualisiert", sub: "inkl. Follow-up-Task" },
+        ],
+        attachmentLabel: "KI-Modell",
+      },
+      {
+        key: "finance",
+        team: "Finance",
+        claim: "Rechnungen auslesen und automatisch verbuchen",
+        nodes: [
+          { title: "Rechnung im Postfach", sub: "PDF-Anhang erkannt" },
+          { title: "KI-Texterkennung", sub: "Positionen & Beträge" },
+          { title: "Verbucht", sub: "im Buchhaltungstool" },
+        ],
+        attachmentLabel: "KI-Modell",
+      },
+      {
+        key: "hr",
+        team: "HR",
+        claim: "neue Mitarbeiter in Minuten onboarden",
+        nodes: [
+          { title: "Vertrag unterschrieben", sub: "E-Signatur eingegangen" },
+          { title: "Onboarding-Workflow", sub: "Accounts, Hardware, Rechte" },
+          { title: "Startklar an Tag 1", sub: "Team automatisch informiert" },
+        ],
+        attachmentLabel: "Microsoft 365",
+      },
+      {
+        key: "it",
+        team: "IT & Ops",
+        claim: "Störungen lösen, bevor Kunden sie bemerken",
+        nodes: [
+          { title: "Monitoring-Alert", sub: "Server & Services" },
+          { title: "KI-Triage", sub: "kategorisiert & priorisiert" },
+          { title: "Eskaliert", sub: "Ticket + Slack-Alert" },
+        ],
+        attachmentLabel: "KI-Modell",
+      },
+      {
+        key: "support",
+        team: "Support",
+        claim: "Anfragen rund um die Uhr beantworten",
+        nodes: [
+          { title: "Kundenanfrage", sub: "E-Mail oder Chat" },
+          { title: "KI-Agent", sub: "entwirft die Antwort" },
+          { title: "Versandfertig", sub: "geprüft von Ihrem Team" },
+        ],
+        attachmentLabel: "Ihre Wissensdatenbank",
+      },
+    ],
+  },
+  beyond: {
+    badge: "Mehr als Automatisierung",
+    title: "Alles, was Automatisierungs-Plattformen können.",
+    titleAccent: "Und mehr.",
+    sub: "Plattformen wie n8n oder Zapier sind ein starker Startpunkt – und wir setzen sie gerne ein. Wenn es darauf ankommt, bauen wir Ihre Automatisierung aber als richtige Software: robust, erweiterbar und ohne Plattform-Grenzen.",
+    cards: [
+      {
+        title: "Eigener Server",
+        desc: "Ihre Workflows laufen als richtige Software auf unserer Infrastruktur in Deutschland – ohne Vendor-Lock-in, Ausführungslimits oder Plattform-Grenzen.",
+      },
+      {
+        title: "Planbare Kosten",
+        desc: "Keine Abrechnung pro Workflow-Ausführung oder Webhook-Traffic. Ihre Kosten bleiben kontrollierbar und vorhersehbar – auch wenn Ihr Volumen wächst.",
+      },
+      {
+        title: "Eigene UIs & Tools",
+        desc: "Wo Plattformen aufhören, fangen wir an: Dashboards, interne Tools und Oberflächen, mit denen Ihr Team die Automationen selbst steuert.",
+      },
+    ],
+  },
+  process: {
+    title: "Von Chaos zu Autopilot.",
+    sub: "In drei Schritten zu Automatisierung, die Ihr Team wirklich nutzt.",
+    steps: [
+      {
+        num: "01",
+        title: "Analyse",
+        desc: "Wir durchleuchten Ihre manuellen Prozesse, finden die Zeitfresser und definieren die Automatisierungen, die sich wirklich lohnen.",
+      },
+      {
+        num: "02",
+        title: "Build",
+        desc: "Wir entwickeln die Lösung, verbinden die APIs und betreiben sie zuverlässig auf unserer Infrastruktur in Deutschland – inklusive Testing und Error-Handling.",
+      },
+      {
+        num: "03",
+        title: "Adoption",
+        desc: "Dann verankern wir das System im Alltag: Schulung, Feintuning und Betrieb gemeinsam mit Ihrem Team – bis es einfach dazugehört.",
+      },
+    ],
+  },
+  founder: {
+    title: "Wir kennen die Grenzen der Plattformen.",
+    titleAccent: "Weil wir sie selbst gebaut haben.",
+    p1: "Interlinked wurde von Marc Serafin gegründet – Softwareentwickler mit über acht Jahren Erfahrung bei Startups und Agenturen, unter anderem als Engineer bei Locoia, einer deutschen iPaaS-Plattform. Wer Automatisierungs-Plattformen von innen gebaut hat, weiß genau, wo sie aufhören.",
+    p2: "Genau dort setzen wir an: robuste, maßgeschneiderte Automatisierungen und die Software drumherum – Backends, Schnittstellen und Oberflächen, die mit Ihrem Unternehmen wachsen, statt es auszubremsen.",
+    name: "Marc Serafin",
+    role: "Gründer",
+    imageAlt: "Engineers bei der gemeinsamen Arbeit",
+    trustedLabel: "Gebaut mit und für",
+  },
+  bento: {
+    gdprTitle: "Ihre Daten bleiben in Deutschland.",
+    gdprAccent: "Garantiert.",
+    gdprDesc: "Keine Übermittlung ins Ausland, kein Training von Modellen mit Ihren Informationen. Volle DSGVO-Konformität und absolute Transparenz.",
+    poweredBy: "Powered by",
+    systemsTitle1: "Ihre Systeme sprechen",
+    systemsTitle2: "endlich miteinander.",
+    systemsDesc: "CRM, ERP, Buchhaltung, E-Mail, Datenbanken – wir verbinden Ihre Tools über APIs zu durchgängigen Workflows. Auch dann, wenn es keine fertige Schnittstelle gibt.",
+    winTitle1: "Gehören Sie zu den 5 %,",
+    winTitle2: "die gewinnen.",
+    winDesc: "Die Mehrheit der Unternehmen scheitert an der Komplexität interner KI-Infrastrukturen. Machen Sie es besser: Interlinked liefert messbare Erfolge innerhalb weniger Wochen.",
+    ctaTitle: "Welche Aufgaben halten Ihr Team unnötig auf?",
+    ctaDesc: "Lassen Sie uns gemeinsam Ihr Automatisierungspotenzial entdecken. Beschreiben Sie Ihr Vorhaben – wir antworten innerhalb eines Werktags.",
+    ctaButton: "Projekt starten",
+  },
+  faq: {
+    badge: "FAQ",
+    title: "Sie haben Fragen. Verständlich.",
+    items: [
+      {
+        q: "Was baut Interlinked?",
+        a: "Maßgeschneiderte Automatisierung und die Software drumherum: Workflow-Automatisierung (n8n und darüber hinaus), System-Integrationen, event-getriebene Backends, interne Tools und Dashboards. Vom einzelnen automatisierten Prozess bis zur kompletten Integrationsplattform.",
+      },
+      {
+        q: "Was ist der Unterschied zu einer Agentur, die Zapier oder n8n einrichtet?",
+        a: "Wir setzen diese Plattformen ein, wo sie passen – aber wir hören nicht auf, wo sie aufhören. Wenn Ihr Prozess echtes Error-Handling, eigene Logik oder eine eigene Oberfläche braucht, bauen wir ihn als Software: versioniert, getestet und auf Infrastruktur in Deutschland betrieben – ohne Abrechnung pro Ausführung.",
+      },
+      {
+        q: "Wie schnell sehen wir Ergebnisse?",
+        a: "Das Audit dauert Tage, nicht Wochen. Eine erste Automatisierung ist typischerweise innerhalb weniger Wochen produktiv – wir starten mit dem Prozess, der am meisten Zeit spart, beweisen den Nutzen und skalieren dann.",
+      },
+      {
+        q: "Was passiert mit unseren Daten?",
+        a: "Sie bleiben in Deutschland. Hosting auf deutscher Infrastruktur, volle DSGVO-Konformität, auf Wunsch mit AV-Vertrag – und Ihre Daten werden niemals zum Training von Modellen verwendet.",
+      },
+      {
+        q: "Wem gehört der Code?",
+        a: "Ihnen. Jedes Projekt wird mit Quellcode und Dokumentation übergeben. Wenn Sie irgendwann wechseln wollen, nehmen Sie alles mit – kein Lock-in, vertraglich zugesichert.",
+      },
+      {
+        q: "Was kostet das?",
+        a: "Das Audit hat einen Festpreis, und jeder Build wird vor dem Start verbindlich angeboten – keine Überraschungen, keine versteckten Kosten. Auch im Betrieb bleiben die Kosten planbar: Wir rechnen nicht pro Workflow-Ausführung ab. Nennen Sie im Formular eine Budget-Spanne, und wir sagen Ihnen ehrlich, was dafür realistisch ist.",
+      },
+    ],
+  },
+  closing: {
+    line1: "Handarbeit skaliert nicht.",
+    line2: "Gute Automatisierung schon.",
+    line3: "Bauen wir Ihre.",
+  },
+  contact: {
+    title: "Erzählen Sie uns, was Sie bauen wollen.",
+    sub: "Wir prüfen jede Anfrage und antworten innerhalb eines Werktags – meist schon mit einer ersten Idee, wie wir es angehen würden.",
+    form: {
+      name: "Name",
+      namePlaceholder: "Max Mustermann",
+      email: "Geschäftliche E-Mail",
+      emailPlaceholder: "max@firma.de",
+      company: "Unternehmen",
+      companyPlaceholder: "Acme GmbH",
+      message: "Was wollen Sie bauen?",
+      messagePlaceholder: "Der Prozess, das Problem, die beteiligten Tools – und Ihr Zeitrahmen...",
+      budget: "Budget (EUR)",
+      budgetSelect: "Spanne auswählen",
+      budgetOptions: ["Unter 2.500 €", "2.500 – 5.000 €", "5.000 – 10.000 €", "10.000 – 25.000 €", "25.000 €+", "Noch unklar"],
+      submit: "Projekt absenden",
+      sending: "Wird gesendet...",
+      success: "Danke! Ihre Anfrage ist angekommen – wir antworten innerhalb eines Werktags.",
+      error: "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt: contact@interlinked.dev.",
+      privacyNote: "Kein Spam, kein Newsletter. Ihre Daten bleiben in Deutschland.",
+    },
+    altTitle: "Lieber zuerst sprechen?",
+    altCalendly: "Kostenloses 30-Minuten-Erstgespräch buchen",
+    altOr: "oder E-Mail an",
+  },
+  footer: {
+    tagline: "Wir bauen die digitale Infrastruktur für die Marktführer von morgen. Automatisierung, die funktioniert.",
+    legalHeading: "Rechtliches",
+    imprint: "Impressum",
+    privacy: "Datenschutz",
+    contactHeading: "Kontakt",
+  },
+};
+
+export const dictionaries = { en, de };
+export type Dict = typeof en;
+
+export function getDict(lang: Lang): Dict {
+  return dictionaries[lang];
+}
+
+export function langHref(lang: Lang): string {
+  return lang === "en" ? "/" : "/de";
+}
