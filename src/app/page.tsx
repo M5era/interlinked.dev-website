@@ -274,7 +274,7 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Eigenes Backend</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Ihre Workflows laufen als richtige Software auf Ihrer Infrastruktur – ohne Vendor-Lock-in, Ausführungslimits oder Plattform-Grenzen.
+                  Ihre Workflows laufen als richtige Software auf unserer Infrastruktur in Deutschland – ohne Vendor-Lock-in, Ausführungslimits oder Plattform-Grenzen.
                 </p>
               </div>
 
@@ -376,7 +376,7 @@ export default function LandingPage() {
                 </div>
                 <p className="text-lg font-medium text-slate-900 mb-4">Implementierung</p>
                 <p className="text-slate-600 leading-relaxed mb-8 relative z-10">
-                  Wir entwickeln die Lösung, verbinden die APIs und deployen auf Ihrer Infrastruktur. Inklusive Testing und Error-Handling.
+                  Wir entwickeln die Lösung, verbinden die APIs und betreiben sie zuverlässig auf unserer Infrastruktur in Deutschland. Inklusive Testing und Error-Handling.
                 </p>
                 <ul className="space-y-3 relative z-10">
                   <li className="flex items-center gap-3 text-slate-600">
