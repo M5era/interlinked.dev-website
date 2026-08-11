@@ -5,9 +5,6 @@ import {
     LayoutDashboard,
     Wallet,
     Workflow,
-    XCircle,
-    Hammer,
-    Users,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import ContactSection from "@/components/ContactSection";
@@ -97,40 +94,28 @@ export default function Landing({ lang }: { lang: Lang }) {
                 </section>
 
                 {/* 3. PAIN NARRATIVE */}
-                <section className="py-24 bg-white border-y border-slate-100">
-                    <div className="max-w-7xl mx-auto px-6">
+                <section className="py-28 bg-white border-y border-slate-100">
+                    <div className="max-w-4xl mx-auto px-6">
                         <Reveal>
-                            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-                                <div>
-                                    <div className="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-widest text-blue-600 uppercase bg-blue-50 rounded-full border border-blue-100">
-                                        {t.pain.badge}
-                                    </div>
-                                    <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6 leading-tight">{t.pain.title}</h2>
-                                    <p className="text-lg text-slate-600 leading-relaxed mb-8">{t.pain.p1}</p>
-                                    <ul className="space-y-4 mb-8">
-                                        {t.pain.symptoms.map((symptom) => (
-                                            <li key={symptom} className="flex items-start gap-3 text-slate-600">
-                                                <XCircle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
-                                                <span>{symptom}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <p className="text-lg text-slate-600 leading-relaxed">
-                                        {t.pain.p2} <span className="font-bold text-slate-900">{t.pain.p3}</span>
-                                    </p>
-                                </div>
+                            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 mb-12 text-xs font-medium text-slate-600 bg-white rounded-full border border-slate-200 shadow-sm">
+                                <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                                {t.pain.badge}
+                            </div>
 
-                                <div className="grid gap-6 lg:pt-16">
-                                    {t.pain.highlights.map((h, i) => (
-                                        <div key={h.title} className="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300">
-                                            <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-5 shadow-sm text-blue-600">
-                                                {i === 0 ? <Hammer className="w-6 h-6" /> : <Users className="w-6 h-6" />}
-                                            </div>
-                                            <h3 className="text-xl font-bold text-slate-900 mb-3">{h.title}</h3>
-                                            <p className="text-slate-600 leading-relaxed">{h.desc}</p>
-                                        </div>
-                                    ))}
-                                </div>
+                            <div className="space-y-7 tracking-tight">
+                                <p className="text-3xl md:text-4xl font-semibold text-slate-900 leading-snug">{t.pain.intro}</p>
+                                <p className="text-3xl md:text-4xl font-semibold text-slate-400 leading-snug">{t.pain.after}</p>
+                                <p className="text-3xl md:text-4xl font-semibold text-slate-400 leading-snug">{t.pain.reassure}</p>
+                                <p className="text-3xl md:text-4xl font-semibold text-slate-900 leading-snug">
+                                    <span className="text-blue-600">{t.pain.brand}</span> {t.pain.resolution}
+                                </p>
+                            </div>
+
+                            <hr className="my-16 border-slate-200" />
+
+                            <div>
+                                <h3 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-5">{t.pain.highlights[0].title}.</h3>
+                                <p className="text-lg text-slate-600 leading-relaxed max-w-2xl">{t.pain.highlights[0].desc}</p>
                             </div>
                         </Reveal>
                     </div>
@@ -280,33 +265,28 @@ export default function Landing({ lang }: { lang: Lang }) {
                     </div>
                 </section>
 
-                {/* 8. FOUNDER / TEAM SECTION (ID: #founder) */}
+                {/* 8. TEAM BANNER (ID: #founder) */}
                 <section id="founder" className="py-24 bg-slate-50 border-y border-slate-100">
                     <div className="max-w-7xl mx-auto px-6">
                         <Reveal>
-                        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                            <div className="relative">
+                            <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-slate-300/60">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
                                     src="/team.jpg"
                                     alt={t.founder.imageAlt}
-                                    className="rounded-3xl shadow-2xl shadow-slate-300/50 object-cover w-full aspect-[4/3] grayscale"
+                                    className="w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] object-cover grayscale"
                                 />
-                            </div>
-
-                            <div>
-                                <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-8 leading-tight">
-                                    {t.founder.title} <br />
-                                    <span className="text-blue-600">{t.founder.titleAccent}</span>
-                                </h2>
-
-                                <div className="prose prose-lg text-slate-600 prose-p:leading-relaxed">
-                                    <p className={t.founder.p2 ? "mb-6" : ""}>{t.founder.p1}</p>
-                                    {t.founder.p2 && <p>{t.founder.p2}</p>}
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/25 to-transparent"></div>
+                                <div className="absolute bottom-0 left-0 p-8 md:p-12 max-w-2xl">
+                                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 mb-5 text-xs font-medium text-slate-200 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                                        {t.founder.title} {t.founder.titleAccent}
+                                    </div>
+                                    <p className="text-2xl md:text-3xl font-semibold text-white leading-snug tracking-tight">
+                                        {t.founder.p1}
+                                    </p>
                                 </div>
-
                             </div>
-                        </div>
                         </Reveal>
                     </div>
                 </section>
@@ -401,7 +381,7 @@ export default function Landing({ lang }: { lang: Lang }) {
             {/* 12. FOOTER */}
             <footer className="bg-white border-t border-slate-200 pt-16 pb-8">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="grid md:grid-cols-5 gap-12 mb-12">
+                    <div className="grid md:grid-cols-6 gap-12 mb-12">
                         <div className="md:col-span-2">
                             <div className="text-xl font-bold font-monda tracking-tight text-slate-900 mb-6">
                                 interlinked.dev
@@ -431,6 +411,17 @@ export default function Landing({ lang }: { lang: Lang }) {
                             <h4 className="font-bold text-slate-900 mb-4">{t.footer.contactHeading}</h4>
                             <ul className="space-y-3 text-sm text-slate-600">
                                 <li><a href="mailto:contact@interlinked.dev" className="hover:text-blue-600 transition-colors">contact@interlinked.dev</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 className="font-bold text-slate-900 mb-4">{t.footer.socialHeading}</h4>
+                            <ul className="space-y-3 text-sm text-slate-600">
+                                <li>
+                                    <a href="https://www.linkedin.com/in/marcserafin/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
+                                        LinkedIn
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>

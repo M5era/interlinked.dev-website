@@ -41,15 +41,11 @@ const en = {
   },
   pain: {
     badge: "Sound familiar?",
-    title: "You tried the tools. The results never came.",
-    p1: "You've bought AI tools, watched the demos, maybe even run a pilot. Months later they're gathering dust, the pilot stayed a pilot, and no one can say what any of it returned.",
-    symptoms: [
-      "Workflows break silently, and nobody notices until a customer does",
-      "The pilot impressed everyone in the demo, then never scaled",
-      "Every new tool added a subscription — but the manual work is still there",
-    ],
-    p2: "That doesn't mean you're behind. It means you've hit the wall everyone hits.",
-    p3: "Interlinked is what gets you past it.",
+    intro: "You've bought AI tools, watched the demos, maybe even run a pilot.",
+    after: "Months later they're gathering dust, the pilot stayed a pilot, and no one can say what any of it returned.",
+    reassure: "That doesn't mean you're behind. It means you've hit the wall everyone hits.",
+    brand: "Interlinked",
+    resolution: "is what gets you past it.",
     highlights: [
       {
         title: "AI that pays its way",
@@ -301,6 +297,7 @@ const en = {
     imprint: "Imprint",
     privacy: "Privacy",
     contactHeading: "Contact",
+    socialHeading: "Social",
   },
 };
 
@@ -345,19 +342,15 @@ const de: typeof en = {
   },
   pain: {
     badge: "Kommt Ihnen das bekannt vor?",
-    title: "Sie haben die Tools ausprobiert. Die Ergebnisse blieben aus.",
-    p1: "Ein paar Make-Flows sind eingerichtet. Vielleicht gab es einen KI-Piloten, oder jemand im Team hat einen n8n-Workflow gebaut, der funktioniert hat – eine Zeit lang.",
-    symptoms: [
-      "Workflows brechen still ab – und niemand merkt es, bis ein Kunde es merkt",
-      "Der Pilot hat in der Demo überzeugt und wurde nie skaliert",
-      "Jedes neue Tool brachte ein Abo – die Handarbeit ist trotzdem noch da",
-    ],
-    p2: "Sie sind nicht zu spät dran. Genau hier bleiben die meisten Teams stecken: Fertige Plattformen bringen Sie schnell auf 80 %. Die letzten 20 % – der Teil, der Ihre echten Systeme, Sonderfälle und Daten berührt – sind Engineering.",
-    p3: "Genau diesen Teil übernehmen wir.",
+    intro: "Sie haben KI-Tools gekauft, Demos angesehen, vielleicht sogar einen Piloten gestartet.",
+    after: "Monate später verstauben sie, der Pilot blieb ein Pilot, und niemand kann sagen, was das alles gebracht hat.",
+    reassure: "Das heißt nicht, dass Sie zu spät dran sind. Sie stehen an der Wand, an der alle ankommen.",
+    brand: "Interlinked",
+    resolution: "bringt Sie darüber hinweg.",
     highlights: [
       {
-        title: "Ergebnisse statt Experimente",
-        desc: "Wir definieren, was sich zu bauen lohnt, bauen es in Ihr Unternehmen ein und sorgen dafür, dass Ihr Team es wirklich nutzt. Zahlen Sie nicht länger fürs Experimentieren – zahlen Sie für Ergebnisse.",
+        title: "KI, die sich rechnet",
+        desc: "Wir definieren, was sich zu bauen lohnt, bauen es in Ihre Arbeitsweise ein und sorgen dafür, dass es wirklich genutzt wird. Zahlen Sie nicht länger fürs Experimentieren – zahlen Sie für Ergebnisse.",
       },
     ],
   },
@@ -605,6 +598,7 @@ const de: typeof en = {
     imprint: "Impressum",
     privacy: "Datenschutz",
     contactHeading: "Kontakt",
+    socialHeading: "Social",
   },
 };
 
