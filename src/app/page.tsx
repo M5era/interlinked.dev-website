@@ -7,8 +7,8 @@ import ContactSection from '@/components/ContactSection';
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: 'Interlinked.dev | Beratung & Engineering für KI-Prozess-Automatisierung',
-  description: 'Ihr Experte für KI-Prozess-Automatisierung. Von der ersten Analyse bis zum vollautomatisierten Workflow.',
+  title: 'Interlinked.dev | Beratung & Engineering für Prozess-Automatisierung',
+  description: 'Ihr Experte für Prozess-Automatisierung. Von der ersten Analyse bis zum vollautomatisierten Workflow.',
 };
 
 export default function LandingPage() {
@@ -31,7 +31,7 @@ export default function LandingPage() {
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-8 leading-[1.1] break-words animate-fade-in-up delay-100">
                   Ihr Experte für <br className="hidden lg:block" />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">
-                    KI-Prozess-Automatisierung.
+                    Prozess-Automatisierung.
                   </span>
                 </h1>
 
