@@ -312,7 +312,7 @@ export default function LandingPage() {
 
               <div className="prose prose-lg text-slate-600 prose-p:leading-relaxed mx-auto">
                 <p className="mb-6">
-                  Interlinked wurde von Marc Serafin gegründet – nach fast einem Jahrzehnt Softwareentwicklung für Startups und Agenturen, unter anderem als Engineer bei Locoia, einer deutschen iPaaS-Plattform. Wer Automatisierungs-Plattformen von innen gebaut hat, weiß: Low-Code ist mächtig, stößt aber irgendwann an Grenzen.
+                  Interlinked wurde von Marc Serafin gegründet – Softwareentwickler mit über acht Jahren Erfahrung bei Startups und Agenturen, unter anderem als Engineer bei Locoia, einer deutschen iPaaS-Plattform. Wer Automatisierungs-Plattformen von innen gebaut hat, weiß: Low-Code ist mächtig, stößt aber irgendwann an Grenzen.
                 </p>
                 <p>
                   Genau an diesem Punkt setzen wir an: robuste, maßgeschneiderte Automatisierungen und die Software drumherum – Backends, Schnittstellen und Oberflächen, die mit Ihrem Unternehmen wachsen, statt es auszubremsen.
