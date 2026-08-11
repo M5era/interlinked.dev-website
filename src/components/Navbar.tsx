@@ -100,16 +100,7 @@ export default function Navbar({ lang }: { lang: Lang }) {
                     </div>
 
                     {/* Mobile Navigation Controls */}
-                    <div className="flex md:hidden items-center gap-3">
-                        <LangDropdown lang={lang} />
-                        <a
-                            href="#contact"
-                            onClick={(e) => handleScroll(e, "#contact")}
-                            className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-blue-700 bg-blue-100 rounded-lg hover:bg-blue-200 transition-colors"
-                        >
-                            {t.contact}
-                        </a>
-
+                    <div className="flex md:hidden items-center">
                         {/* Hamburger Menu Button */}
                         <button
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -137,6 +128,18 @@ export default function Navbar({ lang }: { lang: Lang }) {
                             >
                                 {t.contact}
                             </a>
+                            <div className="flex items-center gap-6 pt-5 border-t border-slate-100 text-base">
+                                {LANGUAGES.map((l) => (
+                                    <Link
+                                        key={l.code}
+                                        href={l.href}
+                                        aria-current={l.code === lang ? "page" : undefined}
+                                        className={l.code === lang ? "font-bold text-slate-900" : "text-slate-400"}
+                                    >
+                                        {l.label}
+                                    </Link>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 )}

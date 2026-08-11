@@ -284,6 +284,12 @@ export default function Landing({ lang }: { lang: Lang }) {
                                     </div>
                                     <p className="text-2xl md:text-3xl font-semibold text-white leading-snug tracking-tight">
                                         {t.founder.p1}
+                                        {t.founder.p2 && (
+                                            <>
+                                                <br />
+                                                {t.founder.p2}
+                                            </>
+                                        )}
                                     </p>
                                 </div>
                             </div>

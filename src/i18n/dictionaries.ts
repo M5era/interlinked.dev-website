@@ -190,8 +190,8 @@ const en = {
   founder: {
     title: "Senior people,",
     titleAccent: "working systems.",
-    p1: "A small, senior team that ships. No juniors learning on your project, no handoff halfway through.",
-    p2: "",
+    p1: "A small, senior team that ships.",
+    p2: "No juniors learning on your project, no handoff halfway through.",
     name: "Marc Serafin",
     role: "Founder",
     imageAlt: "Engineers building software together",
@@ -491,8 +491,8 @@ const de: typeof en = {
   founder: {
     title: "Echte Entwickler,",
     titleAccent: "echte Systeme.",
-    p1: "Ein kleines, erfahrenes Team, das liefert. Keine Übergaben, keine Juniors, die an Ihrem Projekt lernen.",
-    p2: "",
+    p1: "Ein kleines, erfahrenes Team, das liefert.",
+    p2: "Keine Übergaben, keine Juniors, die an Ihrem Projekt lernen.",
     name: "Marc Serafin",
     role: "Gründer",
     imageAlt: "Engineers bei der gemeinsamen Arbeit",
