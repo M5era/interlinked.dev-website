@@ -1,8 +1,9 @@
 import React from 'react';
-import { FileText, MessageSquare, UserPlus, ArrowRight, CheckCircle2, Database, Server, Webhook, Clock, LayoutDashboard, Wallet, Workflow, TrendingUp, Activity } from 'lucide-react';
+import { MessageSquare, ArrowRight, CheckCircle2, Database, Server, Webhook, Clock, LayoutDashboard, Wallet, Workflow, Sparkles } from 'lucide-react';
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import ContactSection from '@/components/ContactSection';
+import SolutionsShowcase from '@/components/SolutionsShowcase';
 
 export const dynamic = 'force-static';
 
@@ -65,74 +66,90 @@ export default function LandingPage() {
                 </div>
               </div>
 
-              {/* Right Column: System Graphic */}
-              <div className="relative hidden lg:block ml-auto translate-x-8">
-                {/* Node-Graph Style System Visualization */}
-                <div className="relative z-10 p-8 w-[480px]">
-                  <div className="relative flex flex-col gap-6 items-center">
+              {/* Right Column: Workflow Canvas (n8n style) */}
+              <div className="relative hidden lg:block ml-auto">
+                <div className="relative z-10 w-[520px] h-[460px] bg-white rounded-3xl border border-slate-200 shadow-2xl shadow-slate-200/60 overflow-hidden">
+                  {/* Dotted canvas grid */}
+                  <div className="absolute inset-0 bg-[radial-gradient(rgba(100,116,139,0.18)_1px,transparent_1px)] [background-size:18px_18px]"></div>
+                  {/* Soft glow */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-100/60 rounded-full blur-3xl"></div>
 
-                    {/* Connecting Line - Central Axis (below the trigger row) */}
-                    <div className="absolute top-32 bottom-8 left-1/2 w-px border-l-2 border-dashed border-blue-200 -translate-x-1/2 -z-10"></div>
+                  {/* Edges */}
+                  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 520 460" fill="none">
+                    {/* Triggers -> Backend */}
+                    <path d="M174 107 C 192 107 188 168 205 168" stroke="#cbd5e1" strokeWidth="1.5" />
+                    <path d="M174 227 C 192 227 188 196 205 196" stroke="#cbd5e1" strokeWidth="1.5" />
+                    {/* Backend -> Systems */}
+                    <path d="M375 160 C 392 160 386 76 400 76" stroke="#cbd5e1" strokeWidth="1.5" />
+                    <path d="M375 182 C 392 182 388 211 400 211" stroke="#cbd5e1" strokeWidth="1.5" />
+                    <path d="M375 204 C 392 204 386 346 400 346" stroke="#cbd5e1" strokeWidth="1.5" />
+                    {/* Dashed attachments below backend */}
+                    <path d="M255 224 C 255 265 195 280 195 315" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="4 4" />
+                    <path d="M325 224 C 325 265 320 280 320 315" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="4 4" />
+                    {/* Connection dots */}
+                    {[[174, 107], [205, 168], [174, 227], [205, 196], [375, 160], [400, 76], [375, 182], [400, 211], [375, 204], [400, 346]].map(([cx, cy]) => (
+                      <circle key={`${cx}-${cy}`} cx={cx} cy={cy} r="2.5" fill="#94a3b8" />
+                    ))}
+                  </svg>
 
-                    {/* Row 1: Triggers (each with its own connector line) */}
-                    <div className="flex gap-12 -mb-6">
-                      <div className="flex flex-col items-center">
-                        <div className="flex items-center gap-2 px-4 py-2.5 bg-white/90 backdrop-blur-sm rounded-full border border-slate-200 shadow-sm text-sm font-semibold text-slate-700 hover:scale-105 transition-transform duration-300">
-                          <Webhook size={16} className="text-blue-600" /> Webhook
-                        </div>
-                        <div className="h-12 border-l-2 border-dashed border-blue-200 -z-10"></div>
-                      </div>
-                      <div className="flex flex-col items-center">
-                        <div className="flex items-center gap-2 px-4 py-2.5 bg-white/90 backdrop-blur-sm rounded-full border border-slate-200 shadow-sm text-sm font-semibold text-slate-700 hover:scale-105 transition-transform duration-300">
-                          <Clock size={16} className="text-blue-600" /> Scheduler
-                        </div>
-                        <div className="h-12 border-l-2 border-dashed border-blue-200 -z-10"></div>
-                      </div>
+                  {/* Trigger: Webhook */}
+                  <div className="absolute left-6 top-[80px] w-[150px] flex items-center gap-2.5 px-4 py-3.5 bg-white border border-slate-200 rounded-xl text-sm font-semibold text-slate-700 shadow-sm">
+                    <Webhook size={16} className="text-blue-600 flex-shrink-0" /> Webhook
+                  </div>
+
+                  {/* Trigger: Scheduler */}
+                  <div className="absolute left-6 top-[200px] w-[150px] flex items-center gap-2.5 px-4 py-3.5 bg-white border border-slate-200 rounded-xl text-sm font-semibold text-slate-700 shadow-sm">
+                    <Clock size={16} className="text-amber-500 flex-shrink-0" /> Scheduler
+                  </div>
+
+                  {/* Backend Node */}
+                  <div className="absolute left-[205px] top-[140px] w-[170px] h-[84px] flex items-center gap-3 p-3 bg-white border border-blue-200 rounded-2xl shadow-lg shadow-blue-600/10">
+                    <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white flex-shrink-0 shadow-md shadow-blue-600/30">
+                      <Server size={20} />
                     </div>
-
-                    {/* Row 2: Central Backend Node */}
-                    <div className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-blue-100 shadow-xl shadow-blue-900/5 w-80 z-20 hover:scale-105 transition-transform duration-300">
-                      <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-600/20 flex-shrink-0">
-                        <Server size={24} />
-                      </div>
-                      <div className="flex-1">
-                        <div className="text-sm font-bold text-slate-900 mb-1">Ihr Automatisierungs-Backend</div>
-                        <div className="text-xs text-slate-500">Workflows, KI & Business-Logik</div>
-                      </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-xs font-bold text-slate-900 leading-tight mb-0.5">Automatisierungs-Backend</div>
+                      <div className="text-[10px] text-slate-500 leading-tight">Workflows & Business-Logik</div>
                     </div>
+                  </div>
 
-                    {/* Row 3: Connected Systems */}
-                    <div className="grid grid-cols-3 gap-3 w-full">
-                      <div className="flex flex-col items-center gap-2 p-4 bg-white/90 backdrop-blur-sm rounded-2xl border border-slate-200 shadow-sm hover:scale-105 transition-transform duration-300">
-                        <div className="w-9 h-9 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
-                          <Database size={18} />
-                        </div>
-                        <div className="text-xs font-semibold text-slate-700 text-center">ERP & Datenbank</div>
-                      </div>
-                      <div className="flex flex-col items-center gap-2 p-4 bg-white/90 backdrop-blur-sm rounded-2xl border border-slate-200 shadow-sm hover:scale-105 transition-transform duration-300">
-                        <div className="w-9 h-9 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
-                          <MessageSquare size={18} />
-                        </div>
-                        <div className="text-xs font-semibold text-slate-700 text-center">Slack & Teams</div>
-                      </div>
-                      <div className="flex flex-col items-center gap-2 p-4 bg-white rounded-2xl border border-blue-100 shadow-md hover:scale-105 transition-transform duration-300">
-                        <div className="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-sm">
-                          <LayoutDashboard size={18} />
-                        </div>
-                        <div className="text-xs font-semibold text-slate-700 text-center">Ihr eigenes Dashboard</div>
-                      </div>
-                    </div>
+                  {/* System: ERP & Datenbank */}
+                  <div className="absolute left-[400px] top-[40px] w-[96px] h-[72px] flex flex-col items-center justify-center gap-1.5 bg-white border border-slate-200 rounded-xl shadow-sm">
+                    <Database size={18} className="text-emerald-500" />
+                    <div className="text-[10px] font-semibold text-slate-700 text-center leading-tight px-1">ERP & Datenbank</div>
+                  </div>
 
-                    {/* Status Pill */}
-                    <div className="flex items-center gap-2.5 px-4 py-2 bg-slate-900 rounded-full text-xs font-medium text-slate-200 shadow-lg">
-                      <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
-                      Hosted in Germany · planbare Kosten
-                    </div>
+                  {/* System: Slack & Teams */}
+                  <div className="absolute left-[400px] top-[175px] w-[96px] h-[72px] flex flex-col items-center justify-center gap-1.5 bg-white border border-slate-200 rounded-xl shadow-sm">
+                    <MessageSquare size={18} className="text-violet-500" />
+                    <div className="text-[10px] font-semibold text-slate-700 text-center leading-tight px-1">Slack & Teams</div>
+                  </div>
+
+                  {/* System: Dashboard */}
+                  <div className="absolute left-[400px] top-[310px] w-[96px] h-[72px] flex flex-col items-center justify-center gap-1.5 bg-white border border-blue-200 rounded-xl shadow-sm shadow-blue-600/10">
+                    <LayoutDashboard size={18} className="text-blue-600" />
+                    <div className="text-[10px] font-semibold text-slate-700 text-center leading-tight px-1">Ihr Dashboard</div>
+                  </div>
+
+                  {/* Attachment: KI-Modell */}
+                  <div className="absolute left-[140px] top-[315px] flex items-center gap-1.5 px-3 py-2 bg-white/90 border border-dashed border-slate-300 rounded-full text-[11px] font-medium text-slate-600">
+                    <Sparkles size={12} className="text-blue-600" /> KI-Modell
+                  </div>
+
+                  {/* Attachment: PostgreSQL */}
+                  <div className="absolute left-[268px] top-[315px] flex items-center gap-1.5 px-3 py-2 bg-white/90 border border-dashed border-slate-300 rounded-full text-[11px] font-medium text-slate-600">
+                    <Database size={12} className="text-emerald-500" /> PostgreSQL
+                  </div>
+
+                  {/* Status Pill (standalone, no connector) */}
+                  <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-2.5 px-4 py-2 bg-slate-900 rounded-full text-xs font-medium text-slate-200 shadow-lg whitespace-nowrap">
+                    <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
+                    Hosted in Germany · planbare Kosten
                   </div>
                 </div>
 
                 {/* Decorative Background Elements behind diagram */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-blue-100/30 to-purple-100/30 rounded-full blur-3xl -z-10"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-blue-100/40 to-purple-100/40 rounded-full blur-3xl -z-10"></div>
               </div>
             </div>
           </div>
@@ -184,94 +201,7 @@ export default function LandingPage() {
               <p className="text-lg text-slate-600">Ob Vertrieb, Finance, HR oder IT – wir automatisieren die Prozesse, in denen Ihre Zeit verloren geht.</p>
             </div>
 
-            <div className="flex flex-col gap-6">
-              {/* Team Use Cases Grid */}
-              <div className="grid md:grid-cols-2 gap-6">
-                {/* Vertrieb & CRM */}
-                <div className="p-8 lg:p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 group hover:border-blue-200 transition-all duration-300">
-                  <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform duration-300">
-                    <TrendingUp className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4">Vertrieb & CRM</h3>
-                  <p className="text-lg text-slate-600 leading-relaxed">
-                    Leads automatisch anreichern, qualifizieren und ins CRM synchronisieren. Angebote und Follow-ups entstehen im Hintergrund – Ihr Team verkauft, statt Daten zu pflegen.
-                  </p>
-                </div>
-
-                {/* Finance & Backoffice */}
-                <div className="p-8 lg:p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 group hover:border-blue-200 transition-all duration-300">
-                  <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform duration-300">
-                    <FileText className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4">Finance & Backoffice</h3>
-                  <p className="text-lg text-slate-600 leading-relaxed">
-                    Rechnungen auslesen, mit Bestellungen abgleichen und direkt im Buchhaltungstool verbuchen. Zahlungsabgleich und Reporting laufen automatisch mit.
-                  </p>
-                </div>
-
-                {/* HR & Onboarding */}
-                <div className="p-8 lg:p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 group hover:border-blue-200 transition-all duration-300">
-                  <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform duration-300">
-                    <UserPlus className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4">HR & Onboarding</h3>
-                  <p className="text-lg text-slate-600 leading-relaxed">
-                    Vom unterschriebenen Arbeitsvertrag zum startklaren Arbeitsplatz: Accounts, Hardware und Zugriffsrechte werden automatisch eingerichtet – und beim Offboarding genauso zuverlässig wieder entzogen.
-                  </p>
-                </div>
-
-                {/* IT & Operations */}
-                <div className="p-8 lg:p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 group hover:border-blue-200 transition-all duration-300">
-                  <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform duration-300">
-                    <Activity className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4">IT & Operations</h3>
-                  <p className="text-lg text-slate-600 leading-relaxed">
-                    Monitoring, Alerts und Incident-Workflows: Störungen werden automatisch erkannt, kategorisiert und an die richtige Stelle eskaliert – bevor Kunden sie bemerken.
-                  </p>
-                </div>
-              </div>
-
-              {/* Bottom Row: Support - Full Width */}
-              <div className="p-8 lg:p-12 rounded-[2.5rem] bg-slate-900 text-white hover:shadow-2xl hover:shadow-slate-900/20 transition-all duration-300 group">
-                <div className="grid md:grid-cols-2 gap-12 items-center">
-                  <div>
-                    <div className="w-16 h-16 bg-slate-800 rounded-2xl flex items-center justify-center mb-8 border border-slate-700 group-hover:scale-110 transition-transform duration-300">
-                      <MessageSquare className="w-8 h-8 text-blue-400" />
-                    </div>
-                    <h3 className="text-2xl lg:text-3xl font-bold mb-6">Support & Kundenservice</h3>
-                    <p className="text-lg text-slate-300 leading-relaxed max-w-xl">
-                      Smarte Chatbots für 24/7 Support. KI kategorisiert Tickets, leitet sie an den richtigen Spezialisten weiter oder erstellt sofort versandfertige Antwortentwürfe für Ihr Team.
-                    </p>
-                  </div>
-
-                  <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50 relative overflow-hidden hidden md:block">
-                    <div className="absolute top-0 right-0 p-24 bg-blue-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-                    <div className="space-y-4 relative z-10">
-                      <div className="flex items-center gap-4 p-4 bg-slate-800 rounded-xl border border-slate-700">
-                        <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
-                        <span className="text-slate-200 font-medium">Ticket #4290 analysiert</span>
-                      </div>
-                      <div className="flex items-center gap-4 p-4 bg-slate-800 rounded-xl border border-slate-700 opacity-60">
-                        <div className="w-2 h-2 rounded-full bg-blue-400"></div>
-                        <span className="text-slate-200 font-medium">Antwort erstellt</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-10 pt-8 border-t border-slate-800 flex flex-wrap gap-8">
-                  <div className="flex items-center gap-3 text-base font-medium text-blue-400">
-                    <CheckCircle2 className="w-6 h-6" />
-                    <span>24/7 Verfügbarkeit</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-base font-medium text-blue-400">
-                    <CheckCircle2 className="w-6 h-6" />
-                    <span>Multi-Language</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <SolutionsShowcase />
           </div>
         </section>
 
