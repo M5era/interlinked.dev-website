@@ -22,9 +22,9 @@ const en = {
     ctaPrimary: "Submit a project",
     ctaSecondary: "How we work",
     stats: [
-      { value: "8+", label: "Years engineering" },
-      { value: "100+", label: "Integrations shipped" },
-      { value: "100k+", label: "Events/month in production" },
+      { value: "30+", label: "Custom systems shipped" },
+      { value: "2–6 wks", label: "Idea to production" },
+      { value: "8+ yrs", label: "Engineering production software" },
     ],
     canvas: {
       webhook: "Webhook",
