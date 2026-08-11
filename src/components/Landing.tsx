@@ -71,9 +71,6 @@ export default function Landing({ lang }: { lang: Lang }) {
                             {/* Left Column: Text */}
                             <div className="max-w-2xl">
                                 <div className="flex flex-wrap items-center gap-3 mb-6 animate-fade-in-up">
-                                    <div className="inline-block px-3 py-1 text-xs font-bold tracking-widest text-blue-600 uppercase bg-blue-50 rounded-full border border-blue-100">
-                                        {t.hero.badge}
-                                    </div>
                                     <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-medium text-slate-600 bg-white rounded-full border border-slate-200">
                                         <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
                                         {t.hero.open}
@@ -101,16 +98,6 @@ export default function Landing({ lang }: { lang: Lang }) {
                                     <a href="#process" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-700 transition-all bg-white border border-slate-200 rounded-full hover:bg-slate-50 hover:border-slate-300 active:scale-[0.98]">
                                         {t.hero.ctaSecondary}
                                     </a>
-                                </div>
-
-                                {/* Trust Stats */}
-                                <div className="grid grid-cols-3 gap-8 border-t border-slate-200 pt-8">
-                                    {t.hero.stats.map((stat) => (
-                                        <div key={stat.label}>
-                                            <div className="text-3xl font-bold text-slate-900 mb-1">{stat.value}</div>
-                                            <div className="text-sm font-medium text-slate-500 uppercase tracking-wide">{stat.label}</div>
-                                        </div>
-                                    ))}
                                 </div>
                             </div>
 
@@ -189,13 +176,6 @@ export default function Landing({ lang }: { lang: Lang }) {
 
                                 </div>
 
-                                {/* Status Badge below the canvas */}
-                                <div className="relative z-10 mt-5 flex justify-center">
-                                    <div className="flex items-center gap-2.5 px-4 py-2 bg-slate-900 rounded-full text-xs font-medium text-slate-200 shadow-lg whitespace-nowrap">
-                                        <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
-                                        {t.hero.canvas.statusBadge}
-                                    </div>
-                                </div>
                                 </div>
 
                                 {/* Decorative Background Elements behind diagram */}
@@ -343,29 +323,47 @@ export default function Landing({ lang }: { lang: Lang }) {
                 </section>
 
                 {/* 7. PROCESS (ID: #process) */}
-                <section id="process" className="py-24 bg-white">
+                <section id="process" className="py-28 bg-white">
                     <div className="max-w-7xl mx-auto px-6">
                         <Reveal>
-                            <div className="max-w-3xl mb-16">
-                                <h2 className="text-3xl font-bold text-slate-900 mb-4">{t.process.title}</h2>
-                                <p className="text-lg text-slate-600">{t.process.sub}</p>
+                            <div className="text-center max-w-3xl mx-auto mb-16">
+                                <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-5 tracking-tight">{t.process.title}</h2>
+                                <p className="text-xl text-slate-600">{t.process.sub}</p>
                             </div>
                         </Reveal>
 
-                        <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
+                        <div className="grid md:grid-cols-3 gap-6">
                             {t.process.steps.map((step, i) => (
-                                <Reveal key={step.num} delay={i * 120}>
-                                    <div className="group h-full">
-                                        <div className="flex items-center gap-4 mb-8">
-                                            <span className="font-mono text-sm font-bold text-blue-600 tracking-widest">{step.num}</span>
-                                            <div className="h-px flex-1 bg-gradient-to-r from-blue-300 via-slate-200 to-transparent"></div>
+                                <Reveal key={step.num} delay={i * 140} className="h-full">
+                                    <div className="relative h-full p-10 pt-14 rounded-3xl bg-slate-50 border border-slate-100 overflow-hidden hover:border-blue-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                                        <div className="absolute -top-10 -right-2 text-[160px] leading-none font-bold text-slate-200/70 select-none pointer-events-none group-hover:text-blue-100 transition-colors duration-500">
+                                            {step.num}
                                         </div>
-                                        <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">{step.title}</h3>
-                                        <p className="text-lg text-slate-600 leading-relaxed">{step.desc}</p>
+                                        <div className="relative z-10">
+                                            <span className="font-mono text-sm font-bold text-blue-600 tracking-widest">{step.num}</span>
+                                            <h3 className="text-2xl font-bold text-slate-900 mt-4 mb-4 group-hover:text-blue-600 transition-colors duration-300">{step.title}</h3>
+                                            <p className="text-lg text-slate-600 leading-relaxed">{step.desc}</p>
+                                        </div>
                                     </div>
                                 </Reveal>
                             ))}
                         </div>
+                    </div>
+                </section>
+
+                {/* 7b. STATS BAND */}
+                <section className="py-16 bg-slate-50 border-t border-slate-100">
+                    <div className="max-w-7xl mx-auto px-6">
+                        <Reveal>
+                            <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-slate-200">
+                                {t.hero.stats.map((stat) => (
+                                    <div key={stat.label} className="py-6 sm:py-2 sm:px-12 sm:first:pl-0">
+                                        <div className="text-5xl md:text-6xl font-bold text-slate-900 mb-3">{stat.value}</div>
+                                        <div className="text-sm font-medium text-slate-500 uppercase tracking-wide">{stat.label}</div>
+                                    </div>
+                                ))}
+                            </div>
+                        </Reveal>
                     </div>
                 </section>
 
@@ -381,10 +379,6 @@ export default function Landing({ lang }: { lang: Lang }) {
                                     alt={t.founder.imageAlt}
                                     className="rounded-3xl shadow-2xl shadow-slate-300/50 object-cover w-full aspect-[4/3]"
                                 />
-                                <div className="absolute -bottom-5 left-8 flex items-center gap-2.5 px-4 py-2 bg-slate-900 rounded-full text-xs font-medium text-slate-200 shadow-lg">
-                                    <span className="w-2 h-2 rounded-full bg-green-400"></span>
-                                    interlinked.dev
-                                </div>
                             </div>
 
                             <div>
@@ -396,11 +390,6 @@ export default function Landing({ lang }: { lang: Lang }) {
                                 <div className="prose prose-lg text-slate-600 prose-p:leading-relaxed">
                                     <p className={t.founder.p2 ? "mb-6" : ""}>{t.founder.p1}</p>
                                     {t.founder.p2 && <p>{t.founder.p2}</p>}
-                                </div>
-
-                                <div className="mt-8">
-                                    <div className="text-xl italic text-slate-400">{t.founder.name}</div>
-                                    <div className="text-xs text-slate-400 font-medium uppercase tracking-wider mt-1">{t.founder.role}</div>
                                 </div>
 
                             </div>
