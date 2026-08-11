@@ -11,16 +11,16 @@ const en = {
     cases: "Work",
     process: "How we work",
     faq: "FAQ",
-    contact: "Start a project",
+    contact: "Submit a project",
   },
   hero: {
     badge: "Consulting & Engineering",
     open: "Open for new projects",
-    h1a: "Beyond no-code.",
-    h1b: "Automation without limits.",
-    sub: "Automation takes routine work off your team's plate — studies show up to 75% time savings. We go further: robust backends, custom tools, and interfaces built around how your team actually works.",
-    ctaPrimary: "Start your project",
-    ctaSecondary: "See how it works",
+    h1a: "Less talk.",
+    h1b: "More shipped.",
+    sub: "Interlinked is a custom AI automation studio. We find the automations that actually pay for themselves, build them into the way you already work, and hand them over running — voice agents, workflow automation, custom AI tools.",
+    ctaPrimary: "Submit a project",
+    ctaSecondary: "How we work",
     stats: [
       { value: "8+", label: "Years engineering" },
       { value: "100+", label: "Integrations shipped" },
@@ -42,22 +42,22 @@ const en = {
   pain: {
     badge: "Sound familiar?",
     title: "You tried the tools. The results never came.",
-    p1: "You set up a few Zapier flows. Maybe you ran an AI pilot, or someone on the team built an n8n workflow that worked — for a while.",
+    p1: "You've bought AI tools, watched the demos, maybe even run a pilot. Months later they're gathering dust, the pilot stayed a pilot, and no one can say what any of it returned.",
     symptoms: [
       "Workflows break silently, and nobody notices until a customer does",
       "The pilot impressed everyone in the demo, then never scaled",
       "Every new tool added a subscription — but the manual work is still there",
     ],
-    p2: "You're not behind. This is exactly where most teams get stuck: off-the-shelf platforms get you to 80% fast. The remaining 20% — the part that touches your real systems, your edge cases, your data — is engineering.",
-    p3: "That's the part we do.",
+    p2: "That doesn't mean you're behind. It means you've hit the wall everyone hits.",
+    p3: "Interlinked is what gets you past it.",
     highlights: [
       {
-        title: "Results, not experiments",
-        desc: "We define what's worth building, build it into your business, and make sure your team actually uses it. Stop paying to experiment. Start paying for results.",
+        title: "AI that pays its way",
+        desc: "We figure out what's worth building, build it into the way you work, and make sure it actually gets used. Stop funding experiments. Start buying outcomes.",
       },
       {
-        title: "Real builders, real systems",
-        desc: "A small, senior team that ships. No handoffs, no juniors learning on your project.",
+        title: "Senior people, working systems",
+        desc: "A small, senior team that ships. No juniors learning on your project, no handoff halfway through.",
       },
     ],
   },
@@ -220,8 +220,8 @@ const en = {
     winTitle2: "that win.",
     winDesc: "Most companies fail at the complexity of internal AI infrastructure. Do it better: Interlinked delivers measurable results within weeks.",
     ctaTitle: "Which tasks are slowing your team down?",
-    ctaDesc: "Let's find your automation potential together. Tell us what you want to build — we reply within one business day.",
-    ctaButton: "Start your project",
+    ctaDesc: "Let's find your automation potential together. Tell us what you want to build — we reply within three business days.",
+    ctaButton: "Submit a project",
   },
   faq: {
     badge: "FAQ",
@@ -260,7 +260,7 @@ const en = {
   },
   contact: {
     title: "Tell us what you want to build.",
-    sub: "We review every submission and reply within one business day — usually with a first idea of how we'd approach it.",
+    sub: "We review every submission and reply within three business days — usually with a first idea of how we'd approach it.",
     form: {
       name: "Full name",
       namePlaceholder: "Jane Doe",
@@ -275,7 +275,7 @@ const en = {
       budgetOptions: ["Under €2,500", "€2,500 – €5,000", "€5,000 – €10,000", "€10,000 – €25,000", "€25,000+", "Not sure yet"],
       submit: "Submit project",
       sending: "Sending...",
-      success: "Thanks! Your project landed in our inbox — we'll reply within one business day.",
+      success: "Thanks! Your project landed in our inbox — we'll reply within three business days.",
       error: "Something went wrong. Please try again or email us directly at contact@interlinked.dev.",
       privacyNote: "No spam, no newsletter. Your data stays in Germany.",
     },
@@ -512,7 +512,7 @@ const de: typeof en = {
     winTitle2: "die gewinnen.",
     winDesc: "Die Mehrheit der Unternehmen scheitert an der Komplexität interner KI-Infrastrukturen. Machen Sie es besser: Interlinked liefert messbare Erfolge innerhalb weniger Wochen.",
     ctaTitle: "Welche Aufgaben halten Ihr Team unnötig auf?",
-    ctaDesc: "Lassen Sie uns gemeinsam Ihr Automatisierungspotenzial entdecken. Beschreiben Sie Ihr Vorhaben – wir antworten innerhalb eines Werktags.",
+    ctaDesc: "Lassen Sie uns gemeinsam Ihr Automatisierungspotenzial entdecken. Beschreiben Sie Ihr Vorhaben – wir antworten innerhalb von drei Werktagen.",
     ctaButton: "Projekt starten",
   },
   faq: {
@@ -552,7 +552,7 @@ const de: typeof en = {
   },
   contact: {
     title: "Erzählen Sie uns, was Sie bauen wollen.",
-    sub: "Wir prüfen jede Anfrage und antworten innerhalb eines Werktags – meist schon mit einer ersten Idee, wie wir es angehen würden.",
+    sub: "Wir prüfen jede Anfrage und antworten innerhalb von drei Werktagen – meist schon mit einer ersten Idee, wie wir es angehen würden.",
     form: {
       name: "Name",
       namePlaceholder: "Max Mustermann",
@@ -567,7 +567,7 @@ const de: typeof en = {
       budgetOptions: ["Unter 2.500 €", "2.500 – 5.000 €", "5.000 – 10.000 €", "10.000 – 25.000 €", "25.000 €+", "Noch unklar"],
       submit: "Projekt absenden",
       sending: "Wird gesendet...",
-      success: "Danke! Ihre Anfrage ist angekommen – wir antworten innerhalb eines Werktags.",
+      success: "Danke! Ihre Anfrage ist angekommen – wir antworten innerhalb von drei Werktagen.",
       error: "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt: contact@interlinked.dev.",
       privacyNote: "Kein Spam, kein Newsletter. Ihre Daten bleiben in Deutschland.",
     },

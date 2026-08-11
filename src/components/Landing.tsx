@@ -1,5 +1,6 @@
 import React from "react";
 import {
+    ArrowRight,
     MessageSquare,
     Database,
     Server,
@@ -95,9 +96,9 @@ export default function Landing({ lang }: { lang: Lang }) {
 
                                 <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-fade-in-up delay-300">
                                     <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white transition-all bg-blue-600 rounded-full hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/20 active:scale-[0.98]">
-                                        {t.hero.ctaPrimary}
+                                        {t.hero.ctaPrimary} <ArrowRight className="ml-2 w-5 h-5" />
                                     </a>
-                                    <a href="#solutions" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-700 transition-all bg-white border border-slate-200 rounded-full hover:bg-slate-50 hover:border-slate-300 active:scale-[0.98]">
+                                    <a href="#process" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-700 transition-all bg-white border border-slate-200 rounded-full hover:bg-slate-50 hover:border-slate-300 active:scale-[0.98]">
                                         {t.hero.ctaSecondary}
                                     </a>
                                 </div>
