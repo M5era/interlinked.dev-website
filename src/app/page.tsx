@@ -534,7 +534,7 @@ export default function LandingPage() {
 
           <div className="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm text-slate-400">
-              © 2026 Interlinked.dev.
+              © 2026 Interlinked.dev. <span className="text-slate-300">· staging</span>
             </div>
           </div>
         </div>
