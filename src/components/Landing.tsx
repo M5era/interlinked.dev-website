@@ -393,6 +393,7 @@ export default function Landing({ lang }: { lang: Lang }) {
                                 interlinked.dev
                             </div>
                             <p className="text-slate-500 max-w-sm">{t.footer.tagline}</p>
+                            <p className="text-sm text-slate-400 mt-4">{t.footer.location}</p>
                         </div>
 
                         <div>
