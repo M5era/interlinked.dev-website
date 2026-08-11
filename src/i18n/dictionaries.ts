@@ -319,13 +319,13 @@ const de: typeof en = {
     open: "Offen für neue Projekte",
     h1a: "Weniger KI-Gerede.",
     h1b: "Mehr geliefert.",
-    sub: "Interlinked ist ein Studio für maßgeschneiderte KI-Automatisierung. Wir finden die Automatisierungen, die sich wirklich rechnen, bauen sie in Ihre bestehenden Abläufe ein und übergeben sie lauffähig – Voice Agents, Workflow-Automatisierung, eigene KI-Tools.",
+    sub: "Interlinked ist ein Studio für maßgeschneiderte KI-Automatisierung. Wir finden heraus, welche Automatisierungen sich wirklich lohnen, bauen sie passgenau in Ihre Abläufe ein – und übergeben erst, wenn alles läuft. Voice Agents, Workflow-Automatisierung, eigene KI-Tools.",
     ctaPrimary: "Projekt einreichen",
     ctaSecondary: "Wie wir arbeiten",
     stats: [
       { value: "30+", label: "Individuelle Systeme geliefert" },
       { value: "2–6 Wo.", label: "Von der Idee in die Produktion" },
-      { value: "8+ Jahre", label: "Engineering von Produktionssoftware" },
+      { value: "8+ Jahre", label: "Erfahrung mit Produktivsystemen" },
     ],
     canvas: {
       webhook: "Webhook",
@@ -342,15 +342,15 @@ const de: typeof en = {
   },
   pain: {
     badge: "Kommt Ihnen das bekannt vor?",
-    intro: "Sie haben KI-Tools gekauft, Demos angesehen, vielleicht sogar einen Piloten gestartet.",
+    intro: "Sie haben KI-Tools gekauft, sich die Demos angeschaut, vielleicht sogar einen Piloten gestartet.",
     after: "Monate später verstauben sie, der Pilot blieb ein Pilot, und niemand kann sagen, was das alles gebracht hat.",
-    reassure: "Das heißt nicht, dass Sie zu spät dran sind. Sie stehen an der Wand, an der alle ankommen.",
+    reassure: "Das heißt nicht, dass Sie zu spät dran sind. Sie stecken nur da fest, wo alle irgendwann feststecken.",
     brand: "Interlinked",
-    resolution: "bringt Sie darüber hinweg.",
+    resolution: "bringt Sie weiter.",
     highlights: [
       {
         title: "KI, die sich rechnet",
-        desc: "Wir definieren, was sich zu bauen lohnt, bauen es in Ihre Arbeitsweise ein und sorgen dafür, dass es wirklich genutzt wird. Zahlen Sie nicht länger fürs Experimentieren – zahlen Sie für Ergebnisse.",
+        desc: "Wir finden heraus, was sich zu bauen lohnt, integrieren es in Ihren Arbeitsalltag und sorgen dafür, dass es auch wirklich genutzt wird. Schluss mit bezahlten Experimenten – zahlen Sie für Ergebnisse.",
       },
     ],
   },
@@ -473,18 +473,18 @@ const de: typeof en = {
     steps: [
       {
         num: "01",
-        title: "Verstehen",
-        desc: "Wir beginnen damit, zu verstehen, wie Ihr Team wirklich arbeitet: wo Stunden verschwinden, was doppelt gemacht wird, worum alle stillschweigend herumarbeiten. Daraus entsteht eine kurze Liste von Automatisierungen, die ihren Platz verdienen.",
+        title: "Identify",
+        desc: "Zuerst verstehen wir, wie Ihr Team wirklich arbeitet: wo Stunden versickern, was doppelt erledigt wird, wo sich alle längst einen Workaround gebaut haben. Daraus entsteht eine kurze Liste von Automatisierungen, die sich wirklich lohnen.",
       },
       {
         num: "02",
-        title: "Bauen",
-        desc: "Dann bauen wir. Alles fügt sich in die Systeme und Tools ein, die Sie bereits nutzen – kein Rip-and-Replace, kein Paralleluniversum. So gebaut, dass es vom ersten Tag an sauber läuft, nicht erst nach drei Korrekturrunden.",
+        title: "Build",
+        desc: "Dann wird gebaut. Alles fügt sich in die Systeme und Tools ein, die Sie bereits nutzen – kein Rip-and-Replace, kein Paralleluniversum. Und zwar so, dass es ab Tag eins sauber läuft, nicht erst nach drei Korrekturrunden.",
       },
       {
         num: "03",
-        title: "Verankern",
-        desc: "Dann sorgen wir dafür, dass es bleibt. Wir arbeiten an der Seite Ihres Teams – schulen, justieren, passen an – bis das System nicht mehr „das neue KI-Ding“ ist, sondern einfach die Art, wie gearbeitet wird. Erst dann ziehen wir uns zurück.",
+        title: "Adopt",
+        desc: "Zum Schluss sorgen wir dafür, dass es bleibt. Seite an Seite mit Ihrem Team – schulen, justieren, nachschärfen – bis das System nicht mehr „das neue KI-Ding“ ist, sondern einfach die Art, wie gearbeitet wird. Erst dann ziehen wir uns zurück.",
       },
     ],
   },
@@ -535,7 +535,7 @@ const de: typeof en = {
       },
       {
         q: "Was brauchen Sie von meinem Team?",
-        a: "Genug Zeit mit Ihren Leuten, um zu verstehen, wie die Arbeit wirklich abläuft. Danach übernehmen wir die technische Last – Ihr Team bleibt bei seiner eigentlichen Arbeit.",
+        a: "Genug Zeit mit Ihren Leuten, um zu verstehen, wie die Arbeit wirklich abläuft. Danach übernehmen wir den technischen Teil – Ihr Team bleibt bei seiner eigentlichen Arbeit.",
       },
       {
         q: "Welche Projekte passen?",
@@ -562,7 +562,7 @@ const de: typeof en = {
     ],
   },
   closing: {
-    line1: "Handarbeit skaliert nicht.",
+    line1: "Manuelle Arbeit skaliert nicht.",
     line2: "Gute Automatisierung schon.",
     line3: "Bauen wir Ihre.",
   },
