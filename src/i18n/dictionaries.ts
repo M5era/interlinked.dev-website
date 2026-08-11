@@ -587,7 +587,7 @@ const de: typeof en = {
       error: "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt: contact@interlinked.dev.",
       privacyNote: "Kein Spam, kein Newsletter. Ihre Daten bleiben in Deutschland.",
     },
-    altTitle: "Lieber zuerst sprechen?",
+    altTitle: "Lieber erst einen Call?",
     altCalendly: "Kostenloses 30-Minuten-Erstgespräch buchen",
     altOr: "oder E-Mail an",
   },
